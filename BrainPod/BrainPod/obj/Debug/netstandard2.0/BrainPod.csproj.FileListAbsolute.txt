@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.deps.json
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.dll
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\ref\BrainPod.dll
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.pdb
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfo.cs
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.dll
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.pdb
