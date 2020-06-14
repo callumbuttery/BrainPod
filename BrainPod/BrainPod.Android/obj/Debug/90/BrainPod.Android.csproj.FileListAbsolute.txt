@@ -475,3 +475,4 @@ C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stam
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\logo.png
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\crc64f2ebc73ee89ceb34\CustomEntryAndroid.java

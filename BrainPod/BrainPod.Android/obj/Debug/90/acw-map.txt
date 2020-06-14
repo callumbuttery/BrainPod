@@ -1,3 +1,6 @@
+BrainPod.Droid.CustomEntryAndroid, BrainPod.Android;crc64f2ebc73ee89ceb34.CustomEntryAndroid
+BrainPod.Droid.CustomEntryAndroid;crc64f2ebc73ee89ceb34.CustomEntryAndroid
+brainpod.droid.CustomEntryAndroid;crc64f2ebc73ee89ceb34.CustomEntryAndroid
 BrainPod.Droid.MainActivity, BrainPod.Android;crc64f2ebc73ee89ceb34.MainActivity
 BrainPod.Droid.MainActivity;crc64f2ebc73ee89ceb34.MainActivity
 brainpod.droid.MainActivity;crc64f2ebc73ee89ceb34.MainActivity

@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             xmlns:local="clr-namespace:BrainPod"
              mc:Ignorable="d"
              x:Class="BrainPod.MainPage">
 
@@ -20,31 +22,29 @@
         <Image x:Name="Logo"
                VerticalOptions="StartAndExpand" />
 
-        <StackLayout BackgroundColor="Black" Padding="1" Margin="20">
-            <Entry Placeholder="Email"
+        <!--Email entry is a custom render, ref CustomEntry.cs-->
+        <local:CustomEntry Placeholder="Email"
                x:Name="emailEntry"
-               HorizontalOptions="FillAndExpand"
-               VerticalOptions="Start"
-               BackgroundColor="White"
+               HorizontalOptions="Center"
                HorizontalTextAlignment="Center"
-                   FontAttributes="Bold"
-                   
+                               WidthRequest="250"
+                               FontAttributes="Bold"
+                              
                />
        
 
-       
-            <Entry Placeholder="Password"
+             <!--Password entry is a custom render, ref CustomEntry.cs-->       
+            <local:CustomEntry Placeholder="Password"
                IsPassword="True"
-               x:Name="passwordEntry" 
-               HorizontalOptions="FillAndExpand"
-               VerticalOptions="Start"
+               x:Name="passwordEntry"    
+               HorizontalOptions="Center"
                HorizontalTextAlignment="Center"
-               BackgroundColor="White"
-                  FontAttributes="Bold"
-                   
-         
+                               WidthRequest="250"
+                               Margin="20"
+                               FontAttributes="Bold"
+                               
                />
-        </StackLayout>
+
 
        
             <Button Text="Sign in" 

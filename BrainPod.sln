@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainPod.Android", "BrainPo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainPod.iOS", "BrainPod\BrainPod.iOS\BrainPod.iOS.csproj", "{3E534E2B-77C7-4B49-8DFF-70D2FDF836BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainPod", "BrainPod\BrainPod\BrainPod.csproj", "{A3D8947F-D161-45D1-AA0D-1E629B97F59F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrainPod", "BrainPod\BrainPod\BrainPod.csproj", "{A3D8947F-D161-45D1-AA0D-1E629B97F59F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E444F425-2797-4276-BF0E-35FCAB3F4733}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
