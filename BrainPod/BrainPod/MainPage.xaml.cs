@@ -17,6 +17,7 @@ namespace BrainPod
         public MainPage()
         {
             InitializeComponent();
+            Logo.Source = ImageSource.FromFile("Logo.png");
         }
 
         public void signInClicked(object sender, EventArgs e)

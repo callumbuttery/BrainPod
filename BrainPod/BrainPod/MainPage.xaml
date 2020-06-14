@@ -8,30 +8,17 @@
 
     <StackLayout BackgroundColor="#c4ebf2">
         <!-- Place new controls here -->
-        
-        <Label Text="BrainPod " 
+
+        <Label Text=" " 
                TextColor="Black"
                FontSize="25"
-               Padding="35"
+            
                FontAttributes="Bold"
            HorizontalOptions="Center"
            VerticalOptions="StartAndExpand" />
-        <Label 
-               TextColor="Black"
-               FontSize="25"
-               Padding="35"
-               FontAttributes="Bold"
-           HorizontalOptions="Center"
-           VerticalOptions="StartAndExpand" 
-               x:Name="TestingEmail"/>
-        <Label 
-               TextColor="Black"
-               FontSize="25"
-               Padding="35"
-               FontAttributes="Bold"
-           HorizontalOptions="Center"
-           VerticalOptions="StartAndExpand" 
-               x:Name="TestingPassword"/>
+
+        <Image x:Name="Logo"
+               VerticalOptions="StartAndExpand" />
 
         <StackLayout BackgroundColor="Black" Padding="1" Margin="20">
             <Entry Placeholder="Email"
