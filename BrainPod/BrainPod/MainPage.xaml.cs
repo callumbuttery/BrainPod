@@ -17,6 +17,8 @@ namespace BrainPod
         public MainPage()
         {
             InitializeComponent();
+            //used to load logo from files
+            //Logo.source is created in xaml file
             Logo.Source = ImageSource.FromFile("Logo.png");
         }
 
