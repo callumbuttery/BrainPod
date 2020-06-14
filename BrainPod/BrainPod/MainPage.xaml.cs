@@ -24,11 +24,14 @@ namespace BrainPod
 
         public void signInClicked(object sender, EventArgs e)
         {
+            //receive email from input box
             string email = emailEntry.Text;
+            //used to verify if the user has entered a valid email address
             bool emailVerified;
 
             try
             {
+                //enter if entry box to enter email isn't blank
                 if (emailEntry.Text != null)
                 {
                     //emailVerified set to value returned from EmailValidation module
@@ -36,7 +39,9 @@ namespace BrainPod
 
                     if (emailVerified != true)
                     {
+                        //display error
                         DisplayAlert("Email error", "Invalid email format", "Retry");
+                        //return user to re-enter
                         return;
                     }
                     else
@@ -51,6 +56,7 @@ namespace BrainPod
                 }
                 else
                 {
+                    //alert user to email error
                     DisplayAlert("Email error", "Email is blank or null", "Retry");
                     return;
                 }
@@ -59,6 +65,7 @@ namespace BrainPod
             }
             catch
             {
+                //report code failure to user
                 DisplayAlert("Login Failure", "The mouse fell off its wheel", "Retry");
                 return;
             }
@@ -92,13 +99,15 @@ namespace BrainPod
                 //checks for password length
                 if (password.Length < 6)
                 {
+                    //password validation error
                     DisplayAlert("Password error", "Password must be bigger than 6 characters", "Retry");
+                    //set password entry box to empty
                     passwordEntry.Text = string.Empty;
                     return;
                 }
                 else
                 {
-                    //proceed to check users account exists
+                    //proceed to check users account exists on backend
                 }
             }
         }
