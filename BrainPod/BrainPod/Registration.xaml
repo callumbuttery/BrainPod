@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:BrainPod"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.Registration">
+             
+    
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#c4ebf2">
+            <Label Text="Welcome to Brain Pod!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   Margin="0"/>
+
+            <Label Text="We look forward to welcoming you to the Brain Pod family!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   Margin="20"/>
+
+            <local:CustomEntry Placeholder="First Name" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+            <local:CustomEntry Placeholder="Second Name" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+            <local:CustomEntry Placeholder="Email" Keyboard="Email" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+            <local:CustomEntry Placeholder="Password" IsPassword="True" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+
+            <Button Text="Register Account"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="#e83d31"
+                    WidthRequest="200"/>
+                    
+            <Button Text="Login"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent"
+                    Clicked="LoadLogin"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

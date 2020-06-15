@@ -9,8 +9,6 @@ using Xamarin.Forms;
 
 namespace BrainPod
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
@@ -20,6 +18,8 @@ namespace BrainPod
             //used to load logo from files
             //Logo.source is created in xaml file
             Logo.Source = ImageSource.FromFile("Logo.png");
+            //hide nav bar
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         public void signInClicked(object sender, EventArgs e)
@@ -112,5 +112,10 @@ namespace BrainPod
             }
         }
 
+        //load registration form
+        private void LoadReg(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Registration());
+        }
     }
 }

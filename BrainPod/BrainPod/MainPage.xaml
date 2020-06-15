@@ -29,6 +29,7 @@
                HorizontalTextAlignment="Center"
                                WidthRequest="250"
                                FontAttributes="Bold"
+                           Keyboard="Email"
                               
                />
        
@@ -56,6 +57,7 @@
                 BackgroundColor="Transparent"
                 HorizontalOptions="CenterAndExpand"
                 TextColor="Gray"
+                Clicked="LoadReg"
                 />
             
  
