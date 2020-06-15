@@ -26,16 +26,17 @@
                    FontAttributes="Bold"
                    Margin="20"/>
 
-            <local:CustomEntry Placeholder="First Name" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
-            <local:CustomEntry Placeholder="Second Name" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
-            <local:CustomEntry Placeholder="Email" Keyboard="Email" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
-            <local:CustomEntry Placeholder="Password" IsPassword="True" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+            <local:CustomEntry x:Name="FirstNameInput" Placeholder="First Name" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+            <local:CustomEntry x:Name="SecondNameInput" Placeholder="Second Name" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+            <local:CustomEntry x:Name="EmailInput" Placeholder="Email" Keyboard="Email" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
+            <local:CustomEntry x:Name="PasswordInput" Placeholder="Password" IsPassword="True" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
 
             <Button Text="Register Account"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"
                     BackgroundColor="#e83d31"
-                    WidthRequest="200"/>
+                    WidthRequest="200"
+                    Clicked="Validation"/>
                     
             <Button Text="Login"
                     VerticalOptions="CenterAndExpand"
