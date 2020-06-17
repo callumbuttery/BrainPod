@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.Slider">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#c4ebf2">
+            <Label Text="Welcome back!"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   Margin="100"
+                   FontAttributes="Bold"
+                   FontSize="25"/>
+
+            <Image x:Name="LogoWithoutText"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="How have you been today out of 100?"
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="20"/>
+
+            <Slider Minimum="0" Maximum="10" 
+                    ValueChanged="Slider_ValueChanged" 
+                    x:Name="DayRatingSlider"
+                    Margin="50"/>
+
+            <Label x:Name="SliderValue" FontSize="40"
+                   HorizontalOptions="Center"
+                   Margin="0"/>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

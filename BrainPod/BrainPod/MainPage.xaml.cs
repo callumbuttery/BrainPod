@@ -108,6 +108,7 @@ namespace BrainPod
                 else
                 {
                     //proceed to check users account exists on backend
+                    Navigation.PushAsync(new Slider());
                 }
             }
         }

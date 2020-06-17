@@ -1,3 +1,11 @@
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.Android.dll
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.Android.pdb
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod.apk
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod.aab
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod-Signed.aab
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod-Signed.apk
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.dll
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.pdb
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\build.props
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\adb.props
@@ -31,14 +39,6 @@ C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\flat
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\R.txt
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\R.cs.flag
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\BrainPod.Android.csproj.CoreCompileInputs.cache
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.Android.dll
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.Android.pdb
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod.apk
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod.aab
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod-Signed.aab
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\com.companyname.brainpod-Signed.apk
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.dll
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\bin\Debug\BrainPod.pdb
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\XamlC.stamp
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\BrainPod.Android.csproj.CopyComplete
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\BrainPod.Android.dll
@@ -63,6 +63,7 @@ C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\logo.png
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\uploadflags.txt
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\assets\BrainPod.Android.dll
@@ -397,6 +398,7 @@ C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\andr
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\FrameRenderer.java
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\ImageRenderer.java
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\LabelRenderer.java
+C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\crc64f2ebc73ee89ceb34\CustomEntryAndroid.java
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\crc64f2ebc73ee89ceb34\MainActivity.java
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\mono\android\app\ApplicationRegistration.java
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\mono\android\support\design\chip\ChipGroup_OnCheckedChangeListenerImplementor.java
@@ -474,5 +476,3 @@ C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stam
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\logo.png
-C:\Users\Admin\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\src\crc64f2ebc73ee89ceb34\CustomEntryAndroid.java

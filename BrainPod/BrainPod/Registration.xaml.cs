@@ -27,7 +27,7 @@ namespace BrainPod
             Navigation.PopAsync();
         }
 
-        public void validation(Object sender, EventArgs e)
+        public void Validation(Object sender, EventArgs e)
         {
             try
             {
