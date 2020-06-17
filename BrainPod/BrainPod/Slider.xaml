@@ -17,7 +17,7 @@
             <Image x:Name="LogoWithoutText"
                    HorizontalOptions="Center"/>
 
-            <Label Text="How have you been today out of 100?"
+            <Label Text="How have you been today out of 10?"
                 HorizontalOptions="CenterAndExpand" 
                    FontSize="20"/>
 
@@ -29,6 +29,10 @@
             <Label x:Name="SliderValue" FontSize="40"
                    HorizontalOptions="Center"
                    Margin="0"/>
+
+            <Button x:Name="ContinueBtn" Text="Continue"
+                    HorizontalOptions="Center"
+                    Margin="100"/>
 
         </StackLayout>
         

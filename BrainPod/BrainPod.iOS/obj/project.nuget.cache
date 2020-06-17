@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "T1CSPTVambM4K9KCutpbxFox+0y+wEgao5+PUlmciPBnQ6cbD08ovAiuDrWRrgKSjuhVCCzE2P07PN3yJcqdMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}

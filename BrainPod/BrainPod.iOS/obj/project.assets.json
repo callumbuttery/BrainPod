@@ -1051,11 +1051,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
       "projectName": "BrainPod.iOS",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+      "projectPath": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1076,8 +1076,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
+            "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
             }
           }
         }

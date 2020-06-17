@@ -19,11 +19,13 @@ namespace BrainPod
             NavigationPage.SetHasNavigationBar(this, false);
             //used to load image
             LogoWithoutText.Source = ImageSource.FromFile("LogoWithoutText.png");
+            ContinueBtn.IsEnabled = false;
         }
 
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             SliderValue.Text = DayRatingSlider.Value.ToString();
+            ContinueBtn.IsEnabled = true;
         }
     }
 }

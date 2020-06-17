@@ -610,11 +610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
       "projectName": "BrainPod",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+      "projectPath": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

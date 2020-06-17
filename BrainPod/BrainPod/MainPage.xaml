@@ -41,7 +41,7 @@
                HorizontalOptions="Center"
                HorizontalTextAlignment="Center"
                                WidthRequest="250"
-                               Margin="20"
+                               Margin="0"
                                FontAttributes="Bold"
                                
                />
