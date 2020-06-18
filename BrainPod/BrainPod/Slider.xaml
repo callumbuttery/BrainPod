@@ -20,19 +20,25 @@
             <Label Text="How have you been today out of 10?"
                 HorizontalOptions="CenterAndExpand" 
                    FontSize="20"/>
-
-            <Slider Minimum="0" Maximum="10" 
+            <StackLayout>
+                <Slider Minimum="0" Maximum="10" 
                     ValueChanged="Slider_ValueChanged" 
                     x:Name="DayRatingSlider"
-                    Margin="50"/>
+                    Margin="50"
+                    BackgroundColor="BlueViolet"
+                    HeightRequest="50"
+                      />
+            </StackLayout>
 
             <Label x:Name="SliderValue" FontSize="40"
                    HorizontalOptions="Center"
                    Margin="0"/>
 
             <Button x:Name="ContinueBtn" Text="Continue"
-                    HorizontalOptions="Center"
-                    Margin="100"/>
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200"
+                    Margin="10"
+                    BackgroundColor="PaleVioletRed"/>
 
         </StackLayout>
         
