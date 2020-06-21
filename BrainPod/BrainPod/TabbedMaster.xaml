@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.TabbedMaster"
+             xmlns:local="clr-namespace:BrainPod">
+
+
+    <ContentPage Title="Summary" IconImageSource="baseline_history_black_18dp.png">
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#c4ebf2">
+                <Label Text="Summary!"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+ 
+    <ContentPage Title="Check up">
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#c4ebf2">
+                <Label Text="Log how you're feeling"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   Margin="10"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="25"/>
+
+                <Image x:Name="LogoWithoutText"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="How are you feeling out of 10?"
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="20"
+                   TextColor="Black"/>
+                
+
+                
+                <StackLayout>
+                    <Slider Minimum="0" Maximum="10" 
+                    ValueChanged="Slider_ValueChanged" 
+                    x:Name="DayRatingSlider"
+                    Margin="0"
+                    BackgroundColor="White"
+                    HeightRequest="50"
+                    HorizontalOptions="CenterAndExpand"
+                            WidthRequest="350"
+                      />
+                </StackLayout>
+
+                <Label x:Name="SliderValue" FontSize="40"
+                   HorizontalOptions="Center"
+                   Margin="0"/>
+
+                <StackLayout>
+                    <Editor x:Name="JournalEntry"
+                    Placeholder="Why do you feel this way?"
+                    HorizontalOptions="Center"
+                    IsSpellCheckEnabled="True"
+                    IsTextPredictionEnabled="True"
+                    Completed="JournalEntry_Completed"
+                    WidthRequest="350"
+                    HeightRequest="300"
+                    FontAttributes="Bold" 
+                    BackgroundColor="White"
+                    MaxLength="500"/>
+                </StackLayout>
+
+
+                <Button x:Name="ContinueBtn" Text="Continue"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="200"
+                    Margin="10"
+                    BackgroundColor="PaleVioletRed"/>
+
+            </StackLayout>
+
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Account">
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#c4ebf2">
+                <Label Text="Account info page"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                <Button Text="Sign out"
+                        VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    
+</TabbedPage>

@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BrainPod.Slider.xaml", "Slider.xaml", typeof(global::BrainPod.Slider))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BrainPod.TabbedMaster.xaml", "TabbedMaster.xaml", typeof(global::BrainPod.TabbedMaster))]
 
 namespace BrainPod {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Slider.xaml")]
-    public partial class Slider : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("TabbedMaster.xaml")]
+    public partial class TabbedMaster : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Image LogoWithoutText;
@@ -26,14 +26,18 @@ namespace BrainPod {
         private global::Xamarin.Forms.Label SliderValue;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Editor JournalEntry;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button ContinueBtn;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Slider));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TabbedMaster));
             LogoWithoutText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "LogoWithoutText");
             DayRatingSlider = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Slider>(this, "DayRatingSlider");
             SliderValue = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "SliderValue");
+            JournalEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "JournalEntry");
             ContinueBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "ContinueBtn");
         }
     }

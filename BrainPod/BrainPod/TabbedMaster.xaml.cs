@@ -10,22 +10,26 @@ using Xamarin.Forms.Xaml;
 namespace BrainPod
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Slider : ContentPage
+    public partial class TabbedMaster : TabbedPage
     {
-        public Slider()
+        public TabbedMaster()
         {
             InitializeComponent();
-            //hide nav bar
             NavigationPage.SetHasNavigationBar(this, false);
-            //used to load image
-            LogoWithoutText.Source = ImageSource.FromFile("LogoWithoutText.png");
-            ContinueBtn.IsEnabled = false;
+            
         }
 
+        //handles a change in slider value
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             SliderValue.Text = DayRatingSlider.Value.ToString();
-            ContinueBtn.IsEnabled = true;
+            //ContinueBtn.IsEnabled = true;
+        }
+
+        //handles editor text entry is complete
+        private void JournalEntry_Completed(object sender, EventArgs e)
+        {
+            string journalEntry = JournalEntry.Text;
         }
     }
 }
