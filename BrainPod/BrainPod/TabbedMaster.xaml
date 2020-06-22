@@ -11,12 +11,22 @@
     <ContentPage Title="Summary" IconImageSource="baseline_history_black_18dp.png">
         <ContentPage.Content>
             <StackLayout BackgroundColor="#c4ebf2">
-                <Label Text="Summary!"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"/>
+                <Label Text="A summary of your logs!"
+                 VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   Margin="10"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="25"/>
+
+                
+
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
+    
+    
+    
  
     <ContentPage Title="Check up">
         <ContentPage.Content>
@@ -47,17 +57,17 @@
                     BackgroundColor="White"
                     HeightRequest="50"
                     HorizontalOptions="CenterAndExpand"
-                            WidthRequest="350"
+                    WidthRequest="350"
                       />
                 </StackLayout>
 
-                <Label x:Name="SliderValue" FontSize="40"
+                <Label Text="0" x:Name="SliderValue" FontSize="40"
                    HorizontalOptions="Center"
                    Margin="0"/>
 
                 <StackLayout>
                     <Editor x:Name="JournalEntry"
-                    Placeholder="Why do you feel this way?"
+                    Placeholder="Journal your feelings"
                     HorizontalOptions="Center"
                     IsSpellCheckEnabled="True"
                     IsTextPredictionEnabled="True"
@@ -66,11 +76,12 @@
                     HeightRequest="300"
                     FontAttributes="Bold" 
                     BackgroundColor="White"
-                    MaxLength="500"/>
+                    MaxLength="500"
+                    TextChanged="JournalEntry_TextChanged"/>
                 </StackLayout>
 
 
-                <Button x:Name="ContinueBtn" Text="Continue"
+                <Button x:Name="LogBtn" Text="Log Journal"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="200"
                     Margin="10"
@@ -78,6 +89,14 @@
 
             </StackLayout>
 
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Zen Space">
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#c4ebf2">
+                
+            </StackLayout>
         </ContentPage.Content>
     </ContentPage>
 

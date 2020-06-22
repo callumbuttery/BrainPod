@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace BrainPod
@@ -20,6 +21,14 @@ namespace BrainPod
             Logo.Source = ImageSource.FromFile("Logo.png");
             //hide nav bar
             NavigationPage.SetHasNavigationBar(this, false);
+
+            var currentNetworkAccess = Connectivity.NetworkAccess;
+
+            if(currentNetworkAccess != NetworkAccess.Internet)
+            {
+                DisplayAlert("Network Failure", "Please connect to a network to use all features of this app", "Close");
+                return; 
+            }
         }
 
         public void signInClicked(object sender, EventArgs e)
