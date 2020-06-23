@@ -50,20 +50,72 @@ namespace BrainPod
             }
         }
 
+        public bool PasswordValidator()
+        {
+            try
+            {
+                string pass = PasswordInput.Text;
+                if(pass.Length > 6)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                //DisplayAlert("Password Validation", "Failed to validate password, please try again", "Retry");
+
+                return false;
+            }
+        }
+
         async  void Button_Clicked(object sender, EventArgs e)
         {
-            var result = await firebaseClient
-               .Child("RegisteredUsers")
-               .PostAsync(new RegisteredUsers() { Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
-
-            if (result.Object != null)
+            try
             {
-                await DisplayAlert("Registration", "Successfully registered", "Close");
+                if(FirstNameInput.Text == null || SecondNameInput.Text == null)
+                {
+                    await DisplayAlert("Enter credentials", "Please enter a first name and second name", "Retry");
+                    return;
+                }
 
+                bool validEmail = EmailValidator();
+                bool passwordValidation = PasswordValidator();
+                if (validEmail == true && passwordValidation == true)
+                {
+
+                    var result = await firebaseClient
+                       .Child("RegisteredUsers")
+                       .PostAsync(new RegisteredUsers() { UserID = Guid.NewGuid(), Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
+
+                    if (result.Object != null)
+                    {
+                        await DisplayAlert("Registration", "Successfully registered", "Close");
+                        FirstNameInput.Text = null;
+                        SecondNameInput.Text = null;
+                        EmailInput.Text = null;
+                        PasswordInput.Text = null;
+                    }
+                    else
+                    {
+                        await DisplayAlert("Registration", "Failed registration, please try again", "Close");
+                        return;
+
+                    }
+                }
+                else
+                {
+                   await DisplayAlert("Registration failure", "Please ensure you have entered a valid email and a password bigger than 6 characters", "Retry");
+                    return;
+                }
             }
-            else
+            catch
             {
-                await DisplayAlert("Registration", "Failed registration, please try again", "Close");
+                await DisplayAlert("Failed", "The mouse fell off the wheel", "Retry");
+                return;
 
             }
         }
