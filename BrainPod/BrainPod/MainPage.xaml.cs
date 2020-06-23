@@ -29,6 +29,8 @@ namespace BrainPod
                 DisplayAlert("Network Failure", "Please connect to a network to use all features of this app", "Close");
                 return; 
             }
+
+           
         }
 
         public void signInClicked(object sender, EventArgs e)

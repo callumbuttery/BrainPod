@@ -36,7 +36,7 @@
                     HorizontalOptions="CenterAndExpand"
                     BackgroundColor="#e83d31"
                     WidthRequest="200"
-                    Clicked="Validation"/>
+                    Clicked="Button_Clicked"/>
                     
             <Button Text="Login"
                     VerticalOptions="CenterAndExpand"

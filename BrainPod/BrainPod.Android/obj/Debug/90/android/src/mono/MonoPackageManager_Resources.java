@@ -4,7 +4,12 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "BrainPod.Android.dll" comes first in this list. */
 		"BrainPod.Android.dll",
 		"BrainPod.dll",
+		"Firebase.Auth.dll",
+		"Firebase.dll",
 		"FormsViewGroup.dll",
+		"LiteDB.dll",
+		"Newtonsoft.Json.dll",
+		"System.Reactive.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

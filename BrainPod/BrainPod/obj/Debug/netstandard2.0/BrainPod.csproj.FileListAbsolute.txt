@@ -8,9 +8,9 @@ C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\MainPage.
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\Registration.xaml.g.cs
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfoInputs.cache
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfo.cs
-C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.dll
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.pdb
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\TabbedMaster.xaml.g.cs
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\XamlC.stamp
