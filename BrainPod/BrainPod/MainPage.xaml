@@ -51,7 +51,7 @@
             <Button Text="Sign in" 
                 BackgroundColor="IndianRed"
                 HorizontalOptions="CenterAndExpand"
-                    Clicked="signInClicked"/>
+                    Clicked="Button_Clicked"/>
             
         <Button Text="Register"
                 BackgroundColor="Transparent"

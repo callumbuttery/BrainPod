@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BrainPod.Table;
+using Firebase.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,8 +15,10 @@ namespace BrainPod
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
         public MainPage()
         {
+
             InitializeComponent();
             //used to load logo from files
             //Logo.source is created in xaml file
@@ -33,55 +37,45 @@ namespace BrainPod
            
         }
 
-        public void signInClicked(object sender, EventArgs e)
+        //called by button click
+        async void Button_Clicked(object sender, EventArgs e)
         {
-            //receive email from input box
+            //checks if username and password are registered to a user
+          var validuser = await CheckUserExists();
+
+            //if returned user isn't null then load tabbedmaster page
+            //need to add functionality to load users saved journal logs
+            if(validuser != null)
+            {
+                await Navigation.PushAsync(new TabbedMaster());
+            }
+        }
+
+
+
+        private async Task<RegisteredUsers> CheckUserExists()
+        {
             string email = emailEntry.Text;
-            //used to verify if the user has entered a valid email address
-            bool emailVerified;
+            string password = passwordEntry.Text;
+            var getUser = (await firebaseClient
+                .Child("RegisteredUsers")
+                .OnceAsync<RegisteredUsers>()).Where(a => a.Object.Email == email).Where(b => b.Object.Password == password).FirstOrDefault();
 
-            try
+            if(getUser == null)
             {
-                //enter if entry box to enter email isn't blank
-                if (emailEntry.Text != null)
-                {
-                    //emailVerified set to value returned from EmailValidation module
-                    emailVerified = EmailValidation(email);
-
-                    if (emailVerified != true)
-                    {
-                        //display error
-                        DisplayAlert("Email error", "Invalid email format", "Retry");
-                        //return user to re-enter
-                        return;
-                    }
-                    else
-                    {
-                        //DisplayAlert("Email correct", "Correct email format", "Okay");
-                        //Email passes all checks, move onto checking password 
-                        PasswordVerification();
-
-
-                    }
-
-                }
-                else
-                {
-                    //alert user to email error
-                    DisplayAlert("Email error", "Email is blank or null", "Retry");
-                    return;
-                }
-
-
+                await DisplayAlert("Login Failed", "Please check your email and password", "Return");
+                return null;
             }
-            catch
+            else
             {
-                //report code failure to user
-                DisplayAlert("Login Failure", "The mouse fell off its wheel", "Retry");
-                return;
+                var Content = getUser.Object as RegisteredUsers;
+                return Content;
+                
+                
             }
 
-           }
+
+        }
             
 
         //Used to check if email entered is a valid email format
@@ -102,26 +96,7 @@ namespace BrainPod
         //verify password
         public void PasswordVerification()
         {
-            //if password entry box isn't blank enter if
-            if (passwordEntry.Text != null)
-            {
-                string password = passwordEntry.Text;
-
-                //checks for password length
-                if (password.Length < 6)
-                {
-                    //password validation error
-                    DisplayAlert("Password error", "Password must be bigger than 6 characters", "Retry");
-                    //set password entry box to empty
-                    passwordEntry.Text = string.Empty;
-                    return;
-                }
-                else
-                {
-                    //proceed to check users account exists on backend
-                    Navigation.PushAsync(new TabbedMaster());
-                }
-            }
+           
         }
 
         //load registration form
@@ -129,5 +104,7 @@ namespace BrainPod
         {
             Navigation.PushAsync(new Registration());
         }
+
+ 
     }
 }
