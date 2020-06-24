@@ -25,7 +25,7 @@ namespace BrainPod
             //hide nav bar
             NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = new RegisteredUsers();
-            
+
         }
 
         //pop off current page from navigations stack to go back to login
@@ -35,7 +35,7 @@ namespace BrainPod
             Navigation.PopAsync();
         }
 
-
+        //checks email that is entered is a valid email format
         public bool EmailValidator()
         {
             try
@@ -50,12 +50,13 @@ namespace BrainPod
             }
         }
 
+        //checks user has entered a password in a valid format e.g. bigger than 6 characters
         public bool PasswordValidator()
         {
             try
             {
                 string pass = PasswordInput.Text;
-                if(pass.Length > 6)
+                if (pass.Length > 6)
                 {
                     return true;
                 }
@@ -72,43 +73,58 @@ namespace BrainPod
             }
         }
 
-        async  void Button_Clicked(object sender, EventArgs e)
+        async void Button_Clicked(object sender, EventArgs e)
         {
             try
             {
-                if(FirstNameInput.Text == null || SecondNameInput.Text == null)
-                {
-                    await DisplayAlert("Enter credentials", "Please enter a first name and second name", "Retry");
-                    return;
-                }
+                //checks if email is registered to a user
+                var validuser = await CheckUserExists();
 
-                bool validEmail = EmailValidator();
-                bool passwordValidation = PasswordValidator();
-                if (validEmail == true && passwordValidation == true)
+
+                if (validuser == null)
                 {
 
-                    var result = await firebaseClient
-                       .Child("RegisteredUsers")
-                       .PostAsync(new RegisteredUsers() { UserID = Guid.NewGuid(), Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
 
-                    if (result.Object != null)
+
+                    if (FirstNameInput.Text == null || SecondNameInput.Text == null)
                     {
-                        await DisplayAlert("Registration", "Successfully registered", "Close");
-                        FirstNameInput.Text = null;
-                        SecondNameInput.Text = null;
-                        EmailInput.Text = null;
-                        PasswordInput.Text = null;
+                        await DisplayAlert("Enter credentials", "Please enter a first name and second name", "Retry");
+                        return;
+                    }
+
+                    bool validEmail = EmailValidator();
+                    bool passwordValidation = PasswordValidator();
+                    if (validEmail == true && passwordValidation == true)
+                    {
+
+                        var result = await firebaseClient
+                           .Child("RegisteredUsers")
+                           .PostAsync(new RegisteredUsers() { UserID = Guid.NewGuid(), Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
+
+                        if (result.Object != null)
+                        {
+                            await DisplayAlert("Registration", "Successfully registered", "Close");
+                            FirstNameInput.Text = null;
+                            SecondNameInput.Text = null;
+                            EmailInput.Text = null;
+                            PasswordInput.Text = null;
+                        }
+                        else
+                        {
+                            await DisplayAlert("Registration", "Failed registration, please try again", "Close");
+                            return;
+
+                        }
                     }
                     else
                     {
-                        await DisplayAlert("Registration", "Failed registration, please try again", "Close");
+                        await DisplayAlert("Registration failure", "Please ensure you have entered a valid email and a password bigger than 6 characters", "Retry");
                         return;
-
                     }
                 }
                 else
                 {
-                   await DisplayAlert("Registration failure", "Please ensure you have entered a valid email and a password bigger than 6 characters", "Retry");
+                    await DisplayAlert("Registration Failed", "Account with this email already exists", "Retry");
                     return;
                 }
             }
@@ -116,6 +132,28 @@ namespace BrainPod
             {
                 await DisplayAlert("Failed", "The mouse fell off the wheel", "Retry");
                 return;
+
+            }
+        }
+
+        private async Task<RegisteredUsers> CheckUserExists()
+        {
+            string email = EmailInput.Text;
+
+            var getUser = (await firebaseClient
+                .Child("RegisteredUsers")
+                .OnceAsync<RegisteredUsers>()).Where(a => a.Object.Email == email).FirstOrDefault();
+
+            if (getUser == null)
+            {
+                //await DisplayAlert("Login Failed", "Please check your email and password", "Return");
+                return null;
+            }
+            else
+            {
+                var Content = getUser.Object as RegisteredUsers;
+                return Content;
+
 
             }
         }
