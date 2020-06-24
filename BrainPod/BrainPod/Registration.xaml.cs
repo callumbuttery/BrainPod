@@ -78,28 +78,33 @@ namespace BrainPod
             try
             {
                 //checks if email is registered to a user
+                //returns either a null value or the user with the email
                 var validuser = await CheckUserExists();
 
-
+                //enters if user email account doesnt exist as null value has been returned
                 if (validuser == null)
                 {
 
 
-
+                    //checks user has entered values into both entry boxes
                     if (FirstNameInput.Text == null || SecondNameInput.Text == null)
                     {
                         await DisplayAlert("Enter credentials", "Please enter a first name and second name", "Retry");
                         return;
                     }
 
+                    //set to true or false value returned from email validation method
                     bool validEmail = EmailValidator();
+                    //set to true or false value returned from password validation methid
                     bool passwordValidation = PasswordValidator();
                     if (validEmail == true && passwordValidation == true)
                     {
-
+                        //stores response from firebase
                         var result = await firebaseClient
                            .Child("RegisteredUsers")
+                           //posts new user to databse
                            .PostAsync(new RegisteredUsers() { UserID = Guid.NewGuid(), Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
+
 
                         if (result.Object != null)
                         {
@@ -136,6 +141,7 @@ namespace BrainPod
             }
         }
 
+        //used to check if user exists with the email provided
         private async Task<RegisteredUsers> CheckUserExists()
         {
             string email = EmailInput.Text;
