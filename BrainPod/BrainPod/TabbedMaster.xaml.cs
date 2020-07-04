@@ -12,11 +12,18 @@ namespace BrainPod
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TabbedMaster : TabbedPage
     {
-        public TabbedMaster()
+        public TabbedMaster(string userEmail, string userFirstName, string userLastName, Guid userID)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             LogBtn.IsEnabled = false;
+
+            userEmailDisplay.Text = userEmail;
+            userFirstDisplay.Text = userFirstName;
+            userLastDisplay.Text = userLastName;
+            userIDDisplay.Text = userID.ToString();
+
+            WelcomeMessage.Text = ("Welcome back " + userFirstName + "!");
             
         }
 
@@ -44,8 +51,17 @@ namespace BrainPod
             if(SliderChanged == true && JournalEntry.Text != null)
             {
                 LogBtn.IsEnabled = true;
+
+
             }
 
+        }
+
+        //store user data
+        private void LogBtn_Clicked(object sender, EventArgs e)
+        {
+            string sliderVal = DayRatingSlider.Value.ToString();
+            string journalVal = JournalEntry.Text;
         }
     }
 }

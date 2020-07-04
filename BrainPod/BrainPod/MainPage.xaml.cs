@@ -43,11 +43,19 @@ namespace BrainPod
             //checks if username and password are registered to a user
           var validuser = await CheckUserExists();
 
+            
+            
+
             //if returned user isn't null then load tabbedmaster page
             //need to add functionality to load users saved journal logs
             if(validuser != null)
             {
-                await Navigation.PushAsync(new TabbedMaster());
+                string userEmail = validuser.Email;
+                string userFirstName = validuser.FirstName;
+                string userLastName = validuser.LastName;
+                Guid userID = validuser.UserID;
+
+                await Navigation.PushAsync(new TabbedMaster(userEmail, userFirstName, userLastName, userID));
             }
         }
 
@@ -55,17 +63,28 @@ namespace BrainPod
 
         private async Task<RegisteredUsers> CheckUserExists()
         {
+            //get values entered by yser
             string email = emailEntry.Text;
             string password = passwordEntry.Text;
+
+            //show loading wheel on screen
+            LoadingWheel.IsRunning = true;
+
+            //fetch account based on information provided by user
             var getUser = (await firebaseClient
                 .Child("RegisteredUsers")
                 .OnceAsync<RegisteredUsers>()).Where(a => a.Object.Email == email).Where(b => b.Object.Password == password).FirstOrDefault();
 
-            if(getUser == null)
+            //No longer need to await a process, hide loading wheel from screen
+            LoadingWheel.IsRunning = false;
+
+            //if getUser equals null then the user has entered incorrect infomation
+            if (getUser == null)
             {
                 await DisplayAlert("Login Failed", "Please check your email and password", "Return");
                 return null;
             }
+            //valid user, return data, successful login
             else
             {
                 var Content = getUser.Object as RegisteredUsers;

@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace BrainPod.Table
+{
+    class UserLogs
+    {
+        public Guid UserID { get; set; }
+        public string logData { get; set; }
+    }
+}

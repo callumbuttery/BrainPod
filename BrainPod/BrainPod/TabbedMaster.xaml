@@ -11,13 +11,21 @@
     <ContentPage Title="Summary" IconImageSource="baseline_history_black_18dp.png">
         <ContentPage.Content>
             <StackLayout BackgroundColor="#c4ebf2">
-                <Label Text="A summary of your logs!"
+                <Label x:Name="WelcomeMessage"
                  VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
                    Margin="10"
                    FontAttributes="Bold"
                    TextColor="Black"
                    FontSize="25"/>
+                
+                <Label Text="A summary of your logs!"
+                 VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   Margin="10"
+                   FontAttributes="Bold"
+                   TextColor="DimGray"
+                   FontSize="20"/>
 
                 
 
@@ -85,7 +93,8 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="200"
                     Margin="10"
-                    BackgroundColor="PaleVioletRed"/>
+                    BackgroundColor="PaleVioletRed"
+                    Clicked="LogBtn_Clicked"/>
 
             </StackLayout>
 
@@ -106,6 +115,29 @@
                 <Label Text="Account info page"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"/>
+
+                <Label x:Name="userEmailDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+                <Label x:Name="userIDDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+                <Label x:Name="userFirstDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+                <Label x:Name="userLastDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+                
+
                 <Button Text="Sign out"
                         VerticalOptions="Center"
                        HorizontalOptions="Center"/>
