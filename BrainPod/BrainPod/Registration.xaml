@@ -31,6 +31,10 @@
             <local:CustomEntry x:Name="EmailInput" Placeholder="Email" Keyboard="Email" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
             <local:CustomEntry x:Name="PasswordInput" Placeholder="Password" IsPassword="True" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="300"/>
 
+
+            <ActivityIndicator x:Name="LoadingWheel"
+                               IsRunning="False"/>
+            
             <Button Text="Register Account"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand"

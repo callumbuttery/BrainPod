@@ -29,12 +29,16 @@ namespace BrainPod {
         private global::BrainPod.CustomEntry PasswordInput;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ActivityIndicator LoadingWheel;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Registration));
             FirstNameInput = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "FirstNameInput");
             SecondNameInput = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "SecondNameInput");
             EmailInput = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "EmailInput");
             PasswordInput = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "PasswordInput");
+            LoadingWheel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "LoadingWheel");
         }
     }
 }

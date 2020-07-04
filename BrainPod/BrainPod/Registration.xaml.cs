@@ -99,11 +99,17 @@ namespace BrainPod
                     bool passwordValidation = PasswordValidator();
                     if (validEmail == true && passwordValidation == true)
                     {
+                        //Enable loading wheel
+                        LoadingWheel.IsRunning = true;
+
                         //stores response from firebase
                         var result = await firebaseClient
                            .Child("RegisteredUsers")
                            //posts new user to databse
                            .PostAsync(new RegisteredUsers() { UserID = Guid.NewGuid(), Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
+
+                        //Hide loading wheel, no longer need to wait
+                        LoadingWheel.IsRunning = false;
 
 
                         if (result.Object != null)
