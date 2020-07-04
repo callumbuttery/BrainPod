@@ -140,7 +140,8 @@
 
                 <Button Text="Sign out"
                         VerticalOptions="Center"
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="Center"
+                        Clicked="Button_Clicked"/>
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>

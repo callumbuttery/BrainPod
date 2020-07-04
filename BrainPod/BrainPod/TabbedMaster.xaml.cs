@@ -77,6 +77,7 @@ namespace BrainPod
                    //posts new log to databse
                    .PostAsync(new UserLogs() { UserID = userIDDisplay.Text, logData = journalVal, sliderValue = sliderVal });
 
+                //reset values
                 DayRatingSlider.Value = 0;
                 JournalEntry.Text = "";
                 
@@ -87,6 +88,13 @@ namespace BrainPod
             }
             
 
+        }
+
+
+        //Signed out, so return user to login screen
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
         }
     }
 }
