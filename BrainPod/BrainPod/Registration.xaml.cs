@@ -17,8 +17,18 @@ namespace BrainPod
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registration : ContentPage
     {
+        
+        /*STILL NEED TO ADD EMAIL VERIFICATION FUNCTION
+         * !
+         * !
+         * !
+         * !
+         * !
+         * !
+         * !
+         * ! */
+        
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
-        FirebaseAuth authU;
         public Registration()
         {
             InitializeComponent();
