@@ -29,10 +29,27 @@ namespace BrainPod
             userIDDisplay.Text = userID.ToString();
 
             WelcomeMessage.Text = ("Welcome back " + userFirstName + "!");
-            
+
+            //recieve instances of userlogs to display
+            var logInstances = RecieveInstances(userID);
+
         }
 
         bool SliderChanged = false;
+
+        //recieve instances of user logs from firebase
+        private async Task<UserLogs> RecieveInstances(Guid userID)
+        {
+            
+            var getInstance = (await firebaseClient
+            .Child("UserLogs")
+            .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == userID).FirstOrDefault();
+
+            var content = getInstance.Object as UserLogs;
+            return content;
+            
+        }
+
 
         //handles a change in slider value
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -71,11 +88,12 @@ namespace BrainPod
 
             try
             {
+                Guid idAsGuid = new Guid(userIDDisplay.Text);
                 //stores response from firebase
                 var result = await firebaseClient
                    .Child("UserLogs")
                    //posts new log to databse
-                   .PostAsync(new UserLogs() { UserID = userIDDisplay.Text, logData = journalVal, sliderValue = sliderVal });
+                   .PostAsync(new UserLogs() { UserID = idAsGuid, logData = journalVal, sliderValue = sliderVal });
 
                 //reset values
                 DayRatingSlider.Value = 0;

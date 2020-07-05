@@ -121,7 +121,7 @@ namespace BrainPod
         //load registration form
         private void LoadReg(object sender, EventArgs e)
         {
-            //pop off tabbedmaster page from nav stack
+            //pop off tabbedmaster page from nav stacks
             Navigation.PopAsync();
         }
 
