@@ -3,6 +3,7 @@ using Firebase.Database;
 using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,7 @@ namespace BrainPod
         private async Task<UserLogs> RecieveInstances(Guid userID)
         {
             
+
             var getInstance = (await firebaseClient
             .Child("UserLogs")
             .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == userID).FirstOrDefault();
@@ -85,6 +87,8 @@ namespace BrainPod
         {
             string sliderVal = DayRatingSlider.Value.ToString();
             string journalVal = JournalEntry.Text;
+            DateTime dt = DateTime.Now;
+            string convertedDateTime = dt.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
             try
             {
@@ -93,7 +97,7 @@ namespace BrainPod
                 var result = await firebaseClient
                    .Child("UserLogs")
                    //posts new log to databse
-                   .PostAsync(new UserLogs() { UserID = idAsGuid, logData = journalVal, sliderValue = sliderVal });
+                   .PostAsync(new UserLogs() { UserID = idAsGuid, logData = journalVal, sliderValue = sliderVal, logTime = convertedDateTime });
 
                 //reset values
                 DayRatingSlider.Value = 0;

@@ -9,5 +9,7 @@ namespace BrainPod.Table
         public Guid UserID { get; set; }
         public string logData { get; set; }
         public string sliderValue { get; set; }
+        public string logTime { get; set; }
+
     }
 }
