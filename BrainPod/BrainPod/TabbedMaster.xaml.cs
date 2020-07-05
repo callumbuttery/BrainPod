@@ -1,4 +1,5 @@
 ﻿using BrainPod.Table;
+using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
 using System;
@@ -39,16 +40,31 @@ namespace BrainPod
         bool SliderChanged = false;
 
         //recieve instances of user logs from firebase
-        private async Task<UserLogs> RecieveInstances(Guid userID)
+        private async Task<List<UserLogs>> RecieveInstances(Guid userID)
         {
-            
+
 
             var getInstance = (await firebaseClient
             .Child("UserLogs")
-            .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == userID).FirstOrDefault();
+            .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == userID).Select(item => new UserLogs
+            {
+                UserID = item.Object.UserID,
+                logData = item.Object.logData,
+                sliderValue = item.Object.sliderValue,
+                logTime = item.Object.logTime
+            }).ToList(); 
 
-            var content = getInstance.Object as UserLogs;
-            return content;
+            if(getInstance == null)
+            {
+                return null;
+            }
+            else
+            {
+                return new List<UserLogs>(getInstance);
+            }
+
+            //var content = getInstance.Object as UserLogs;
+            //return content;
             
         }
 
