@@ -20,11 +20,12 @@ namespace BrainPod
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TabbedMaster : TabbedPage
     {
+        //new firebaseClient
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
 
+        //list to store logs returned from backend
         List<UserLogs> foundLogs = new List<UserLogs>();
-        List<string> testing = new List<string>();
-
+        
         public TabbedMaster(string userEmail, string userFirstName, string userLastName, Guid userID)
         {
             InitializeComponent();
