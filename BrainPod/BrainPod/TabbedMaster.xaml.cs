@@ -4,8 +4,11 @@ using Firebase.Database;
 using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using System.Reactive.Linq;
+using System.Reactive.Threading.Tasks;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,11 +21,17 @@ namespace BrainPod
     public partial class TabbedMaster : TabbedPage
     {
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
+
+        List<UserLogs> foundLogs = new List<UserLogs>();
+        List<string> testing = new List<string>();
+
         public TabbedMaster(string userEmail, string userFirstName, string userLastName, Guid userID)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             LogBtn.IsEnabled = false;
+
+
 
             //read data passed from login screen
             userEmailDisplay.Text = userEmail;
@@ -32,19 +41,30 @@ namespace BrainPod
 
             WelcomeMessage.Text = ("Welcome back " + userFirstName + "!");
 
+            
             //recieve instances of userlogs to display
-            var logInstances = RecieveInstances(userID);
+            RecieveInstances(userID);
+           
+
+            var noInstances = "No logs were found";
+            string[] testing = new string[] { "this is a test" };
+
+
+            //ListOfLogs.ItemsSource = testing;
+            
 
         }
 
         bool SliderChanged = false;
 
         //recieve instances of user logs from firebase
-        private async Task<List<UserLogs>> RecieveInstances(Guid userID)
+        async void RecieveInstances(Guid userID)
         {
 
-
-            var getInstance = (await firebaseClient
+            /*getInstance will hold a list 
+             * of log instances with the matching userID
+             * */
+            foundLogs = (await firebaseClient
             .Child("UserLogs")
             .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == userID).Select(item => new UserLogs
             {
@@ -52,20 +72,16 @@ namespace BrainPod
                 logData = item.Object.logData,
                 sliderValue = item.Object.sliderValue,
                 logTime = item.Object.logTime
-            }).ToList(); 
 
-            if(getInstance == null)
-            {
-                return null;
-            }
-            else
-            {
-                return new List<UserLogs>(getInstance);
-            }
+            }).ToList();
 
-            //var content = getInstance.Object as UserLogs;
-            //return content;
-            
+            //set listview source to the list returned from backend
+            listOfLogs.ItemsSource = foundLogs;
+
+
+            /*Need to work out a way to display the newest log first
+             * rather than the oldest log first 
+             */
         }
 
 

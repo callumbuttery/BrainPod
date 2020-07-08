@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BrainPod.Table
 {
-    class UserLogs
+    public class UserLogs
     {
         public Guid UserID { get; set; }
         public string logData { get; set; }

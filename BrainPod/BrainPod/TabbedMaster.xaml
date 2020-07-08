@@ -7,8 +7,8 @@
              x:Class="BrainPod.TabbedMaster"
              xmlns:local="clr-namespace:BrainPod">
 
-
-    <ContentPage Title="Summary" IconImageSource="baseline_history_black_18dp.png">
+    
+        <ContentPage Title="Summary" IconImageSource="baseline_history_black_18dp.png">
         <ContentPage.Content>
             <StackLayout BackgroundColor="#c4ebf2">
                 <Label x:Name="WelcomeMessage"
@@ -27,7 +27,26 @@
                    TextColor="DimGray"
                    FontSize="20"/>
 
-                
+                <ListView x:Name="listOfLogs" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White" Margin = "10,10,10,10">
+                                    <Label Text="Log Date" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding logTime}" FontSize="15" HorizontalTextAlignment="Center"/>
+                                    <Label Text="Happiness Rating" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding sliderValue}" FontSize="15" HorizontalTextAlignment="Center"/>
+                                    <Label Text="Log Data" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding logData}" FontSize="15" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                            
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                </ListView>
+
+
 
             </StackLayout>
         </ContentPage.Content>
