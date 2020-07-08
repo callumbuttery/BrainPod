@@ -44,15 +44,6 @@ namespace BrainPod
             
             //recieve instances of userlogs to display
             RecieveInstances(userID);
-           
-
-            var noInstances = "No logs were found";
-            string[] testing = new string[] { "this is a test" };
-
-
-            //ListOfLogs.ItemsSource = testing;
-            
-
         }
 
         bool SliderChanged = false;
@@ -70,22 +61,16 @@ namespace BrainPod
             {
                 UserID = item.Object.UserID,
                 logData = item.Object.logData,
-                sliderValue = item.Object.sliderValue,
+                sliderValue = item.Object.sliderValue,  
                 logTime = item.Object.logTime
 
             }).ToList();
 
-            //set listview source to the list returned from backend
-            listOfLogs.ItemsSource = foundLogs;
+            //order list so most recently added log is positioned first
+            var orderedLogs = foundLogs.OrderByDescending(x => x.logTime).ToList();
 
-
-            /*Need to work out a way to display the newest log first
-             * rather than the oldest log first 
-             */
-
-            /*Need to work out how to add new logs to screen without closing
-             * and reopening the app
-             */
+            //set listview source to the list returned from backend 
+            listOfLogs.ItemsSource = orderedLogs;
         }
 
 
@@ -112,8 +97,6 @@ namespace BrainPod
             if(SliderChanged == true && JournalEntry.Text != null)
             {
                 LogBtn.IsEnabled = true;
-
-
             }
 
         }
@@ -121,13 +104,18 @@ namespace BrainPod
         //store user data
         async void LogBtn_Clicked(object sender, EventArgs e)
         {
+            //get slidervalue
             string sliderVal = DayRatingSlider.Value.ToString();
+            //get journal value
             string journalVal = JournalEntry.Text;
+            //get current date
             DateTime dt = DateTime.Now;
+            //append datetime to correct format
             string convertedDateTime = dt.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
             try
             {
+                //get users accountID
                 Guid idAsGuid = new Guid(userIDDisplay.Text);
                 //stores response from firebase
                 var result = await firebaseClient
@@ -138,6 +126,9 @@ namespace BrainPod
                 //reset values
                 DayRatingSlider.Value = 0;
                 JournalEntry.Text = "";
+
+                //recall recieveInstances module so log screen updates with the newest log
+                RecieveInstances(idAsGuid);
                 
             }
             catch
