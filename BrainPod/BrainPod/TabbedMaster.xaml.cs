@@ -82,6 +82,10 @@ namespace BrainPod
             /*Need to work out a way to display the newest log first
              * rather than the oldest log first 
              */
+
+            /*Need to work out how to add new logs to screen without closing
+             * and reopening the app
+             */
         }
 
 
