@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.PHQ9Test">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to the PHQ9 test, please answer the following questions"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                Margin="0"
+                   HorizontalTextAlignment="Center"
+                   FontSize="25"/>
+            <Label x:Name="DisplayQuestion"
+                   VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+
+            <Button Text="Not at all"
+                    VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Center" 
+                    WidthRequest="250"
+                    BackgroundColor="LightGreen"
+                    Clicked="NotAtAllClicked"
+                    x:Name="Button1"/>
+            
+            <Button Text="Several days"
+                    VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Center" 
+                    WidthRequest="250"
+                    BackgroundColor="LightBlue"
+                    Clicked="SeveralDays"
+                    x:Name="Button2"/>
+            
+            <Button Text="More than half the days"
+                    VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Center"
+                    WidthRequest="250"
+                    BackgroundColor="PaleVioletRed"
+                    Clicked="MoreThanHalf"
+                    x:Name="Button3"/>
+            
+            <Button Text="Nearly everyday"
+                    VerticalOptions="StartAndExpand" 
+                HorizontalOptions="Center"
+                    WidthRequest="250"
+                    BackgroundColor="OrangeRed"
+                    Clicked="NearlyEveryday"
+                    x:Name="Button4"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

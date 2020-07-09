@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.ResultsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Test results"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="ResultsLabel"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   TextColor="OrangeRed"
+                   HorizontalTextAlignment="Center"/>
+            
+            <Label x:Name="WarningLabel"
+                   VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"/>
+
+            <Label x:Name="SuggestionsLabel"
+                   VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"/>
+
+            <Button Text="Return"
+                    VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                    Clicked="Button_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

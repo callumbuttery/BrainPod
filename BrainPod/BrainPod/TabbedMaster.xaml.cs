@@ -72,6 +72,7 @@ namespace BrainPod
 
             //set listview source to the list returned from backend 
             listOfLogs.ItemsSource = orderedLogs;
+
         }
 
 
@@ -146,5 +147,26 @@ namespace BrainPod
         {
             Navigation.PushAsync(new MainPage());
         }
+
+
+
+        /*CODE FOR MIND TEST TAB
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         */
+        public void startTestBtn(object sender, EventArgs e)
+        {
+            //get users accountID
+            Guid idAsGuid = new Guid(userIDDisplay.Text);
+
+            Navigation.PushAsync(new PHQ9Test(idAsGuid));
+        }
+        
     }
 }
