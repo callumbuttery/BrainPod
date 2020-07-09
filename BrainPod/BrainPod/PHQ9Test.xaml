@@ -6,19 +6,23 @@
              mc:Ignorable="d"
              x:Class="BrainPod.PHQ9Test">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#c4ebf2">
             <Label Text="Welcome to the PHQ9 test, please answer the following questions"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
                 Margin="0"
                    HorizontalTextAlignment="Center"
-                   FontSize="25"/>
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+            
             <Label x:Name="DisplayQuestion"
                    VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
                    HorizontalTextAlignment="Center"
                    FontSize="20"
-                   FontAttributes="Bold"/>
+                   FontAttributes="Bold"
+                   />
 
             <Button Text="Not at all"
                     VerticalOptions="StartAndExpand" 

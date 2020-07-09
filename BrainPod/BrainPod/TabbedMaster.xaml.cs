@@ -167,6 +167,12 @@ namespace BrainPod
 
             Navigation.PushAsync(new PHQ9Test(idAsGuid));
         }
-        
+
+        public void TestHistory(object sender, EventArgs e)
+        {
+            //get users accountID
+            Guid idAsGuid = new Guid(userIDDisplay.Text);
+            Navigation.PushAsync(new PHQ9History(idAsGuid));
+        }
     }
 }

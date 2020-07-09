@@ -30,6 +30,7 @@ namespace BrainPod
             //display score to screen
             ResultsLabel.Text = score.ToString();
 
+            //Depending on score, display certain information
             if(score >=0 && score <=4)
             {
                 WarningLabel.Text = "Your test score suggests minimal to no symptoms or signs of depression";
@@ -61,8 +62,6 @@ namespace BrainPod
         public void Button_Clicked(object sender, EventArgs e)
         {
             returnUser();
-
-
         }
 
         public async void returnUser()
@@ -77,6 +76,7 @@ namespace BrainPod
 
                 var Content = getUser.Object as RegisteredUsers;
 
+                //read content data returned from firebase
                 var userEmail = Content.Email;
                 var userFirstName = Content.FirstName;
                 var userLastName = Content.LastName;
