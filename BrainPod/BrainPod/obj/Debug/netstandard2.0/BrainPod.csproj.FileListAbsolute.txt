@@ -12,8 +12,8 @@ C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.pdb
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\TabbedMaster.xaml.g.cs
-C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\PHQ9Test.xaml.g.cs
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ResultsPage.xaml.g.cs
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\PHQ9History.xaml.g.cs
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\XamlC.stamp

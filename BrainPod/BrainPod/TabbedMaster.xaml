@@ -57,7 +57,7 @@
  
     <ContentPage Title="Daily Journal">
         <ContentPage.Content>
-            <StackLayout BackgroundColor="#c4ebf2">
+            <StackLayout BackgroundColor="#B4ECE2">
                 <Label Text="Log how you're feeling"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
@@ -122,7 +122,7 @@
 
     <ContentPage Title="Mind Test">
         <ContentPage.Content>
-            <StackLayout BackgroundColor="#c4ebf2">
+            <StackLayout BackgroundColor="#F7F4EA">
                 <Label Text="Where's your head at?"
                        VerticalOptions="Start" 
                        HorizontalOptions="CenterAndExpand"
@@ -161,6 +161,27 @@
                 HorizontalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
                        />
+
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Sound Room">
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#D7C0DD">
+                <Label Text="Take a second to relax"
+                        VerticalOptions="Start" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       Margin="20"/>
+
+                <Label Text="You can find all your sleep and meditation audio here"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
 
             </StackLayout>
         </ContentPage.Content>
