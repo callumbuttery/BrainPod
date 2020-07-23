@@ -183,6 +183,8 @@
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
 
+                
+
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>

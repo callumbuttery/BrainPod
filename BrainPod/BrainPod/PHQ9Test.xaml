@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BrainPod.PHQ9Test">
+             x:Class="BrainPod.PHQ9Test"
+             Title="PHQ9 Test">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#c4ebf2">
             <Label Text="Welcome to the PHQ9 test, please answer the following questions"

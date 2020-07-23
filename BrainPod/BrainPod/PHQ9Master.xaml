@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.PHQ9Master"
+             Title="PHQ9">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#F7F4EA">
+            <Label Text="Where's your head at?"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       Margin="20"/>
+
+            <Label Text="Take a few minutes out of your busy life to understand where you are mentally"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="20"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+
+            <Label Margin="20"></Label>
+
+            <Button Text="Take the test"
+                        VerticalOptions="Start" 
+                HorizontalOptions="Center"
+                        WidthRequest="150"
+                        BackgroundColor="LightGreen"
+                        Margin="10"
+                        Clicked="startTestBtn"/>
+
+            <Button Text="Test History"
+                        VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                        WidthRequest="150"
+                        BackgroundColor="Orange"
+                        Clicked="TestHistory"/>
+
+            <Label Margin="50"></Label>
+
+            <Label Text="Disclaimer: This is a PHQ-9 questionnaire, a self administered tool used commonly for mental health disorders. Please consult a professional physician if you are concerned about your health"
+                       VerticalOptions="End" 
+                HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

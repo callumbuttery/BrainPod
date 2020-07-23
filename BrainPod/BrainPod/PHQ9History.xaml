@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BrainPod.PHQ9History">
+             x:Class="BrainPod.PHQ9History"
+             Title="PHQ9 History">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#c4ebf2">
             <Label Text="Previous test results"

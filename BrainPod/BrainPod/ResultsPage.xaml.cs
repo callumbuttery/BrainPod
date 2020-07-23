@@ -82,7 +82,7 @@ namespace BrainPod
                 var userLastName = Content.LastName;
                 Guid userID = Content.UserID;
 
-                await Navigation.PushAsync(new TabbedMaster(userEmail, userFirstName, userLastName, userID));
+                await Navigation.PushAsync(new MasterPage(userEmail, userFirstName, userLastName, userID));
             }
             catch
             {

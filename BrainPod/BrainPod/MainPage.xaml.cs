@@ -41,7 +41,7 @@ namespace BrainPod
         async void Button_Clicked(object sender, EventArgs e)
         {
             //checks if username and password are registered to a user
-          var validuser = await CheckUserExists();
+            var validuser = await CheckUserExists();
 
             
             
@@ -55,7 +55,9 @@ namespace BrainPod
                 string userLastName = validuser.LastName;
                 Guid userID = validuser.UserID;
 
-                await Navigation.PushAsync(new TabbedMaster(userEmail, userFirstName, userLastName, userID));
+                //await Navigation.PushAsync(new TabbedMaster(userEmail, userFirstName, userLastName, userID));
+                //User is logged in, load MasterPage
+                await Navigation.PushAsync(new MasterPage(userEmail, userFirstName, userLastName, userID));
             }
         }
 
@@ -122,7 +124,7 @@ namespace BrainPod
         private void LoadReg(object sender, EventArgs e)
         {
             //pop off tabbedmaster page from nav stacks
-            Navigation.PopAsync();
+            Navigation.PushAsync(new Registration());
         }
 
  

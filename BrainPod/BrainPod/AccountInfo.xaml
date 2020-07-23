@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.AccountInfo"
+             Title="Account Info">
+    
+        <ContentPage.Content>
+            <StackLayout BackgroundColor="#c4ebf2">
+                <Label Text="Account info page"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+
+                <Label x:Name="userEmailDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+                <Label x:Name="userIDDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+                <Label x:Name="userFirstDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+                <Label x:Name="userLastDisplay"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="25"
+                       FontAttributes="Bold"/>
+
+
+                <Button Text="Sign out"
+                        VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                        Clicked="SignOut_Clicked"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>

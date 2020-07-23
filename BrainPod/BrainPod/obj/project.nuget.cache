@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pDldYKP0kEfA5gWSyE7e1bjQKmG0G9KgMduHKzEDfIz2tLdrhNJAhXFj8jyXQD59susaRBTELWvszzvF5/xZvQ==",
+  "dgSpecHash": "UDFy9FuZeSmm172bcgzkCOzTOcaBmw8jyYRPeQ2inDeFCZKAzX5CmJL8W5p3PeCSrg/ZkIj9/Q/h1/ZUx293IQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Dis\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xam.plugins.messaging\\5.2.0\\xam.plugins.messaging.5.2.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
   ],

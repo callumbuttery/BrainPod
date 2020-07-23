@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace BrainPod
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -72,6 +73,8 @@ namespace BrainPod
 
             //set listview source to the list returned from backend 
             listOfLogs.ItemsSource = orderedLogs;
+
+            
 
         }
 
@@ -174,5 +177,8 @@ namespace BrainPod
             Guid idAsGuid = new Guid(userIDDisplay.Text);
             Navigation.PushAsync(new PHQ9History(idAsGuid));
         }
+
+
+
     }
 }

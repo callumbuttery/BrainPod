@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.MasterPage"
+             Title="Master">
+    
+    <MasterDetailPage.Master >
+        <ContentPage Title="Master">
+            <ContentPage.Content>
+                <StackLayout>
+                    <Label Text="Navigate!"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Start" />
+
+                    <Button Text="Journal"
+                            VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                            Clicked="Button_Clicked"/>
+
+                    <Button Text="Journal Entries"
+                            VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                            Clicked="Button_Clicked_1"/>
+
+                    <Button Text="PHQ9 Test"
+                            VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                            Clicked="Button_Clicked_2"/>
+
+                    <Button Text="Account "
+                            VerticalOptions="Start" 
+                        HorizontalOptions="Start"
+                            Clicked="Button_Clicked_3"/>
+
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master >
+
+
+    <MasterDetailPage.Detail>
+
+        <ContentPage Padding="10">
+            <ContentPage.Content>
+                <StackLayout>
+                    <Label Text="Detail  Page"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
