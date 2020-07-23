@@ -973,3 +973,4 @@ C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\asset
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\assets\Plugin.Messaging.Abstractions.pdb
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\assets\Plugin.Messaging.dll
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\assets\Plugin.Messaging.dll.mdb
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\journallogo.png

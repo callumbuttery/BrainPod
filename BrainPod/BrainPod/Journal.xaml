@@ -8,7 +8,8 @@
              Title="Daily Journal">
     
         <ContentPage.Content>
-            <StackLayout BackgroundColor="#B4ECE2">
+        <ScrollView>
+            <StackLayout BackgroundColor="#e8e8e8">
                 <Label Text="Log how you're feeling"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
@@ -26,24 +27,25 @@
                    TextColor="Black"/>
 
 
-
+                
                 <StackLayout>
                     <Slider Minimum="0" Maximum="10" 
                     ValueChanged="Slider_ValueChanged" 
                     x:Name="DayRatingSlider"
-                    Margin="0"
-                    BackgroundColor="White"
+                    Margin="0,10"
+                    BackgroundColor="LightSeaGreen"
                     HeightRequest="50"
                     HorizontalOptions="CenterAndExpand"
-                    WidthRequest="350"
-                      />
+                    WidthRequest="350"/>
                 </StackLayout>
+        
 
-                <Label Text="0" x:Name="SliderValue" FontSize="40"
+            <Label Text="0" x:Name="SliderValue" FontSize="40"
                    HorizontalOptions="Center"
                    Margin="0"/>
 
                 <StackLayout>
+                <Frame HasShadow="True" CornerRadius="10" WidthRequest="200" HeightRequest="250" BorderColor="Black" Margin="40,10,40,0">
                     <Editor x:Name="JournalEntry"
                     Placeholder="Journal your feelings"
                     HorizontalOptions="Center"
@@ -53,10 +55,10 @@
                     WidthRequest="350"
                     HeightRequest="300"
                     FontAttributes="Bold" 
-                    BackgroundColor="White"
                     MaxLength="500"
                     TextChanged="JournalEntry_TextChanged"/>
-                </StackLayout>
+                </Frame>
+            </StackLayout>
 
 
                 <Button x:Name="LogBtn" Text="Log Journal"
@@ -67,6 +69,6 @@
                     Clicked="LogBtn_Clicked"/>
 
             </StackLayout>
-
+        </ScrollView>
         </ContentPage.Content>
     </ContentPage>

@@ -8,7 +8,8 @@
              Title="Summary">
 
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#c4ebf2">
+        <ScrollView>
+            <StackLayout BackgroundColor="WhiteSmoke">
             <Label x:Name="WelcomeMessage"
                  VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
@@ -17,27 +18,32 @@
                    TextColor="Black"
                    FontSize="30"/>
 
-            <Label Text="A summary of your logs!"
+            <Label Text="Here you will find a list of your previous journal entries! These entries will include your happiness rating at the time of submitting the journal, as well as the journal data"
                  VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                    Margin="10"
                    FontAttributes="Bold"
                    TextColor="DimGray"
                    FontSize="20"
+                   HorizontalTextAlignment="Center"
                    />
+
+            <Image x:Name="jLogo"
+                   VerticalOptions="StartAndExpand"
+                   HeightRequest="250"/>
 
             <ListView x:Name="listOfLogs" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black">
-                                <StackLayout BackgroundColor="White" >
-                                    <Label Text="Log Date" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding logTime}" FontSize="15" HorizontalTextAlignment="Center"/>
-                                    <Label Text="Happiness Rating" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding sliderValue}" FontSize="15" HorizontalTextAlignment="Center"/>
-                                    <Label Text="Log Data" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding logData}" FontSize="15" HorizontalTextAlignment="Center"/>
+                            <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="LightBlue">
+                                <StackLayout BackgroundColor="LightBlue" >
+                                    <Label Text="Log Date" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding logTime}" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    <Label Text="Happiness Rating" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding sliderValue}" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    <Label Text="Log Data" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding logData}" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
 
                                 </StackLayout>
                             </Frame>
@@ -47,6 +53,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
     

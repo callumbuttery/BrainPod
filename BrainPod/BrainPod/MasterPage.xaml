@@ -5,35 +5,65 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BrainPod.MasterPage"
-             Title="Master">
+             Title="Master"
+             MasterBehavior="Popover">
     
     <MasterDetailPage.Master >
         <ContentPage Title="Master">
             <ContentPage.Content>
-                <StackLayout>
-                    <Label Text="Navigate!"
-                        VerticalOptions="Start" 
-                        HorizontalOptions="Start" />
 
-                    <Button Text="Journal"
-                            VerticalOptions="Start" 
-                        HorizontalOptions="Start"
-                            Clicked="Button_Clicked"/>
 
-                    <Button Text="Journal Entries"
-                            VerticalOptions="Start" 
-                        HorizontalOptions="Start"
-                            Clicked="Button_Clicked_1"/>
+                <StackLayout BackgroundColor="WhiteSmoke">
 
-                    <Button Text="PHQ9 Test"
-                            VerticalOptions="Start" 
-                        HorizontalOptions="Start"
-                            Clicked="Button_Clicked_2"/>
+                    <Label Text="Menu"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                            Margin="10,0,0,0"
+                           Padding="20"
+                           FontSize="30"
+                           FontAttributes="Bold"
+                           TextColor="#a6ddf2"/>
 
-                    <Button Text="Account "
-                            VerticalOptions="Start" 
-                        HorizontalOptions="Start"
-                            Clicked="Button_Clicked_3"/>
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
+                        <Button Text="Logs"
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                            Clicked="Button_Clicked"
+                            BackgroundColor="White"
+                                CornerRadius="10"
+                                WidthRequest="150"
+                            />
+                    </Frame>
+
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSeaGreen">
+                        <Button Text="Journal"
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                            Clicked="Button_Clicked_1"
+                             BackgroundColor="White"
+                                CornerRadius="10"
+                                WidthRequest="150"/>
+                    </Frame>
+
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSalmon">
+                        <Button Text="PHQ9 "
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                            Clicked="Button_Clicked_2"
+                             BackgroundColor="White"
+                               CornerRadius="10"
+                               WidthRequest="150"/>
+                    </Frame>
+
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightPink">
+                        <Button Text="Account "
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                            Clicked="Button_Clicked_3"
+                             BackgroundColor="White"
+                                CornerRadius="10"
+                                WidthRequest="150"/>
+                    </Frame>
 
                 </StackLayout>
             </ContentPage.Content>

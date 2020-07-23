@@ -89,7 +89,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\JournalLogo.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BrainPod\BrainPod.csproj">
       <Project>{26F1EF8B-5144-4A9C-A326-AE5D36836FBC}</Project>

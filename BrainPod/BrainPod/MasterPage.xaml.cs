@@ -34,13 +34,15 @@ namespace BrainPod
             uID = userID;
 
             Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
-
         }
 
        //open journal logs
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
+            Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID))
+            {
+                BarBackgroundColor = Color.LightSkyBlue
+            };
             //hide menu bar
             IsPresented = false;
         }
@@ -48,7 +50,11 @@ namespace BrainPod
         //open journal logger
         private void Button_Clicked_1(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Journal(uEmail,uFirstName,uLastName,uID));
+            Detail = new NavigationPage(new Journal(uEmail,uFirstName,uLastName,uID))
+            {
+                BarBackgroundColor = Color.LightSeaGreen
+               
+            };
             //hide menu bar
             IsPresented = false;
         }
@@ -56,7 +62,10 @@ namespace BrainPod
         //Display PHQ9 master
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new PHQ9Master(uEmail, uFirstName, uLastName, uID));
+            Detail = new NavigationPage(new PHQ9Master(uEmail, uFirstName, uLastName, uID))
+            {
+                BarBackgroundColor = Color.LightSalmon
+            };
             //hide menu bar
             IsPresented = false;
         }
@@ -64,7 +73,10 @@ namespace BrainPod
         //Display account info page
         private void Button_Clicked_3(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new AccountInfo(uEmail, uFirstName, uLastName, uID));
+            Detail = new NavigationPage(new AccountInfo(uEmail, uFirstName, uLastName, uID))
+            {
+                BarBackgroundColor = Color.LightPink
+            };
             //hide menu bar
             IsPresented = false;
 

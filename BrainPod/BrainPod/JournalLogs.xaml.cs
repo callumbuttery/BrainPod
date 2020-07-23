@@ -25,6 +25,7 @@ namespace BrainPod
             InitializeComponent();
 
             Guid userID = uID;
+            jLogo.Source = ImageSource.FromFile("JournalLogo.png");
 
             WelcomeMessage.Text = ("Welcome back " + uFirstName + "!");
 
