@@ -24,6 +24,19 @@
                            FontAttributes="Bold"
                            TextColor="#a6ddf2"/>
 
+
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
+                        <Button Text="Stats"
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                           Clicked="Button_Clicked_4"
+                            BackgroundColor="White"
+                                CornerRadius="10"
+                                WidthRequest="150"
+                            />
+                    </Frame>
+
+
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
                         <Button Text="Logs"
                             VerticalOptions="Center" 

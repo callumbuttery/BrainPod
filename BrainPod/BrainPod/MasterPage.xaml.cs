@@ -33,7 +33,8 @@ namespace BrainPod
             uLastName = userLastName;
             uID = userID;
 
-            Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
+            //Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
+            Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID));
         }
 
        //open journal logs
@@ -82,5 +83,15 @@ namespace BrainPod
 
         }
 
+        //Display stats page
+        private void Button_Clicked_4(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
+            {
+                BarBackgroundColor = Color.LightPink
+            };
+            //hide menu bar
+            IsPresented = false;
+        }
     }
 }

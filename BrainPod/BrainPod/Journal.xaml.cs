@@ -78,6 +78,11 @@ namespace BrainPod
             //append datetime to correct format
             string convertedDateTime = dt.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
+
+            /*Prevent users from entering
+             *slider value and journal to enable log button 
+             before deleting journal*/
+
             if (journalVal != "")
             {
                 try
