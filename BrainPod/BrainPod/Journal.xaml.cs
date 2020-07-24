@@ -31,7 +31,8 @@ namespace BrainPod
             uFirstName = userFirstName;
             uLastName = userLastName;
             uID = userID;
-            
+
+            LogBtn.IsEnabled = false;
         }
 
         //new firebaseClient
@@ -77,25 +78,33 @@ namespace BrainPod
             //append datetime to correct format
             string convertedDateTime = dt.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
-            try
+            if (journalVal != "")
             {
-                //get users accountID
-                //Guid idAsGuid = new Guid(uID);
-                //stores response from firebase
-                var result = await firebaseClient
-                   .Child("UserLogs")
-                   //posts new log to databse
-                   .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sliderVal, logTime = convertedDateTime });
+                try
+                {
+                    //get users accountID
+                    //Guid idAsGuid = new Guid(uID);
+                    //stores response from firebase
+                    var result = await firebaseClient
+                       .Child("UserLogs")
+                       //posts new log to databse
+                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sliderVal, logTime = convertedDateTime });
 
-                //reset values
-                DayRatingSlider.Value = 0;
-                JournalEntry.Text = "";
+                    //reset values
+                    DayRatingSlider.Value = 0;
+                    JournalEntry.Text = "";
 
 
+                }
+                catch
+                {
+                    await DisplayAlert("Failure", "The mouse couldn't add your journal log, please try again", "Retry");
+                }
             }
-            catch
+            else
             {
-                await DisplayAlert("Failure", "The mouse couldn't add your journal log, please try again", "Retry");
+                await DisplayAlert("Failure", "Please make sure your journal entry isn't blank, please try again", "Retry");
+                return;
             }
 
 
