@@ -44,8 +44,9 @@
                                     <Label Text="{Binding sliderValue}" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
                                     <Label Text="Log Data" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
                                     <Label Text="{Binding logData}" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
+                                    <Image x:Name="Emoji" HorizontalOptions="Center" />
 
-                                </StackLayout>
+                                    </StackLayout>
                             </Frame>
                         </ViewCell>
 

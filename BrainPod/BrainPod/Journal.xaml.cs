@@ -16,6 +16,9 @@ namespace BrainPod
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Journal : ContentPage
     {
+        //new firebaseClient
+        public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
+
 
         //globals
         bool SliderChanged = false;
@@ -33,10 +36,8 @@ namespace BrainPod
             uID = userID;
 
             LogBtn.IsEnabled = false;
+            
         }
-
-        //new firebaseClient
-        public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
 
 
         //handles a change in slider value
@@ -44,7 +45,6 @@ namespace BrainPod
         {
             SliderValue.Text = DayRatingSlider.Value.ToString();
             SliderChanged = true;
-
 
         }
 
@@ -98,6 +98,11 @@ namespace BrainPod
                     //reset values
                     DayRatingSlider.Value = 0;
                     JournalEntry.Text = "";
+
+                    //post new slider scores to LogScores table
+                    var ScoreResult = await firebaseClient
+                        .Child("LogScores")
+                        .PostAsync(new LogScores() { UserID = uID, sliderValue = sliderVal });
 
 
                 }

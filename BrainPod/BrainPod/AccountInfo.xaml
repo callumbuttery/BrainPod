@@ -8,34 +8,28 @@
              Title="Account Info">
     
         <ContentPage.Content>
-            <StackLayout BackgroundColor="#c4ebf2">
+            <StackLayout BackgroundColor="White">
                 <Label Text="Account info page"
                        VerticalOptions="Center"
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       FontSize="30"
+                       Margin="0,20,0,20"/>
 
-                <Label x:Name="userEmailDisplay"
+            <Label x:Name="userEmailDisplay"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
-                       Margin="25"
-                       FontAttributes="Bold"/>
-                <Label x:Name="userIDDisplay"
+                   FontSize="20"/>
+            <Label x:Name="userFirstDisplay"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
-                       Margin="25"
-                       FontAttributes="Bold"/>
-                <Label x:Name="userFirstDisplay"
+                   FontSize="20"/>
+            <Label x:Name="userLastDisplay"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
-                       Margin="25"
-                       FontAttributes="Bold"/>
-                <Label x:Name="userLastDisplay"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"
-                       Margin="25"
-                       FontAttributes="Bold"/>
+                   FontSize="20"/>
 
-
-                <Button Text="Sign out"
+            <Button Text="Sign out"
                         VerticalOptions="Center"
                        HorizontalOptions="Center"
                         Clicked="SignOut_Clicked"/>

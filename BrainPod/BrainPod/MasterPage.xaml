@@ -78,6 +78,14 @@
                                 WidthRequest="150"/>
                     </Frame>
 
+                    <Button Text="Sign Out"
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                            Clicked="Button_Clicked_5"
+                                CornerRadius="10"
+                                WidthRequest="150"
+                            Margin="0,10,0,0"/>
+
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>

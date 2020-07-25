@@ -76,7 +76,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new AccountInfo(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.LightPink
+                BarBackgroundColor = Color.LightGray
             };
             //hide menu bar
             IsPresented = false;
@@ -92,6 +92,14 @@ namespace BrainPod
             };
             //hide menu bar
             IsPresented = false;
+        }
+
+        //Control sign out button
+        private void Button_Clicked_5(object sender, EventArgs e)
+        {
+            //Set new current page to the login screen
+            //This way if the user presses the back arrow, the app won't display the MasterPage again
+            App.Current.MainPage = new MainPage();
         }
     }
 }

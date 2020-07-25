@@ -18,6 +18,7 @@ namespace BrainPod
         public PHQ9Master(string uEmail, string uFirstName, string uLastName, Guid uID)
         {
             InitializeComponent();
+            SmileyIcon.Source = ImageSource.FromFile("smiley.png");
             id = uID;
         }
 

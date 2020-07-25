@@ -16,7 +16,7 @@ namespace BrainPod
     {
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
         List<phq9Results> getResults = new List<phq9Results>();
-
+        
         public PHQ9History(Guid idAsGuid)
         {
             InitializeComponent();

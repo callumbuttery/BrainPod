@@ -57,8 +57,6 @@ namespace BrainPod
             //set listview source to the list returned from backend 
             listOfLogs.ItemsSource = orderedLogs;
 
-
-
         }
     }
 }

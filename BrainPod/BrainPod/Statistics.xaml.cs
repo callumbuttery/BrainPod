@@ -15,18 +15,18 @@ namespace BrainPod
     public partial class Statistics : ContentPage
     {
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
-
+        List<LogScores> scores = new List<LogScores>();
 
         public Statistics(string uEmail, string uFirstName, string uLastName, Guid uID)
         {
             InitializeComponent();
 
-            var validuser = getStats(uEmail, uFirstName, uLastName, uID);
+           // var validuser = getStats(uEmail, uFirstName, uLastName, uID);
         }
 
-        public async Task getStats(string uEmail, string uFirstName, string uLastName, Guid uID)
-        {
+        //public async Task<LogScores> getStats(string uEmail, string uFirstName, string uLastName, Guid uID)
+        //{
             
-        }
+        //}
     }
 }
