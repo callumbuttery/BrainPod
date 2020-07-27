@@ -21,12 +21,42 @@ namespace BrainPod
         {
             InitializeComponent();
 
-           // var validuser = getStats(uEmail, uFirstName, uLastName, uID);
+            //Logo.source is created in xaml file
+            Logo.Source = ImageSource.FromFile("Logo.png");
+            //Welcome message with capitalised first name
+            WelcomeMessage.Text = "Welcome to Brain Pod " + char.ToUpper(uFirstName[0]) + uFirstName.Substring(1) + "!";
+            //checks if username and password are registered to a user
+            getLastLogInstance(uID);
+
         }
 
-        //public async Task<LogScores> getStats(string uEmail, string uFirstName, string uLastName, Guid uID)
-        //{
-            
-        //}
+        public async void getLastLogInstance(Guid uID)
+        {
+
+            //fetch last log user had information provided by user
+            var getUser = (await firebaseClient
+                .Child("UserLogs")
+                .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == uID).LastOrDefault();
+
+
+            //if getUser equals null then the user has no log history
+            if (getUser == null)
+            {
+                logDate.Text = "No recent logs found";
+
+            }
+            //valid logs found, return data, successful login
+            else
+            {
+                var Content = getUser.Object as UserLogs;
+                logDate.Text = Content.logTime;
+                logData.Text = Content.logData;
+                happinessRating.Text = Content.sliderValue;
+
+
+            }
+
+
+        }
     }
 }

@@ -28,7 +28,18 @@
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
                    FontSize="20"/>
+            <Label x:Name="logCounter"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                   FontSize="20"
+                   Margin="0,45,0,0"/>
 
+            <Label x:Name="phq9Counter"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                   FontSize="20"
+                   Margin="0,45,0,0"/>
+                
             <Button Text="Sign out"
                         VerticalOptions="Center"
                        HorizontalOptions="Center"

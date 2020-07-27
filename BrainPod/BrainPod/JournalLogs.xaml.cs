@@ -27,7 +27,7 @@ namespace BrainPod
             Guid userID = uID;
             jLogo.Source = ImageSource.FromFile("JournalLogo.png");
 
-            WelcomeMessage.Text = ("Welcome back " + uFirstName + "!");
+            WelcomeMessage.Text = ("Journal Entries");
 
             //recieve instances of userlogs to display
             RecieveInstances(userID);

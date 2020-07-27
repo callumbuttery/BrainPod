@@ -7,9 +7,36 @@
              x:Class="BrainPod.Statistics">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="WelcomeMessage"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   Margin="0,20"/>
+
+            <Image x:Name="Logo"
+               VerticalOptions="StartAndExpand" 
+                   WidthRequest="150"
+                   HeightRequest="150"/>
+
+            <Label Text="Most Recent Log"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="20"
+                   Margin="0,20"/>
+            
+            <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="LightBlue">
+                <StackLayout BackgroundColor="LightBlue" >
+                    <Label Text="Log Date" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="logDate" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
+                    <Label Text="Happiness Rating" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="happinessRating" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
+                    <Label Text="Log Data" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="logData" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
+                    <Image x:Name="Emoji" HorizontalOptions="Center" />
+
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

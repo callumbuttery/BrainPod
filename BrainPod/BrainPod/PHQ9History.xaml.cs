@@ -44,6 +44,7 @@ namespace BrainPod
                 var orderedResults = getResults.OrderByDescending(x => x.submissionDate).ToList();
 
                 listOfResults.ItemsSource = orderedResults;
+
             }
             catch
             {
