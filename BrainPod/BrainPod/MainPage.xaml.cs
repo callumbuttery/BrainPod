@@ -57,7 +57,7 @@ namespace BrainPod
 
                 //await Navigation.PushAsync(new TabbedMaster(userEmail, userFirstName, userLastName, userID));
                 //User is logged in, load MasterPage
-                await Navigation.PushAsync(new MasterPage(userEmail, userFirstName, userLastName, userID));
+                Application.Current.MainPage = new MasterPage(userEmail, userFirstName, userLastName, userID);
             }
         }
 
