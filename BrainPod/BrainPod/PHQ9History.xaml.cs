@@ -45,6 +45,8 @@ namespace BrainPod
 
                 listOfResults.ItemsSource = orderedResults;
 
+                
+
             }
             catch
             {

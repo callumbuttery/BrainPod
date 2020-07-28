@@ -20,7 +20,6 @@ namespace BrainPod
         {
 
             InitializeComponent();
-            //used to load logo from files
             //Logo.source is created in xaml file
             Logo.Source = ImageSource.FromFile("Logo.png");
             //hide nav bar

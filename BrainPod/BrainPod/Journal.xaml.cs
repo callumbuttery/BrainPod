@@ -30,6 +30,9 @@ namespace BrainPod
         public Journal(string userEmail, string userFirstName, string userLastName, Guid userID)
         {
             InitializeComponent();
+
+            
+
             uEmail = userEmail;
             uFirstName = userFirstName;
             uLastName = userLastName;
@@ -43,7 +46,13 @@ namespace BrainPod
         //handles a change in slider value
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            SliderValue.Text = DayRatingSlider.Value.ToString();
+            //get slidervalue
+            double sliderVal = DayRatingSlider.Value;
+            //convert to int and remove decimals
+            int convertedSliderVal = Convert.ToInt32(sliderVal);
+
+
+            SliderValue.Text = convertedSliderVal.ToString();
             SliderChanged = true;
 
         }
@@ -70,7 +79,15 @@ namespace BrainPod
         async void LogBtn_Clicked(object sender, EventArgs e)
         {
             //get slidervalue
-            string sliderVal = DayRatingSlider.Value.ToString();
+            double sliderVal = DayRatingSlider.Value;
+
+            //Convert to int to remove decimals
+            int convertedSliderVal = Convert.ToInt32(sliderVal);
+
+            //convert to string for storage
+            string sConvertedSliderVal = convertedSliderVal.ToString();
+
+
             //get journal value
             string journalVal = JournalEntry.Text;
             //get current date
@@ -93,17 +110,11 @@ namespace BrainPod
                     var result = await firebaseClient
                        .Child("UserLogs")
                        //posts new log to databse
-                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sliderVal, logTime = convertedDateTime });
+                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedDateTime });
 
                     //reset values
                     DayRatingSlider.Value = 0;
                     JournalEntry.Text = "";
-
-                    //post new slider scores to LogScores table
-                    var ScoreResult = await firebaseClient
-                        .Child("LogScores")
-                        .PostAsync(new LogScores() { UserID = uID, sliderValue = sliderVal });
-
 
                 }
                 catch

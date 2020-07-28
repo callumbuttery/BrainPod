@@ -37,7 +37,8 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="350"
                           MaximumTrackColor="Black"
-                            MinimumTrackColor="Red"/>
+                            MinimumTrackColor="Red"
+                            />
                 </StackLayout>
         
 

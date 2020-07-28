@@ -543,7 +543,6 @@ C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\mipmap-xx
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\journallogo.png
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\logo.png
-C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\smiley.png
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\sadsmiley.png
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\uploadflags.txt
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\resolvedassemblies.hash
@@ -976,3 +975,6 @@ C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_Conver
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\middlesmile.png
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\sadsmile.png
+C:\Users\Admin\Dis\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res\drawable\happysmile.png

@@ -6,26 +6,47 @@
              mc:Ignorable="d"
              x:Class="BrainPod.Statistics">
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="WelcomeMessage"
-                VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand" 
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   Margin="0,20"/>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="WelcomeMessage"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand" 
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       Margin="0,20"/>
 
-            <Image x:Name="Logo"
-               VerticalOptions="StartAndExpand" 
-                   WidthRequest="150"
-                   HeightRequest="150"/>
+                <Image x:Name="Logo"
+                   VerticalOptions="StartAndExpand" 
+                       WidthRequest="150"
+                       HeightRequest="150"/>
 
-            <Label Text="Most Recent Log"
-                   VerticalOptions="Start"
-                   HorizontalOptions="CenterAndExpand"
-                   FontSize="20"
-                   Margin="0,20"/>
-            
-            <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="LightBlue">
+                <Frame BorderColor="Black" HasShadow="True" Margin="15,20,15,20" CornerRadius="10">
+                    <StackLayout>
+                        <Label x:Name="overallHappiness"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Center"
+                               FontSize="25"/>
+
+                        <Label x:Name="overallHappinessInt"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Center"
+                               FontSize="40"
+                               FontAttributes="Bold"/>
+
+                        <Image x:Name="HappinessLogo"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Center"
+                               HeightRequest="150"/>
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Most Recent Log"
+                       VerticalOptions="Start"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="20"
+                       />
+
+                <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="LightBlue">
                 <StackLayout BackgroundColor="LightBlue" >
                     <Label Text="Log Date" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
                     <Label x:Name="logDate" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
@@ -38,5 +59,7 @@
                 </StackLayout>
             </Frame>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
+        
 </ContentPage>
