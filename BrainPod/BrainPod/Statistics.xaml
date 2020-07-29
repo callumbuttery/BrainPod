@@ -19,7 +19,7 @@
                    VerticalOptions="StartAndExpand" 
                        WidthRequest="150"
                        HeightRequest="150"/>
-
+                
                 <Frame BorderColor="Black" HasShadow="True" Margin="15,20,15,20" CornerRadius="10">
                     <StackLayout>
                         <Label x:Name="overallHappiness"

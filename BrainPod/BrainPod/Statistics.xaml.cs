@@ -19,7 +19,7 @@ namespace BrainPod
 
         public Statistics(string uEmail, string uFirstName, string uLastName, Guid uID)
         {
-            InitializeComponent();
+            InitializeComponent();           
 
             //Logo.source is created in xaml file
             Logo.Source = ImageSource.FromFile("Logo.png");
@@ -65,22 +65,22 @@ namespace BrainPod
                 //work out average
                 average = total / countLogs;
 
-                overallHappiness.Text = "Your average happiness rating:";
-                overallHappinessInt.Text = average.ToString() + "/10";
+            }
 
-                if(average < 3)
-                {
-                    HappinessLogo.Source = ImageSource.FromFile("sadSmile.png");
-                }
-                if(average >3 & average<6)
-                {
-                    HappinessLogo.Source = ImageSource.FromFile("middleSmile.png");
-                }
-                if(average>6 & average<11)
-                {
-                    HappinessLogo.Source = ImageSource.FromFile("happySmile.png");
-                }
+            overallHappiness.Text = "Your average happiness rating:";
+            overallHappinessInt.Text = average.ToString() + "/10";
 
+            if (average < 3)
+            {
+                HappinessLogo.Source = ImageSource.FromFile("sadSmile.png");
+            }
+            if (average > 3 & average < 6)
+            {
+                HappinessLogo.Source = ImageSource.FromFile("middleSmile.png");
+            }
+            if (average > 6 & average < 11)
+            {
+                HappinessLogo.Source = ImageSource.FromFile("happySmile.png");
             }
 
             //fetch account based on information provided by user
