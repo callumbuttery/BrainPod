@@ -25,23 +25,11 @@
                            TextColor="#a6ddf2"/>
 
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
-                        <Button Text="Stats"
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="PaleVioletRed">
+                        <Button Text="Analysis"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                            Clicked="Button_Clicked_4"
-                            BackgroundColor="White"
-                                CornerRadius="10"
-                                WidthRequest="150"
-                            />
-                    </Frame>
-
-
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
-                        <Button Text="Logs"
-                            VerticalOptions="Center" 
-                        HorizontalOptions="Center"
-                            Clicked="Button_Clicked"
                             BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"
@@ -58,6 +46,17 @@
                                 WidthRequest="150"/>
                     </Frame>
 
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
+                        <Button Text="Logs"
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                            Clicked="Button_Clicked"
+                            BackgroundColor="White"
+                                CornerRadius="10"
+                                WidthRequest="150"
+                            />
+                    </Frame>
+
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSalmon">
                         <Button Text="PHQ9 "
                             VerticalOptions="Center" 
@@ -68,8 +67,19 @@
                                WidthRequest="150"/>
                     </Frame>
 
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#77dd77">
+                        <Button Text="Events"
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                            Clicked="Button_Clicked_6"
+                             BackgroundColor="White"
+                                CornerRadius="10"
+                                WidthRequest="150"/>
+                    </Frame>
+
+
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightPink">
-                        <Button Text="Account "
+                        <Button Text="Account"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                             Clicked="Button_Clicked_3"

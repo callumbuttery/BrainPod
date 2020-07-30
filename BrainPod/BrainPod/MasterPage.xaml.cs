@@ -34,7 +34,10 @@ namespace BrainPod
             uID = userID;
 
             //Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
-            Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID));
+            Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
+            {
+                BarBackgroundColor = Color.PaleVioletRed
+            };
         }
 
        //open journal logs
@@ -88,7 +91,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.LightPink
+                BarBackgroundColor = Color.PaleVioletRed
             };
             //hide menu bar
             IsPresented = false;
@@ -100,6 +103,17 @@ namespace BrainPod
             //Set new current page to the login screen
             //This way if the user presses the back arrow, the app won't display the MasterPage again
             App.Current.MainPage = new MainPage();
+        }
+
+        //Control events button
+        private void Button_Clicked_6(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new Events(uID))
+            {
+                BarBackgroundColor = Color.FromHex("#77dd77")
+            };
+            //hide menu bar
+            IsPresented = false;
         }
     }
 }

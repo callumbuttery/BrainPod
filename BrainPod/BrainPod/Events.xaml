@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:BrainPod"
+             mc:Ignorable="d"
+             x:Class="BrainPod.Events"
+             Title="Events">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+            <Image x:Name="CalendarLogo"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="0,15,0,0"/>
+
+            <Label Text="Worried about an up coming event? We get it! You can add and track your thoughts and feelings towards your events here"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,15"
+                   FontAttributes="Bold"/>
+
+
+                <Frame HasShadow="True" Margin="20,0,20,20" CornerRadius="10" BackgroundColor="#77dd77">
+                <StackLayout>
+                        <Label Text="Select event date"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start"
+                           FontSize="20"/>
+
+                        <DatePicker VerticalOptions="Start"
+                            HorizontalOptions="CenterAndExpand"
+                            x:Name="DatePicker"
+                               FontSize="30" />
+
+                        <local:CustomEntry x:Name="EventTitleBox"
+                           Placeholder="Event name"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start"
+                           WidthRequest="300"
+                           Keyboard="Chat"
+                           HorizontalTextAlignment="Center" 
+                                       Margin="0,0,0,10"/>
+
+                        <local:CustomEntry x:Name="ReasonBox"
+                           Placeholder="Reason"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start"
+                           WidthRequest="300"
+                           HeightRequest="300"
+                           Keyboard="Chat"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Start"/>
+
+                        <Label x:Name="AnxietyLevelDisplay"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start"
+                               Padding="0,10,0,0"
+                               FontSize="20"/>
+                    
+                        <Slider x:Name="AnxietyLevelSlider"
+                                VerticalOptions="Start"
+                                HorizontalOptions="Center"
+                                Margin="0,20,0,10"
+                                MinimumTrackColor="Red"
+                                MaximumTrackColor="Black"
+                                WidthRequest="400"
+                                ValueChanged="AnxietyLevelSlider_ValueChanged"
+                                Minimum="0"
+                                Maximum="10"
+                                />
+
+                        <Label x:Name="WorryingThroughtLabel"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start"
+                               Padding="0,10,0,0"
+                               FontSize="20"/>
+
+                        <Slider x:Name="WorryingThoughtSlider"
+                                VerticalOptions="Start"
+                                HorizontalOptions="Center"
+                                Margin="0,20,0,10"
+                                MinimumTrackColor="Red"
+                                MaximumTrackColor="Black"
+                                WidthRequest="400"
+                                ValueChanged="WorryingThoughtSlider_ValueChanged"
+                                Minimum="0"
+                                Maximum="10"
+                                />
+
+                    </StackLayout>
+            </Frame>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
