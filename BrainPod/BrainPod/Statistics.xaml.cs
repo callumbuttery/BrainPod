@@ -101,6 +101,7 @@ namespace BrainPod
                 logData.Text = getUser.Object.logData;
                 happinessRating.Text = getUser.Object.sliderValue;
 
+
             }
             
 

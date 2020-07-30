@@ -34,10 +34,7 @@ namespace BrainPod
             uID = userID;
 
             //Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
-            Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
-            {
-                BarBackgroundColor = Color.PaleVioletRed
-            };
+            Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID));
         }
 
        //open journal logs
@@ -91,7 +88,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.PaleVioletRed
+                BarBackgroundColor = Color.LightPink
             };
             //hide menu bar
             IsPresented = false;

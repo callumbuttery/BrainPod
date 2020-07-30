@@ -25,7 +25,7 @@
                            TextColor="#a6ddf2"/>
 
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#ff6961">
+                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
                         <Button Text="Stats"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
