@@ -54,3 +54,4 @@ C:\Users\callu\Dis\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.dll
 C:\Users\callu\Dis\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\callu\Dis\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.pdb
 C:\Users\callu\Dis\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
+C:\Users\callu\Dis\BrainPod\BrainPod\obj\Debug\netstandard2.0\EventsMaster.xaml.g.cs

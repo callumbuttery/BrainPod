@@ -10,12 +10,12 @@
         <ScrollView>
             <StackLayout>
 
-            <Image x:Name="CalendarLogo"
+                <Image x:Name="CalendarLogo"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    Margin="0,15,0,0"/>
 
-            <Label Text="Worried about an up coming event? We get it! You can add and track your thoughts and feelings towards your events here"
+                <Label Text="Worried about an up coming event? We get it! You can add and track your thoughts and feelings towards your events here"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" 
                    FontSize="20"
@@ -25,7 +25,7 @@
 
 
                 <Frame HasShadow="True" Margin="20,0,20,20" CornerRadius="10" BackgroundColor="#77dd77">
-                <StackLayout>
+                    <StackLayout>
                         <Label Text="Select event date"
                            HorizontalOptions="Center"
                            VerticalOptions="Start"
@@ -61,7 +61,7 @@
                                VerticalOptions="Start"
                                Padding="0,10,0,0"
                                FontSize="20"/>
-                    
+
                         <Slider x:Name="AnxietyLevelSlider"
                                 VerticalOptions="Start"
                                 HorizontalOptions="Center"
@@ -95,11 +95,14 @@
                         <Button VerticalOptions="Start"
                                 HorizontalOptions="Center"
                                 Text="Add event"
-                                Clicked="Button_Clicked"/>
+                                Clicked="Button_Clicked"
+                                HeightRequest="70"
+                                WidthRequest="150"/>
 
                     </StackLayout>
-            </Frame>
-        </StackLayout>
+                </Frame>
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

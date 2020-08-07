@@ -108,7 +108,7 @@ namespace BrainPod
         //Control events button
         private void Button_Clicked_6(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Events(uID))
+            Detail = new NavigationPage(new EventsMaster(uID))
             {
                 BarBackgroundColor = Color.FromHex("#77dd77")
             };

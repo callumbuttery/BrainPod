@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BrainPod.EventsMaster"
+             Title="Events">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="CalendarLogo"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="0,15,0,0"/>
+
+            <Label Text="Worried about a forth coming event? We get it! Whether it's a social event or a big work event, add and track your feelings until you start to feel positive about it"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   HorizontalTextAlignment="Center"
+                   FontSize="20"
+                   Margin="15,0,15,0"/>
+
+            <Button Text="Add new event"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    HeightRequest="70"
+                    Clicked="Button_Clicked"/>
+            <Button Text="Track events"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    HeightRequest="70"
+                    Margin="0,0,0,55"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
