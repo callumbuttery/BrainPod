@@ -1,16 +1,10 @@
 ﻿using BrainPod.Table;
-using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
-using Java.Util;
-using Plugin.Messaging;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
-using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

@@ -34,7 +34,8 @@
                         <DatePicker VerticalOptions="Start"
                             HorizontalOptions="CenterAndExpand"
                             x:Name="DatePicker"
-                               FontSize="30" />
+                               FontSize="30" 
+                                    />
 
                         <local:CustomEntry x:Name="EventTitleBox"
                            Placeholder="Event name"
@@ -90,6 +91,11 @@
                                 Minimum="0"
                                 Maximum="10"
                                 />
+
+                        <Button VerticalOptions="Start"
+                                HorizontalOptions="Center"
+                                Text="Add event"
+                                Clicked="Button_Clicked"/>
 
                     </StackLayout>
             </Frame>
