@@ -37,8 +37,8 @@ namespace BrainPod
         //pop off current page from navigations stack to go back to login
         public void LoadLogin(object sender, EventArgs e)
         {
-            //pop off
-            Navigation.PopAsync();
+            //set new mainpage to login screen
+            Application.Current.MainPage = new NavigationPage(new MainPage());
         }
 
         //checks email that is entered is a valid email format

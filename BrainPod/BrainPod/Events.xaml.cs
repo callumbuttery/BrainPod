@@ -103,6 +103,14 @@ namespace BrainPod
                 //Display successful log
                 await DisplayAlert("Success!", "New event added successfully","Close");
 
+                EventTitleBox.Text = string.Empty;
+                ReasonBox.Text = string.Empty;
+
+                AnxietyLevelSlider.Value = 0;
+                WorryingThoughtSlider.Value = 0;
+
+
+
             }
             catch
             {
@@ -110,7 +118,7 @@ namespace BrainPod
                 return;
             }
 
-            await Navigation.PushAsync(new Events(UserID));
+            //await Navigation.PushAsync(new Events(UserID));
         }
     }
 }

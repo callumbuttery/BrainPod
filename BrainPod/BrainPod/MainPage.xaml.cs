@@ -123,7 +123,7 @@ namespace BrainPod
         private void LoadReg(object sender, EventArgs e)
         {
             //pop off tabbedmaster page from nav stacks
-            Navigation.PushAsync(new Registration());
+            Application.Current.MainPage = new NavigationPage(new Registration());
         }
 
  
