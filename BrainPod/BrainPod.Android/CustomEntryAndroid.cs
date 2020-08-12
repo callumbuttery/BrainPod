@@ -31,7 +31,7 @@ namespace BrainPod.Droid
                 var gradientDrawable = new GradientDrawable();
                 gradientDrawable.SetCornerRadius(60f);
                 gradientDrawable.SetStroke(5, Android.Graphics.Color.Black);
-                gradientDrawable.SetColor(Android.Graphics.Color.White);
+                gradientDrawable.SetColor(Android.Graphics.Color.GhostWhite);
               
                 
                 Control.SetBackground(gradientDrawable);

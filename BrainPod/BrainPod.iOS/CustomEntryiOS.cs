@@ -25,7 +25,7 @@ namespace BrainPod.iOS
                 Control.Layer.CornerRadius = 20;
                 Control.Layer.BorderWidth = 3f;
                 Control.Layer.BorderColor = Color.Black.ToCGColor();
-                Control.Layer.BackgroundColor = Color.White.ToCGColor();
+                Control.Layer.BackgroundColor = Color.LightSlateGray.ToCGColor();
 
                 Control.LeftView = new UIKit.UIView(new CGRect(0, 0, 10, 0));
                 Control.LeftViewMode = UIKit.UITextFieldViewMode.Always;

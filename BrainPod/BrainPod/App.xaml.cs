@@ -9,6 +9,7 @@ namespace BrainPod
         public App()
         {
             InitializeComponent();
+            Device.SetFlags(new string[] { "Shapes_Experimental" });
             Application.Current.MainPage = new NavigationPage(new MainPage());
         }
 
