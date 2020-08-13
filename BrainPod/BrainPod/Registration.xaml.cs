@@ -127,6 +127,8 @@ namespace BrainPod
                             EmailInput.Text = null;
                             PasswordInput.Text = null;
 
+                            Application.Current.MainPage = new NavigationPage(new MainPage());
+
                             
                         }
                         else
