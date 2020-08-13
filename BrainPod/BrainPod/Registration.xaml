@@ -31,7 +31,7 @@
                    Margin="20"
                    TextColor="#1f96e6"/>
 
-            <Frame HasShadow="True" CornerRadius="10" Margin="20,0,20,0">
+            <Frame HasShadow="True" CornerRadius="10" Margin="20,0,20,0" BackgroundColor="#E0E0E0">
                 <StackLayout >
                     <StackLayout Orientation="Horizontal">
                         <Image Source="https://image.flaticon.com/icons/png/128/1250/1250568.png"

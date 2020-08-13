@@ -39,7 +39,12 @@ namespace BrainPod
             uID = userID;
 
             LogBtn.IsEnabled = false;
-            
+
+
+            DatePicker.MinimumDate = DateTime.Now;
+            DatePicker.MaximumDate = DateTime.Now;
+            DatePicker.Format = "dd-MM-yy";
+
         }
 
 

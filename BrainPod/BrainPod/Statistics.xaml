@@ -82,8 +82,8 @@
                        FontSize="20"
                        />
 
-                <Frame CornerRadius="10" Margin="35,20,35,20" HasShadow="True" BackgroundColor="LightBlue">
-                <StackLayout BackgroundColor="LightBlue" >
+                <Frame CornerRadius="10" Margin="35,20,35,20" HasShadow="True" BackgroundColor="#B8EABD">
+                <StackLayout>
                     <Label Text="Log Date" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
                     <Label x:Name="logDate" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
                     <Label Text="Happiness Rating" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>

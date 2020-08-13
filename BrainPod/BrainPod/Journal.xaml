@@ -9,7 +9,7 @@
     
         <ContentPage.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="#e8e8e8">
+            <StackLayout BackgroundColor="#E0E0E0">
                 <Label Text="Log how you're feeling"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
@@ -18,36 +18,57 @@
                    TextColor="Black"
                    FontSize="25"/>
 
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="https://static.thenounproject.com/png/3480239-200.png"
+                           WidthRequest="50"
+                           HeightRequest="50"
+                           HorizontalOptions="Center"
+                           Margin="80,10,0,0"/>
+                    <DatePicker VerticalOptions="Start"
+                            HorizontalOptions="Center"
+                            x:Name="DatePicker"
+                               FontSize="30"
+                                Margin="0,0,20,0"/>
+                </StackLayout>
+
                 <Image x:Name="LogoWithoutText"
                    HorizontalOptions="Center"/>
 
-                <Label Text="How are you feeling out of 10?"
-                HorizontalOptions="CenterAndExpand" 
-                   FontSize="20"
-                   TextColor="Black"/>
+                <Frame BackgroundColor="White" HasShadow="True" CornerRadius="10" WidthRequest="200" Margin="40,10,40,0">
+                    <StackLayout>
+                        <Label Text="How are you feeling out of 10?"
+                                HorizontalOptions="CenterAndExpand" 
+                                FontSize="19"
+                                TextColor="Black"
+                               FontAttributes="Bold"
+                               />
 
 
-                
+
+                        <StackLayout>
+                            <Slider Minimum="0" Maximum="10" 
+                            ValueChanged="Slider_ValueChanged" 
+                            x:Name="DayRatingSlider"
+                            Margin="0,10"
+                            HeightRequest="50"
+                            HorizontalOptions="CenterAndExpand"
+                            WidthRequest="350"
+                                  MaximumTrackColor="Black"
+                                    MinimumTrackColor="Red"
+                                    />
+
+                            <Label Text="0" x:Name="SliderValue" FontSize="30"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Start"
+                                   Margin="0"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+
+
                 <StackLayout>
-                    <Slider Minimum="0" Maximum="10" 
-                    ValueChanged="Slider_ValueChanged" 
-                    x:Name="DayRatingSlider"
-                    Margin="0,10"
-                    HeightRequest="50"
-                    HorizontalOptions="CenterAndExpand"
-                    WidthRequest="350"
-                          MaximumTrackColor="Black"
-                            MinimumTrackColor="Red"
-                            />
-                </StackLayout>
-        
-
-            <Label Text="0" x:Name="SliderValue" FontSize="40"
-                   HorizontalOptions="Center"
-                   Margin="0"/>
-
-                <StackLayout>
-                <Frame HasShadow="True" CornerRadius="10" WidthRequest="200" HeightRequest="250" BorderColor="Black" Margin="40,10,40,0">
+                <Frame HasShadow="True" CornerRadius="10" WidthRequest="200" HeightRequest="180" Margin="40,10,40,0">
                     <Editor x:Name="JournalEntry"
                     Placeholder="Journal your feelings"
                     HorizontalOptions="Center"
@@ -55,10 +76,12 @@
                     IsTextPredictionEnabled="True"
                     Completed="JournalEntry_Completed"
                     WidthRequest="350"
-                    HeightRequest="300"
+                    HeightRequest="150"
                     FontAttributes="Bold" 
                     MaxLength="500"
-                    TextChanged="JournalEntry_TextChanged"/>
+                    PlaceholderColor="Black"
+                    TextChanged="JournalEntry_TextChanged"
+                            />
                 </Frame>
             </StackLayout>
 
