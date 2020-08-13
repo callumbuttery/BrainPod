@@ -20,7 +20,7 @@
                    FontAttributes="Bold"/>
 
             <Image Source="https://image.flaticon.com/icons/png/512/61/61224.png"
-                   HeightRequest="120"
+                   HeightRequest="100"
                    Margin="0,20,0,0"/>
 
             <Label Text="We look forward to welcoming you to the Brain Pod family!"
@@ -72,6 +72,13 @@
 
 
                     </StackLayout>
+                    <Button Text="Go Back"
+                            BackgroundColor="Transparent"
+                            VerticalOptions="Start"
+                            HorizontalOptions="Center"
+                            Clicked="LoadLogin"
+                            HeightRequest="50"
+                            />
                 </StackLayout>
             </Frame>
 

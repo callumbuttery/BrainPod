@@ -25,14 +25,15 @@
         <Label Text="Use your credentials to login"
                HorizontalOptions="Center"
                VerticalOptions="Start"
-               TextColor="#1f96e6"
+               TextColor="White"
                FontSize="25"
-               Padding="0,10,0,0"/>
+               Padding="0,10,0,0"
+               FontAttributes="Bold"/>
 
         <ActivityIndicator x:Name="LoadingWheel"
                            IsRunning="false"/>
 
-        <Frame HasShadow="True" CornerRadius="15" Margin="30,0,30,30" BackgroundColor="White" BorderColor="Black" >
+        <Frame HasShadow="True" CornerRadius="15" Margin="30,0,30,30" BackgroundColor="White" BorderColor="Black" VerticalOptions="Center">
             <StackLayout>
                 <StackLayout Orientation="Horizontal">
 
