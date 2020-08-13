@@ -18,7 +18,7 @@ namespace BrainPod
             InitializeComponent();           
 
             //Logo.source is created in xaml file
-            Logo.Source = ImageSource.FromFile("Logo.png");
+            //Logo.Source = ImageSource.FromFile("Logo.png");
             //Welcome message with capitalised first name
             WelcomeMessage.Text = "Welcome to Brain Pod " + char.ToUpper(uFirstName[0]) + uFirstName.Substring(1) + "!";
             //checks if username and password are registered to a user
@@ -63,7 +63,8 @@ namespace BrainPod
 
             }
 
-            overallHappiness.Text = "Your average happiness rating:";
+            noOfEntries.Text = getValues.Count.ToString();
+            
             overallHappinessInt.Text = average.ToString() + "/10";
 
             if (average < 3)

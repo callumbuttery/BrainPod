@@ -36,7 +36,7 @@ namespace BrainPod
             //Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
             Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.PaleVioletRed
+                BarBackgroundColor = Color.FromHex("#ff8080")
             };
         }
 
@@ -91,7 +91,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.PaleVioletRed
+                BarBackgroundColor = Color.FromHex("#ff8080")
             };
             //hide menu bar
             IsPresented = false;

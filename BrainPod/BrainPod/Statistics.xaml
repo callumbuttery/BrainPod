@@ -7,37 +7,72 @@
              x:Class="BrainPod.Statistics"
              Title="Analysis">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView BackgroundColor="White">
             <StackLayout>
                 <Label x:Name="WelcomeMessage"
                     VerticalOptions="Start" 
                     HorizontalOptions="CenterAndExpand" 
                        FontSize="28"
-                       FontAttributes="Bold"
+                       
                        Margin="0,20"/>
 
                 <Image x:Name="Logo"
                    VerticalOptions="StartAndExpand" 
-                       WidthRequest="150"
-                       HeightRequest="150"/>
-                
-                <Frame BorderColor="Black" HasShadow="True" Margin="15,20,15,20" CornerRadius="10">
-                    <StackLayout>
-                        <Label x:Name="overallHappiness"
-                               VerticalOptions="Start"
-                               HorizontalOptions="Center"
-                               FontSize="25"/>
+                       WidthRequest="100"
+                       HeightRequest="100"
+                       Source="https://static.thenounproject.com/png/2500248-84.png"/>
 
-                        <Label x:Name="overallHappinessInt"
+                <Label Text="Here you can analyse your statistics based on the activities you have participated in"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Center"
+                       FontSize="21"
+                       HorizontalTextAlignment="Center"
+                       Margin="10,10,10,0"/>
+
+                <Frame HasShadow="True" Margin="35,20,35,20" CornerRadius="10" BackgroundColor="#ededed">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label x:Name="overallHappiness"
+                                   Text="Journal Statistics"
                                VerticalOptions="Start"
                                HorizontalOptions="Center"
-                               FontSize="40"
+                               FontSize="20"
+                               HorizontalTextAlignment="Center"
+                                   FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="Average Happiness: "
+                                   VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                                   FontSize="20"
+                                   Margin="0,20"/>
+
+                            <Label x:Name="overallHappinessInt"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               FontSize="25"
                                FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="Recorded Journal Entries: "
+                                   VerticalOptions="Start"
+                               HorizontalOptions="Center"
+                                   FontSize="20"
+                                   Margin="0,0"/>
+
+                            <Label x:Name="noOfEntries"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               FontSize="25"
+                               FontAttributes="Bold"/>
+                        </StackLayout>
 
                         <Image x:Name="HappinessLogo"
                                VerticalOptions="Start"
                                HorizontalOptions="Center"
-                               HeightRequest="150"/>
+                               HeightRequest="120"/>
                     </StackLayout>
                 </Frame>
 
@@ -47,7 +82,7 @@
                        FontSize="20"
                        />
 
-                <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="LightBlue">
+                <Frame CornerRadius="10" Margin="35,20,35,20" HasShadow="True" BackgroundColor="LightBlue">
                 <StackLayout BackgroundColor="LightBlue" >
                     <Label Text="Log Date" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
                     <Label x:Name="logDate" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>

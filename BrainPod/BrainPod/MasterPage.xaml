@@ -12,8 +12,8 @@
         <ContentPage Title="Master">
             <ContentPage.Content>
 
-
-                <StackLayout BackgroundColor="WhiteSmoke">
+                <ScrollView>
+                    <StackLayout BackgroundColor="WhiteSmoke">
 
                     <Label Text="Menu"
                            HorizontalTextAlignment="Center"
@@ -22,11 +22,15 @@
                            Padding="20"
                            FontSize="30"
                            FontAttributes="Bold"
-                           TextColor="#a6ddf2"/>
+                           TextColor="#e6491f"/>
 
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="PaleVioletRed">
-                        <Button Text="Analysis"
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#ff8080">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://static.thenounproject.com/png/2500248-84.png"
+                                   Margin="0,0,45,0"/>
+                            
+                            <Button Text="Analysis"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                            Clicked="Button_Clicked_4"
@@ -34,20 +38,30 @@
                                 CornerRadius="10"
                                 WidthRequest="150"
                             />
+                        </StackLayout>
                     </Frame>
 
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSeaGreen">
-                        <Button Text="Journal"
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://static.thenounproject.com/png/2079029-200.png"
+                                   Margin="0,0,45,0"/>
+
+                            <Button Text="Journal"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                             Clicked="Button_Clicked_1"
                              BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"/>
+                        </StackLayout>
                     </Frame>
 
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
-                        <Button Text="Logs"
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://static.thenounproject.com/png/3087920-200.png"
+                                   Margin="0,0,45,0"/>
+
+                            <Button Text="Logs"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                             Clicked="Button_Clicked"
@@ -55,37 +69,53 @@
                                 CornerRadius="10"
                                 WidthRequest="150"
                             />
+                        </StackLayout>
                     </Frame>
 
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSalmon">
-                        <Button Text="PHQ9 "
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://static.thenounproject.com/png/1243631-200.png"
+                                   Margin="0,0,45,0"/>
+
+                            <Button Text="PHQ9 "
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                             Clicked="Button_Clicked_2"
                              BackgroundColor="White"
                                CornerRadius="10"
                                WidthRequest="150"/>
+                        </StackLayout>
                     </Frame>
 
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#77dd77">
-                        <Button Text="Events"
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://static.thenounproject.com/png/3480239-200.png"
+                                   Margin="0,0,45,0"/>
+
+                            <Button Text="Events"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                             Clicked="Button_Clicked_6"
                              BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"/>
+                        </StackLayout>
                     </Frame>
 
 
                     <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightPink">
-                        <Button Text="Account"
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="https://static.thenounproject.com/png/3480499-200.png"
+                                   Margin="0,0,45,0"/>
+
+                            <Button Text="Account"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                             Clicked="Button_Clicked_3"
                              BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"/>
+                        </StackLayout>
                     </Frame>
 
                     <Button Text="Sign Out"
@@ -94,9 +124,10 @@
                             Clicked="Button_Clicked_5"
                                 CornerRadius="10"
                                 WidthRequest="150"
-                            Margin="0,10,0,0"/>
+                            Margin="0,10,0,10"/>
 
                 </StackLayout>
+                </ScrollView>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master >
