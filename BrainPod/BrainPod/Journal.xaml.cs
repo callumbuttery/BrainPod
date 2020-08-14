@@ -22,6 +22,7 @@ namespace BrainPod
 
         //globals
         bool SliderChanged = false;
+        string faceClicked;
         string uEmail;
         string uFirstName;
         string uLastName;
@@ -39,7 +40,6 @@ namespace BrainPod
             uID = userID;
 
             LogBtn.IsEnabled = false;
-
 
             DatePicker.MinimumDate = DateTime.Now;
             DatePicker.MaximumDate = DateTime.Now;
@@ -80,6 +80,21 @@ namespace BrainPod
 
         }
 
+        private void sadFaceClicked(object sender, EventArgs e)
+        {
+            faceClicked = "bad";
+        }
+
+        private void middleFaceClicked(object sender, EventArgs e)
+        {
+            faceClicked = "middle";
+        }
+
+        private void happyFaceClicked(object sender, EventArgs e)
+        {
+            faceClicked = "good";
+        }
+
         //store user data
         async void LogBtn_Clicked(object sender, EventArgs e)
         {
@@ -115,7 +130,7 @@ namespace BrainPod
                     var result = await firebaseClient
                        .Child("UserLogs")
                        //posts new log to databse
-                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedDateTime });
+                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedDateTime, mood = faceClicked });
 
                     //reset values
                     DayRatingSlider.Value = 0;

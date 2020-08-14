@@ -68,24 +68,51 @@
 
 
                 <StackLayout>
-                <Frame HasShadow="True" CornerRadius="10" WidthRequest="200" HeightRequest="180" Margin="40,10,40,0">
-                    <Editor x:Name="JournalEntry"
-                    Placeholder="Journal your feelings"
-                    HorizontalOptions="Center"
-                    IsSpellCheckEnabled="True"
-                    IsTextPredictionEnabled="True"
-                    Completed="JournalEntry_Completed"
-                    WidthRequest="350"
-                    HeightRequest="150"
-                    FontAttributes="Bold" 
-                    MaxLength="500"
-                    PlaceholderColor="Black"
-                    TextChanged="JournalEntry_TextChanged"
-                            />
-                </Frame>
-            </StackLayout>
+                    <Frame HasShadow="True" CornerRadius="10" WidthRequest="200" HeightRequest="180" Margin="40,10,40,0">
+                        <Editor x:Name="JournalEntry"
+                        Placeholder="Journal your feelings"
+                        HorizontalOptions="Center"
+                        IsSpellCheckEnabled="True"
+                        IsTextPredictionEnabled="True"
+                        Completed="JournalEntry_Completed"
+                        WidthRequest="350"
+                        HeightRequest="150"
+                        FontAttributes="Bold" 
+                        MaxLength="500"
+                        PlaceholderColor="Black"
+                        TextChanged="JournalEntry_TextChanged"
+                                />
+                    </Frame>
+                </StackLayout>
 
-
+                <StackLayout>
+                    <Frame HasShadow="True" CornerRadius="10" WidthRequest="200"  Margin="40,10,40,0">
+                        <StackLayout>
+                             <StackLayout>
+                                <Label Text="How has your day been?"
+                                       HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center"
+                                       Margin="0,0,0,15"
+                                       FontSize="25"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal">
+                                <ImageButton Source="https://static.thenounproject.com/png/1421319-200.png"
+                                               Margin="10,0,0,0"
+                                               Clicked="sadFaceClicked"
+                                               BackgroundColor="White"/>
+                                <ImageButton Source="https://static.thenounproject.com/png/746248-200.png"
+                                               Margin="15,0,15,0"
+                                               Clicked="middleFaceClicked"
+                                               BackgroundColor="White"/>
+                                <ImageButton Source="https://static.thenounproject.com/png/2541167-200.png"
+                                               Clicked="happyFaceClicked"
+                                               BackgroundColor="White"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                
                 <Button x:Name="LogBtn" Text="Log Journal"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="200"
