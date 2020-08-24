@@ -46,7 +46,7 @@
                         Clicked="SignOut_Clicked"/>
 
 
-            <Label Text ="Icons from flaticon"
+            <Label Text ="Icons from flaticon and thenounproject"
                    HorizontalOptions="Center"
                    />
           

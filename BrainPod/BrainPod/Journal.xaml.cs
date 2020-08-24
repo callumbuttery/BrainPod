@@ -23,6 +23,7 @@ namespace BrainPod
         //globals
         bool SliderChanged = false;
         string faceClicked;
+        bool faceClickedBool = false;
         string uEmail;
         string uFirstName;
         string uLastName;
@@ -32,7 +33,9 @@ namespace BrainPod
         {
             InitializeComponent();
 
-            
+            sadFace.BackgroundColor = Color.White;
+            middleFace.BackgroundColor = Color.White;
+            happyFace.BackgroundColor = Color.White;
 
             uEmail = userEmail;
             uFirstName = userFirstName;
@@ -83,16 +86,28 @@ namespace BrainPod
         private void sadFaceClicked(object sender, EventArgs e)
         {
             faceClicked = "bad";
+            faceClickedBool = true;
+            sadFace.BackgroundColor = Color.FromHex("#FF2C26");
+            middleFace.BackgroundColor = Color.White;
+            happyFace.BackgroundColor = Color.White;
         }
 
         private void middleFaceClicked(object sender, EventArgs e)
         {
             faceClicked = "middle";
+            faceClickedBool = true;
+            sadFace.BackgroundColor = Color.White;
+            middleFace.BackgroundColor = Color.FromHex("#F4FF54");
+            happyFace.BackgroundColor = Color.White;
         }
 
         private void happyFaceClicked(object sender, EventArgs e)
         {
             faceClicked = "good";
+            faceClickedBool = true;
+            sadFace.BackgroundColor = Color.White;
+            middleFace.BackgroundColor = Color.White;
+            happyFace.BackgroundColor = Color.FromHex("#4AFF51");
         }
 
         //store user data
@@ -120,7 +135,7 @@ namespace BrainPod
              *slider value and journal to enable log button 
              before deleting journal*/
 
-            if (journalVal != "")
+            if (journalVal != "" && SliderChanged == true && faceClickedBool == true)
             {
                 try
                 {
@@ -135,6 +150,9 @@ namespace BrainPod
                     //reset values
                     DayRatingSlider.Value = 0;
                     JournalEntry.Text = "";
+                    sadFace.BackgroundColor = Color.White;
+                    middleFace.BackgroundColor = Color.White;
+                    happyFace.BackgroundColor = Color.White;
 
                 }
                 catch

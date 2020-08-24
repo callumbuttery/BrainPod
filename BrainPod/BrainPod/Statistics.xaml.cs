@@ -99,6 +99,21 @@ namespace BrainPod
                 happinessRating.Text = getUser.Object.sliderValue;
 
 
+                switch(getUser.Object.mood)
+                {
+                    case "bad":
+                        Emoji.Source = "https://static.thenounproject.com/png/1421319-200.png";
+                        break;
+                    case "middle":
+                        Emoji.Source = "https://static.thenounproject.com/png/746248-200.png";
+                        break;
+                    case "good":
+                        Emoji.Source = "https://static.thenounproject.com/png/2541167-200.png";
+                        break;
+
+                }
+                
+
             }
             
 

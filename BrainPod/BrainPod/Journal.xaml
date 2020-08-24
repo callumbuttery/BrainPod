@@ -100,16 +100,160 @@
                                 <ImageButton Source="https://static.thenounproject.com/png/1421319-200.png"
                                                Margin="10,0,0,0"
                                                Clicked="sadFaceClicked"
-                                               BackgroundColor="White"/>
+                                               x:Name="sadFace"
+                                             BackgroundColor="White"/>
                                 <ImageButton Source="https://static.thenounproject.com/png/746248-200.png"
                                                Margin="15,0,15,0"
                                                Clicked="middleFaceClicked"
-                                               BackgroundColor="White"/>
+                                               x:Name="middleFace"
+                                             BackgroundColor="White"/>
                                 <ImageButton Source="https://static.thenounproject.com/png/2541167-200.png"
                                                Clicked="happyFaceClicked"
-                                               BackgroundColor="White"/>
+                                               x:Name="happyFace"
+                                             BackgroundColor="White"/>
                             </StackLayout>
                         </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" CornerRadius="10" WidthRequest="200"  Margin="40,10,40,0">
+                        <StackLayout>
+                            <StackLayout>
+                                <Label Text="What've you been up to?"
+                                   HorizontalOptions="Center"
+                                   FontSize="25"
+                                   Margin="0,0,0,15"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/1730628-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Work" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                                
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/3316464-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Study" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/2873592-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Exercise" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/377668-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Stretch" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,10">
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/62507-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Socialise" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/3482923-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Game" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/486916-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Nap" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/1179859-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Watch Movie" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+
+
+
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/1529167-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Alcohol" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/2793853-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Eat out" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/2219349-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Date" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/3498011-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Shopping" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/1902637-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Read" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/2323617-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Clean" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+
+                                <StackLayout Margin="5,0,5,0">
+                                    <ImageButton Source="https://static.thenounproject.com/png/2995904-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60"/>
+                                    <Label Text="Eat Health" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <ImageButton Source="https://static.thenounproject.com/png/2745802-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="60" />
+                                    <Label Text="Early Sleep" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+
+                        </StackLayout>
+
                     </Frame>
                 </StackLayout>
                 

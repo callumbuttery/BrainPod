@@ -29,24 +29,28 @@
                        HorizontalTextAlignment="Center"
                        Margin="10,10,10,0"/>
 
-                <Frame HasShadow="True" Margin="35,20,35,20" CornerRadius="10" BackgroundColor="#ededed">
+                <Frame HasShadow="True" Margin="0,20,0,5" BackgroundColor="#e8f7f6" BorderColor="Black">
                     <StackLayout>
                         <StackLayout>
-                            <Label x:Name="overallHappiness"
+                            <Frame Margin="50,0,50,0" CornerRadius="40" BackgroundColor="LightSeaGreen">
+                                <Label x:Name="overallHappiness"
                                    Text="Journal Statistics"
-                               VerticalOptions="Start"
-                               HorizontalOptions="Center"
-                               FontSize="20"
-                               HorizontalTextAlignment="Center"
-                                   FontAttributes="Bold"/>
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="Center"
+                                   FontSize="25"
+                                   HorizontalTextAlignment="Center"
+                                   FontAttributes="Bold"
+                                   TextColor="White"/>
+                            </Frame>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                             <Label Text="Average Happiness: "
                                    VerticalOptions="Center"
                                HorizontalOptions="Center"
-                                   FontSize="20"
-                                   Margin="0,20"/>
+                                   FontSize="25"
+                                   Margin="0,0"
+                                   TextColor="Black"/>
 
                             <Label x:Name="overallHappinessInt"
                                VerticalOptions="Center"
@@ -55,12 +59,13 @@
                                FontAttributes="Bold"/>
                         </StackLayout>
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
                             <Label Text="Recorded Journal Entries: "
                                    VerticalOptions="Start"
                                HorizontalOptions="Center"
-                                   FontSize="20"
-                                   Margin="0,0"/>
+                                   FontSize="25"
+                                   Margin="0,0"
+                                   TextColor="Black"/>
 
                             <Label x:Name="noOfEntries"
                                VerticalOptions="Center"
@@ -76,25 +81,33 @@
                     </StackLayout>
                 </Frame>
 
-                <Label Text="Most Recent Log"
-                       VerticalOptions="Start"
-                       HorizontalOptions="CenterAndExpand"
-                       FontSize="20"
-                       />
 
-                <Frame CornerRadius="10" Margin="35,20,35,20" HasShadow="True" BackgroundColor="#B8EABD">
-                <StackLayout>
-                    <Label Text="Log Date" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
-                    <Label x:Name="logDate" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
-                    <Label Text="Happiness Rating" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
-                    <Label x:Name="happinessRating" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
-                    <Label Text="Log Data" FontAttributes="Bold" FontSize="25" HorizontalTextAlignment="Center"/>
-                    <Label x:Name="logData" FontSize="20" HorizontalTextAlignment="Center" TextColor="White"/>
-                    <Image x:Name="Emoji" HorizontalOptions="Center" />
 
-                </StackLayout>
-            </Frame>
-        </StackLayout>
+                <Frame Margin="0,10,0,20" HasShadow="True" BackgroundColor="#ffb347" BorderColor="Black">
+                    <StackLayout>
+                        <Frame Margin="50,0,50,20" CornerRadius="40" BackgroundColor="LightSkyBlue">
+                            <Label Text="Most Recent Log"
+                               VerticalOptions="Start"
+                               HorizontalOptions="CenterAndExpand"
+                               FontSize="25"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="Log Date:" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
+                            <Label x:Name="logDate" FontSize="25" HorizontalTextAlignment="Center" TextColor="White"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label Text="Happiness Rating:" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
+                            <Label x:Name="happinessRating" FontSize="25" HorizontalTextAlignment="Center" TextColor="White"/>
+                        </StackLayout>
+                        <Label Text="Log Data" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="logData" FontSize="22" HorizontalTextAlignment="Center" TextColor="White"/>
+                        <Image x:Name="Emoji" HorizontalOptions="Center" />
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
         
