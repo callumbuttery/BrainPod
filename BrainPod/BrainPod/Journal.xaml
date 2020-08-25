@@ -120,35 +120,47 @@
                             <StackLayout>
                                 <Label Text="What've you been up to?"
                                    HorizontalOptions="Center"
-                                   FontSize="25"
-                                   Margin="0,0,0,15"/>
+                                   FontSize="25"                                  Margin="0,0,0,15"
+                                       x:Name="test"/>
                             </StackLayout>
                             
                             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/1730628-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="WorkButton"
+                                                 x:Name="WorkButton"/>
                                     <Label Text="Work" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                                 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/3316464-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="StudyButton"
+                                                 x:Name="StudyButton"/>
                                     <Label Text="Study" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/2873592-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="ExerciseButton"
+                                                 x:Name="ExerciseButton"/>
                                     <Label Text="Exercise" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/377668-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="StretchButton"
+                                                 x:Name="StretchButton"/>
                                     <Label Text="Stretch" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                             </StackLayout>
@@ -160,27 +172,39 @@
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/62507-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="SocialiseButton"
+                                                 x:Name="SocialiseButton"/>
                                     <Label Text="Socialise" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/3482923-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="GameButton"
+                                                 x:Name="GameButton"/>
                                     <Label Text="Game" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/486916-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="NapButton"
+                                                 x:Name="NapButton"/>
                                     <Label Text="Nap" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/1179859-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="MovieButton"
+                                                 x:Name="MovieButton"/>
                                     <Label Text="Watch Movie" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                             </StackLayout>
@@ -194,27 +218,39 @@
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/1529167-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="AlcoholButton"
+                                                 x:Name="AlcoholButton"/>
                                     <Label Text="Alcohol" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/2793853-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="EatOutButton"
+                                                 x:Name="EatOutButton"/>
                                     <Label Text="Eat out" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/2219349-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="DateButton"
+                                                 x:Name="DateButton"/>
                                     <Label Text="Date" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/3498011-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="ShoppingButton"
+                                                 x:Name="ShoppingButton"/>
                                     <Label Text="Shopping" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                             </StackLayout>
@@ -226,27 +262,39 @@
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/1902637-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="ReadButton"
+                                                 x:Name="ReadButton"/>
                                     <Label Text="Read" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/2323617-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="CleanButton"
+                                                 x:Name="CleanButton"/>
                                     <Label Text="Clean" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
 
                                 <StackLayout Margin="5,0,5,0">
                                     <ImageButton Source="https://static.thenounproject.com/png/2995904-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60"/>
-                                    <Label Text="Eat Health" HorizontalTextAlignment="Center"/>
+                                                 HeightRequest="60"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="EatHealthyButton"
+                                                 x:Name="EatHealthyButton"/>
+                                    <Label Text="Eat Healthy" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                                 <StackLayout>
                                     <ImageButton Source="https://static.thenounproject.com/png/2745802-200.png"
                                                  BackgroundColor="White"
-                                                 HeightRequest="60" />
+                                                 HeightRequest="60" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="EarlySleepButton"
+                                                 x:Name="EarlySleepButton"/>
                                     <Label Text="Early Sleep" HorizontalTextAlignment="Center"/>
                                 </StackLayout>
                             </StackLayout>

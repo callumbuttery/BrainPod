@@ -29,6 +29,9 @@ namespace BrainPod
         string uLastName;
         Guid uID;
 
+        //holds users list of daily activites 
+        List<string> listofactivites = new List<string>();
+
         public Journal(string userEmail, string userFirstName, string userLastName, Guid userID)
         {
             InitializeComponent();
@@ -83,6 +86,7 @@ namespace BrainPod
 
         }
 
+        
         private void sadFaceClicked(object sender, EventArgs e)
         {
             faceClicked = "bad";
@@ -131,21 +135,23 @@ namespace BrainPod
             string convertedDateTime = dt.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
 
-            /*Prevent users from entering
-             *slider value and journal to enable log button 
-             before deleting journal*/
-
-            if (journalVal != "" && SliderChanged == true && faceClickedBool == true)
+           
+            //journal must not be blank, slider value must have changed, face clicked must be true and list of activities must not be empty or null
+            //in order to enable the submit log button to prevent blank values being logged
+            if (journalVal != "" && SliderChanged == true && faceClickedBool == true && listofactivites.Count != 0 && listofactivites != null)
             {
                 try
                 {
+                    //convert list of activities to a string for storage
+                    string activitiesString = String.Join(",", listofactivites.ToArray());
+
                     //get users accountID
                     //Guid idAsGuid = new Guid(uID);
                     //stores response from firebase
                     var result = await firebaseClient
                        .Child("UserLogs")
                        //posts new log to databse
-                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedDateTime, mood = faceClicked });
+                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedDateTime, mood = faceClicked, activities = activitiesString});
 
                     //reset values
                     DayRatingSlider.Value = 0;
@@ -153,6 +159,26 @@ namespace BrainPod
                     sadFace.BackgroundColor = Color.White;
                     middleFace.BackgroundColor = Color.White;
                     happyFace.BackgroundColor = Color.White;
+
+                    //reset button colours
+                    WorkButton.BackgroundColor = Color.White; 
+                    StudyButton.BackgroundColor = Color.White;
+                    ExerciseButton.BackgroundColor = Color.White;
+                    StretchButton.BackgroundColor = Color.White;
+                    SocialiseButton.BackgroundColor = Color.White;
+                    GameButton.BackgroundColor = Color.White;
+                    NapButton.BackgroundColor = Color.White;
+                    MovieButton.BackgroundColor = Color.White;
+                    AlcoholButton.BackgroundColor = Color.White;
+                    EatOutButton.BackgroundColor = Color.White;
+                    DateButton.BackgroundColor = Color.White;
+                    ShoppingButton.BackgroundColor = Color.White;
+                    ReadButton.BackgroundColor = Color.White;
+                    CleanButton.BackgroundColor = Color.White;
+                    EatHealthyButton.BackgroundColor = Color.White;
+                    EarlySleepButton.BackgroundColor = Color.White;
+
+
 
                 }
                 catch
@@ -167,6 +193,104 @@ namespace BrainPod
             }
 
 
+        }
+
+        //add the users activities for that day to a list
+        private void addActivityToList(object sender, EventArgs e)
+        {
+            //read button ID to work out which activity the user has clicked
+            var buttonID = sender as ImageButton;
+            string activityType = buttonID.ClassId;
+
+            //stores the colour returned from validateActivity
+            string returnValue = "Color.White";
+
+            
+            //reads ID of whatever button has been clicked
+            switch(buttonID.ClassId)
+            {
+                case "WorkButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "StudyButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "ExerciseButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "StretchButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "SocialiseButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "GameButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "NapButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "MovieButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "AlcoholButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "EatOutButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "ShoppingButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "DateButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "ReadButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "CleanButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "EatHealthyButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+                case "EarlySleepButton":
+                    returnValue = validateActivity(activityType);
+                    break;
+
+            }
+
+            if(returnValue == "Color.White")
+            {
+                buttonID.BackgroundColor = Color.White;
+            }
+            else
+            {
+                buttonID.BackgroundColor = Color.FromHex("#4AFF51");
+            }
+        }
+
+        //used to check if the activity has already been added to the list to prevent duplicates
+        private string validateActivity(string activityType)
+        {
+
+            //if activity not in list then add to list
+            if (!listofactivites.Contains(activityType))
+            {
+                //add to list
+                listofactivites.Add(activityType);
+                //return value to update button background to show its been clicked and added
+                return "#4AFF51";
+
+                
+            }
+            else
+            {
+                //remove from list as button has been pressed to deselect it
+                listofactivites.Remove(activityType);
+                //return value to update update button background to show its been clicked and added
+                return "Color.White";
+            }
         }
     }
 }
