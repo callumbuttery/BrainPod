@@ -1,6 +1,7 @@
 ﻿using BrainPod.Table;
 using Firebase.Database;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using Xamarin.Forms;
@@ -94,8 +95,102 @@ namespace BrainPod
             //valid logs found, return data, successful login
             else
             {
-                logDate.Text = getUser.Object.logTime;
-                logData.Text = getUser.Object.logData;
+                //receive activities
+                var activites = getUser.Object.activities;
+                List<string> activitesList = new List<string>();
+
+                //split string on comma value(s)
+                activitesList = activites.Split(',').ToList<string>();
+
+                //change background colour of activity icon to show it was selected by the user in the original journal
+                if (activitesList.Contains("WorkButton"))
+                {
+                    WorkButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    WorkFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("StudyButton"))
+                {
+                    StudyButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    StudyFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("ExerciseButton"))
+                {
+                    ExerciseButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    ExerciseFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("StretchButton"))
+                {
+                    StretchButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    StretchFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("SocialiseButton"))
+                {
+                    SocialiseButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    SocialFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("GameButton"))
+                {
+                    GameButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    GameFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("NapButton"))
+                {
+                    NapButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    NapFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("MovieButton"))
+                {
+                    MovieButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    MovieFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("AlcoholButton"))
+                {
+                    AlcoholButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    AlcoholFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("EatOutButton"))
+                {
+                    EatOutButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    EatOutFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("ShoppingButton"))
+                {
+                    ShoppingButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    ShoppingFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("DateButton"))
+                {
+                    DateButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    DateFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("ReadButton"))
+                {
+                    ReadButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    ReadFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("CleanButton"))
+                {
+                    CleanButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    CleanFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("EatHealthyButton"))
+                {
+                    EatHealthyButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    EatHealthyFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+                if (activitesList.Contains("EarlySleepButton"))
+                {
+                    EarlySleepButton.BackgroundColor = Color.FromHex("#4AFF51");
+                    EarlySleepFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                }
+
+                //find space in datetime (logtime)
+                int spaceIndex = getUser.Object.logTime.IndexOf(" ");
+                //remove all chars after found space
+                string trimmedDateTime = getUser.Object.logTime.Substring(0, spaceIndex);
+                //display
+                logDate.Text = trimmedDateTime;
+                logData.Text = '"' + getUser.Object.logData + '"';
                 happinessRating.Text = getUser.Object.sliderValue;
 
 
@@ -116,6 +211,11 @@ namespace BrainPod
 
             }
             
+
+        }
+
+        public void addActivityToList(object sender, EventArgs  e)
+        {
 
         }
     }

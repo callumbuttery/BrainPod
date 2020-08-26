@@ -15,12 +15,13 @@
                        FontSize="28"
                        
                        Margin="0,20"/>
-
-                <Image x:Name="Logo"
+                <Frame CornerRadius="100" BackgroundColor="Yellow" Margin="140,0,140,0">
+                    <Image x:Name="Logo"
                    VerticalOptions="StartAndExpand" 
                        WidthRequest="100"
                        HeightRequest="100"
                        Source="https://static.thenounproject.com/png/2500248-84.png"/>
+                </Frame>
 
                 <Label Text="Here you can analyse your statistics based on the activities you have participated in"
                        VerticalOptions="Start"
@@ -29,12 +30,12 @@
                        HorizontalTextAlignment="Center"
                        Margin="10,10,10,0"/>
 
-                <Frame HasShadow="True" Margin="0,20,0,5" BackgroundColor="#e8f7f6" BorderColor="Black">
+                <Frame HasShadow="True" Margin="20,20,20,5" BackgroundColor="White" BorderColor="Black" CornerRadius="40">
                     <StackLayout>
                         <StackLayout>
                             <Frame Margin="50,0,50,0" CornerRadius="40" BackgroundColor="LightSeaGreen">
                                 <Label x:Name="overallHappiness"
-                                   Text="Journal Statistics"
+                                   Text="Journal Stats"
                                    VerticalOptions="Start"
                                    HorizontalOptions="Center"
                                    FontSize="25"
@@ -83,7 +84,7 @@
 
 
 
-                <Frame Margin="0,10,0,20" HasShadow="True" BackgroundColor="#ffb347" BorderColor="Black">
+                <Frame Margin="20,10,20,20" HasShadow="True" BackgroundColor="White" CornerRadius="40">
                     <StackLayout>
                         <Frame Margin="50,0,50,20" CornerRadius="40" BackgroundColor="LightSkyBlue">
                             <Label Text="Most Recent Log"
@@ -93,17 +94,286 @@
                                FontAttributes="Bold"
                                TextColor="White"/>
                         </Frame>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Label Text="Log Date:" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
-                            <Label x:Name="logDate" FontSize="25" HorizontalTextAlignment="Center" TextColor="White"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image x:Name="Emoji" HorizontalOptions="Center" Margin="30,0,0,0"/>
+                            <Label Text="-" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="30,0,0,0"/>
+                            <Label x:Name="logDate" FontSize="25" HorizontalTextAlignment="Center" TextColor="LightGreen" VerticalOptions="Center"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Image Source="https://cdn4.iconfinder.com/data/icons/emoji-18/61/2-128.png" HeightRequest="20" WidthRequest="20"/>
                             <Label Text="Happiness Rating:" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
-                            <Label x:Name="happinessRating" FontSize="25" HorizontalTextAlignment="Center" TextColor="White"/>
+                            <Label x:Name="happinessRating" FontSize="25" HorizontalTextAlignment="Center" TextColor="Black"/>
                         </StackLayout>
-                        <Label Text="Log Data" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
-                        <Label x:Name="logData" FontSize="22" HorizontalTextAlignment="Center" TextColor="White"/>
-                        <Image x:Name="Emoji" HorizontalOptions="Center" />
+                        <Label x:Name="logData" FontSize="22" HorizontalTextAlignment="Center" TextColor="Black" Margin="0,10,0,10"/>
+
+
+
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="WorkFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/1730628-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="WorkButton"
+                                                 x:Name="WorkButton"/>
+
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Work" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="5,0,5,0">
+                                <StackLayout>
+                                    <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="StudyFrame">
+                                        <StackLayout>
+                                            <ImageButton Source="https://static.thenounproject.com/png/3316464-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="StudyButton"
+                                                 x:Name="StudyButton"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Label Text="Study" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Margin="5,0,5,0">
+                                <StackLayout>
+                                    <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="ExerciseFrame">
+                                        <StackLayout>
+                                            <ImageButton Source="https://static.thenounproject.com/png/2873592-200.png"
+                                                     BackgroundColor="White"
+                                                     HeightRequest="40"
+                                                     Clicked="addActivityToList"
+                                                     ClassId="ExerciseButton"
+                                                     x:Name="ExerciseButton"/>
+
+                                        </StackLayout>
+                                    </Frame>
+                                    <Label Text="Exercise" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="StretchFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/377668-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="StretchButton"
+                                                 x:Name="StretchButton"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Stretch" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,10">
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="SocialFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/62507-200.png"
+                                                                 BackgroundColor="White"
+                                                                 HeightRequest="40"
+                                                                 Clicked="addActivityToList"
+                                                                 ClassId="SocialiseButton"
+                                                                 x:Name="SocialiseButton"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Socialise" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Margin="5,0,5,0">
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="GameFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/3482923-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="GameButton"
+                                                 x:Name="GameButton"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Game" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="5,0,5,0">
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="NapFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/486916-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="NapButton"
+                                                 x:Name="NapButton"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Nap" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="MovieFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/1179859-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="MovieButton"
+                                                 x:Name="MovieButton"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Watch Movie" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+
+
+
+
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="AlcoholFrame">
+                                    <StackLayout>
+                                        <StackLayout>
+                                            <ImageButton Source="https://static.thenounproject.com/png/1529167-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="AlcoholButton"
+                                                 x:Name="AlcoholButton"/>
+
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                </Frame>
+                                <Label Text="Alcohol" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="5,0,5,0">
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="EatOutFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/2793853-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="EatOutButton"
+                                                 x:Name="EatOutButton"/>
+
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Eat out" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="5,0,5,0">
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="DateFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/2219349-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="DateButton"
+                                                 x:Name="DateButton"/>
+
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Date" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="ShoppingFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/3498011-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="ShoppingButton"
+                                                 x:Name="ShoppingButton"/>
+
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Shopping" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="ReadFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/1902637-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="ReadButton"
+                                                 x:Name="ReadButton"/>
+
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Read" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="5,0,5,0">
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="CleanFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/2323617-200.png"
+                                                     BackgroundColor="White"
+                                                     HeightRequest="40" 
+                                                     Clicked="addActivityToList"
+                                                     ClassId="CleanButton"
+                                                     x:Name="CleanButton"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Clean" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+
+                            <StackLayout Margin="5,0,5,0">
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="EatHealthyFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/2995904-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40"
+                                                 Clicked="addActivityToList"
+                                                 ClassId="EatHealthyButton"
+                                                 x:Name="EatHealthyButton"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Eat Healthy" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <StackLayout>
+                                <Frame HasShadow="True" CornerRadius="100" HeightRequest="40" WidthRequest="40" x:Name="EarlySleepFrame">
+                                    <StackLayout>
+                                        <ImageButton Source="https://static.thenounproject.com/png/2745802-200.png"
+                                                 BackgroundColor="White"
+                                                 HeightRequest="40" 
+                                                 Clicked="addActivityToList"
+                                                 ClassId="EarlySleepButton"
+                                                 x:Name="EarlySleepButton"/>
+
+                                    </StackLayout>
+                                </Frame>
+                                <Label Text="Early Sleep" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
 
                     </StackLayout>
                 </Frame>
