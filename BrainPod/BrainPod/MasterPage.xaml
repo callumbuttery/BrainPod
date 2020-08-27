@@ -25,7 +25,7 @@
                            TextColor="#e6491f"/>
 
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#ff8080">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/2500248-84.png"
                                    Margin="0,0,45,0"/>
@@ -41,7 +41,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSeaGreen">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/2079029-200.png"
                                    Margin="0,0,45,0"/>
@@ -56,7 +56,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSkyBlue">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/3087920-200.png"
                                    Margin="0,0,45,0"/>
@@ -72,7 +72,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightSalmon">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/1243631-200.png"
                                    Margin="0,0,45,0"/>
@@ -87,7 +87,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#77dd77">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/3480239-200.png"
                                    Margin="0,0,45,0"/>
@@ -103,7 +103,7 @@
                     </Frame>
 
 
-                    <Frame HasShadow="True" HeightRequest="40" BackgroundColor="LightPink">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/3480499-200.png"
                                    Margin="0,0,45,0"/>

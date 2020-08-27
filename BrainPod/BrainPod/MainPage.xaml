@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              x:Class="BrainPod.MainPage">
 
-    <StackLayout BackgroundColor="#b8e3ea">
+    <StackLayout BackgroundColor="#7C40A9">
         <!-- Place new controls here -->
         <Label Text=" " 
                TextColor="Black"
@@ -25,7 +25,7 @@
         <Label Text="Use your credentials to login"
                HorizontalOptions="Center"
                VerticalOptions="Start"
-               TextColor="#1f96e6"
+               TextColor="White"
                FontSize="25"
                Padding="0,10,0,0"
                FontAttributes="Bold"/>
@@ -71,14 +71,14 @@
 
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Sign in" 
-                    BackgroundColor="#e6491f"
+                    BackgroundColor="#FF99FF"
                     HorizontalOptions="CenterAndExpand"
                         Clicked="Button_Clicked"
                         TextColor="Black"
                             HeightRequest="40"/>
 
                     <Button Text="Register"
-                    BackgroundColor="#b8e3ea"
+                    BackgroundColor="White"
                     HorizontalOptions="CenterAndExpand"
                     TextColor="Black"
                     Clicked="LoadReg"

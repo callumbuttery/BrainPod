@@ -36,7 +36,7 @@ namespace BrainPod
             //Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
             Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.FromHex("#ff8080")
+                BarBackgroundColor = Color.FromHex("#7C40A9")
             };
         }
 
@@ -45,7 +45,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.LightSkyBlue
+                BarBackgroundColor = Color.FromHex("#7C40A9")
             };
             //hide menu bar
             IsPresented = false;
@@ -56,8 +56,8 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new Journal(uEmail,uFirstName,uLastName,uID))
             {
-                BarBackgroundColor = Color.LightSeaGreen
-               
+                BarBackgroundColor = Color.FromHex("#7C40A9")
+
             };
             //hide menu bar
             IsPresented = false;
@@ -68,7 +68,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new PHQ9Master(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.LightSalmon
+                BarBackgroundColor = Color.FromHex("#7C40A9")
             };
             //hide menu bar
             IsPresented = false;
@@ -79,7 +79,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new AccountInfo(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.LightGray
+                BarBackgroundColor = Color.FromHex("#7C40A9")
             };
             //hide menu bar
             IsPresented = false;
@@ -91,7 +91,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
             {
-                BarBackgroundColor = Color.FromHex("#ff8080")
+                BarBackgroundColor = Color.FromHex("#7C40A9")
             };
             //hide menu bar
             IsPresented = false;
@@ -110,7 +110,7 @@ namespace BrainPod
         {
             Detail = new NavigationPage(new EventsMaster(uID))
             {
-                BarBackgroundColor = Color.FromHex("#77dd77")
+                BarBackgroundColor = Color.FromHex("#7C40A9")
             };
             //hide menu bar
             IsPresented = false;

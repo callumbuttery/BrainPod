@@ -105,83 +105,83 @@ namespace BrainPod
                 //change background colour of activity icon to show it was selected by the user in the original journal
                 if (activitesList.Contains("WorkButton"))
                 {
-                    WorkButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    WorkFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    WorkButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    WorkFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("StudyButton"))
                 {
-                    StudyButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    StudyFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    StudyButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    StudyFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("ExerciseButton"))
                 {
-                    ExerciseButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    ExerciseFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    ExerciseButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    ExerciseFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("StretchButton"))
                 {
-                    StretchButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    StretchFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    StretchButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    StretchFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("SocialiseButton"))
                 {
-                    SocialiseButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    SocialFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    SocialiseButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    SocialFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("GameButton"))
                 {
-                    GameButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    GameFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    GameButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    GameFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("NapButton"))
                 {
-                    NapButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    NapFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    NapButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    NapFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("MovieButton"))
                 {
-                    MovieButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    MovieFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    MovieButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    MovieFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("AlcoholButton"))
                 {
-                    AlcoholButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    AlcoholFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    AlcoholButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    AlcoholFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("EatOutButton"))
                 {
-                    EatOutButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    EatOutFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    EatOutButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    EatOutFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("ShoppingButton"))
                 {
-                    ShoppingButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    ShoppingFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    ShoppingButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    ShoppingFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("DateButton"))
                 {
-                    DateButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    DateFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    DateButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    DateFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("ReadButton"))
                 {
-                    ReadButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    ReadFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    ReadButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    ReadFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("CleanButton"))
                 {
-                    CleanButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    CleanFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    CleanButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    CleanFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("EatHealthyButton"))
                 {
-                    EatHealthyButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    EatHealthyFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    EatHealthyButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    EatHealthyFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
                 if (activitesList.Contains("EarlySleepButton"))
                 {
-                    EarlySleepButton.BackgroundColor = Color.FromHex("#4AFF51");
-                    EarlySleepFrame.BackgroundColor = Color.FromHex("#4AFF51");
+                    EarlySleepButton.BackgroundColor = Color.FromHex("#FF99FF");
+                    EarlySleepFrame.BackgroundColor = Color.FromHex("#FF99FF");
                 }
 
                 //find space in datetime (logtime)
