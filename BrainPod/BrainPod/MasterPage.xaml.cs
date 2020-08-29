@@ -34,7 +34,7 @@ namespace BrainPod
             uID = userID;
 
             //Detail = new NavigationPage(new JournalLogs(uEmail, uFirstName, uLastName, uID));
-            Detail = new NavigationPage(new Statistics(uEmail, uFirstName, uLastName, uID))
+            Detail = new NavigationPage(new WelcomeScreen(uEmail, uFirstName, uLastName, uID))
             {
                 BarBackgroundColor = Color.FromHex("#7C40A9")
             };
@@ -109,6 +109,17 @@ namespace BrainPod
         private void Button_Clicked_6(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new EventsMaster(uID))
+            {
+                BarBackgroundColor = Color.FromHex("#7C40A9")
+            };
+            //hide menu bar
+            IsPresented = false;
+        }
+
+        //loads welcome screen
+        private void Button_Clicked_7(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new WelcomeScreen(uEmail, uFirstName, uLastName, uID))
             {
                 BarBackgroundColor = Color.FromHex("#7C40A9")
             };

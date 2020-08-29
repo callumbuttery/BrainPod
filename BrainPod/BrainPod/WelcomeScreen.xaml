@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainPod.WelcomeScreen">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#7C40A9">
+            <StackLayout>
+                <Label
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   x:Name="WelcomeMessage"
+                   FontSize="25"
+                   TextColor="White"/>
+
+                <Image x:Name="Logo"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="0,10,0,0"
+                       HeightRequest="200"/>
+                
+                <Label Text="Brain Pod allows you to take care of all your mental health needs in one place. Use our journal to track how your feeling at any time. Use our events feature to track how you are feeling about upcoming events, why not also take a PHQ9 test to find out where your heads at mentally."
+                       VerticalOptions="Start"
+                       HorizontalOptions="Center"
+                       FontSize="15"
+                       TextColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,20,0,0"/>
+
+                <Frame HasShadow="True" BackgroundColor="White" Margin="35,15,35,0">
+                    
+                </Frame>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

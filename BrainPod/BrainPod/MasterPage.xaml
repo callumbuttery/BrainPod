@@ -24,6 +24,22 @@
                            FontAttributes="Bold"
                            TextColor="#e6491f"/>
 
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="https://static.thenounproject.com/png/2500248-84.png"
+                                   Margin="0,0,45,0"/>
+
+                                <Button Text="Welcome"
+                            VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                           Clicked="Button_Clicked_7"
+                            BackgroundColor="White"
+                                CornerRadius="10"
+                                WidthRequest="150"
+                            />
+                            </StackLayout>
+                        </Frame>
+
 
                         <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">

@@ -1801,24 +1801,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\callu\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Callum\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\callu\\Dis\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
       "projectName": "BrainPod.iOS",
-      "projectPath": "C:\\Users\\callu\\Dis\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
-      "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\callu\\Dis\\BrainPod\\BrainPod.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+      "packagesPath": "C:\\Users\\Callum\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\callu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Callum\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1832,8 +1832,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\callu\\Dis\\BrainPod\\BrainPod\\BrainPod.csproj": {
-              "projectPath": "C:\\Users\\callu\\Dis\\BrainPod\\BrainPod\\BrainPod.csproj"
+            "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+              "projectPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
             }
           }
         }
