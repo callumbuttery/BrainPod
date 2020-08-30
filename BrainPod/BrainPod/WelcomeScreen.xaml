@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainPod.WelcomeScreen">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#7C40A9">
+        <ScrollView>
+            <StackLayout BackgroundColor="#7C40A9">
             <StackLayout>
                 <Label
                 VerticalOptions="StartAndExpand" 
@@ -26,11 +27,89 @@
                        HorizontalTextAlignment="Center"
                        Margin="0,20,0,0"/>
 
-                <Frame HasShadow="True" BackgroundColor="White" Margin="35,15,35,0">
-                    
+                <Frame HasShadow="True" BackgroundColor="White" Margin="35,15,35,0" CornerRadius="60">
+                    <StackLayout>
+                            <Label Text="Navigate"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Start"
+                                   FontSize="25"
+                                   Margin="0,0,0,15"
+                                   FontAttributes="Bold"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                
+                                <StackLayout Orientation="Vertical">
+                                <ImageButton Source="https://static.thenounproject.com/png/1228602-200.png"
+                                             BackgroundColor="White"/>
+                                <Label Text="Analysis"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       ClassId="AnalysisButton"
+                                       />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical">
+                                <ImageButton Source="https://static.thenounproject.com/png/2079029-200.png"
+                                             BackgroundColor="White"/>
+                                <Label Text="Journal"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       ClassId="JournalButton"
+                                       Margin="10,0,10,0"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical">
+                                <ImageButton Source="https://static.thenounproject.com/png/3087920-200.png"
+                                             BackgroundColor="White"/>
+                            
+                                <Label Text="Logs"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       ClassId="LogsButton"
+                                       Margin="10,0,10,0"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <StackLayout Orientation="Vertical">
+                                <ImageButton Source="https://static.thenounproject.com/png/1243631-200.png"
+                                             BackgroundColor="White"/>
+
+
+                                <Label Text="PHQ9"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       ClassId="PHQ9Button"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical">
+                                <ImageButton Source="https://static.thenounproject.com/png/3480239-200.png"
+                                             BackgroundColor="White"/>
+                                <Label Text="Events"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       ClassId="EventsButton"
+                                       Margin="10,0,10,0"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical">
+                                <ImageButton Source="https://static.thenounproject.com/png/3480499-200.png"
+                                             BackgroundColor="White"/>
+                           
+                                <Label Text="Account"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   ClassId="AccountButton"
+                                   Margin="10,0,10,0"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                    </StackLayout>
                 </Frame>
                 
             </StackLayout>
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

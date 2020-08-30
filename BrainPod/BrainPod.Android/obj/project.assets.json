@@ -2412,11 +2412,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
       "projectName": "BrainPod.Android",
-      "projectPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
+      "projectPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
       "packagesPath": "C:\\Users\\Callum\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod.Android\\obj\\",
+      "outputPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2437,8 +2437,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
-              "projectPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
+            "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+              "projectPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
             }
           }
         }

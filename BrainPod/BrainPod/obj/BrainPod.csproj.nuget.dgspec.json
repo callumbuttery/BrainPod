@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {}
+    "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+    "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+        "projectUniqueName": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
         "projectName": "BrainPod",
-        "projectPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+        "projectPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
         "packagesPath": "C:\\Users\\Callum\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod\\obj\\",
+        "outputPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\",
