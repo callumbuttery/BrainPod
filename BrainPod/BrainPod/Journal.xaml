@@ -309,8 +309,9 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="200"
                     Margin="10"
-                    BackgroundColor="PaleVioletRed"
-                    Clicked="LogBtn_Clicked"/>
+                    BackgroundColor="#7C40A9"
+                    Clicked="LogBtn_Clicked"
+                        TextColor="White"/>
 
             </StackLayout>
         </ScrollView>

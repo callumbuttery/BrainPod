@@ -17,49 +17,40 @@
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Margin="0,10,0,0"
-                       HeightRequest="200"/>
-                
-                <Label Text="Brain Pod allows you to take care of all your mental health needs in one place. Use our journal to track how your feeling at any time. Use our events feature to track how you are feeling about upcoming events, why not also take a PHQ9 test to find out where your heads at mentally."
-                       VerticalOptions="Start"
-                       HorizontalOptions="Center"
-                       FontSize="15"
-                       TextColor="WhiteSmoke"
-                       HorizontalTextAlignment="Center"
-                       Margin="0,20,0,0"/>
+                       HeightRequest="250"/>
 
-                <Frame HasShadow="True" BackgroundColor="White" Margin="25,15,25,0" CornerRadius="60">
+
+                    <Frame BackgroundColor="White"  Margin="0,60,0,0">
                         <StackLayout>
-                            <Label x:Name="QuoteText"
+                        <Label x:Name="QuoteText"
                               VerticalOptions="Start"
                               HorizontalOptions="Center"
                               FontSize="20"
                               HorizontalTextAlignment="Center"
                                    FontAttributes="Italic"
-                                   Margin="0,0,0,0"/>
-                            
-                            <Label Text="-"
-                                   VerticalOptions="Start"
-                              HorizontalOptions="Center"
-                              FontSize="60"
-                              HorizontalTextAlignment="Center"/>
+                                   Margin="0,0,0,0"
+                               TextColor="#7C40A9"/>
 
-                            <Label x:Name="QuoteAuthorText"
+                        <Image Source="https://static.thenounproject.com/png/1776295-200.png"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Start"/>
+
+                        <Label x:Name="QuoteAuthorText"
                               VerticalOptions="Start"
                               HorizontalOptions="Center"
                               FontSize="20"
-                                   HorizontalTextAlignment="Center"/>
+                                   HorizontalTextAlignment="Center"
+                               TextColor="Black"/>
 
-                            <Label x:Name="AuthorJobText"
+                        <Label x:Name="AuthorJobText"
                               VerticalOptions="Start"
                               HorizontalOptions="Center"
                               FontSize="20"
                                    HorizontalTextAlignment="Center"
                                    TextColor="LightGray"/>
-                        </StackLayout>
-
-                </Frame>
-                
-            </StackLayout>
+                    </StackLayout>
+                    </Frame>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

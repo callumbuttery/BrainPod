@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0Jnh1M3PnxSPrOjVOa4U73cE1FPY49hXMAGABn23gOQdd/kJBOY3rqJeqVr2hgd2hGYCAgZdR5mMEnWsf08ycQ==",
+  "dgSpecHash": "qurlQruaSCYZne4hAAi9yi1NJKkv1goyG4p6SvJvg/KRZbFNj+PorxCz1abOCqrwV/78PuWzfrsr/JuYLokx9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Callum\\source\\repos\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Callum\\.nuget\\packages\\firebaseauthentication.net\\3.4.0\\firebaseauthentication.net.3.4.0.nupkg.sha512",
     "C:\\Users\\Callum\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",
