@@ -17,10 +17,12 @@ android.support.v7.widget.RecyclerView;C:\Users\Callum\source\repos\BrainPod\Bra
 android.support.v7.widget.Toolbar;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
 android.support.v7.widget.Toolbar;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
+attr;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
+declare-styleable;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
 external-cache-path;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
@@ -30,6 +32,8 @@ item;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\9
 item;obj\Debug\90\res\values\styles.xml
 LinearLayout;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
 paths;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
+resources;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
 resources;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\styles.xml
@@ -37,6 +41,7 @@ set;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90
 set;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
 set;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
 set;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
+string;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
 style;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
 translate;C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml

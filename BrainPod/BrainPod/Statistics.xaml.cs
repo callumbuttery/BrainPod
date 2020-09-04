@@ -20,8 +20,6 @@ namespace BrainPod
 
             //Logo.source is created in xaml file
             //Logo.Source = ImageSource.FromFile("Logo.png");
-            //Welcome message with capitalised first name
-            WelcomeMessage.Text = "Welcome to Brain Pod " + char.ToUpper(uFirstName[0]) + uFirstName.Substring(1) + "!";
             //checks if username and password are registered to a user
             getLogScores(uID);
 
@@ -197,13 +195,13 @@ namespace BrainPod
                 switch(getUser.Object.mood)
                 {
                     case "bad":
-                        Emoji.Source = "https://static.thenounproject.com/png/1421319-200.png";
+                        Emoji.Source = ImageSource.FromFile("sadSmile.png");
                         break;
                     case "middle":
-                        Emoji.Source = "https://static.thenounproject.com/png/746248-200.png";
+                        Emoji.Source = ImageSource.FromFile("middleSmile.png");
                         break;
                     case "good":
-                        Emoji.Source = "https://static.thenounproject.com/png/2541167-200.png";
+                        Emoji.Source = ImageSource.FromFile("happySmile.png");
                         break;
 
                 }

@@ -59,7 +59,6 @@ C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.dll
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.pdb
-C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\AccountInfo.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\Events.xaml.g.cs
@@ -75,6 +74,7 @@ C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ResultsPage.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\Statistics.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\TabbedMaster.xaml.g.cs
+C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\WelcomeScreen.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfoInputs.cache
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfo.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
@@ -82,4 +82,4 @@ C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.dll
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.pdb
-C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\WelcomeScreen.xaml.g.cs
+C:\Users\Callum\source\repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
