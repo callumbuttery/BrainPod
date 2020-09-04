@@ -16,7 +16,14 @@ namespace BrainPod
 
         public Statistics(string uEmail, string uFirstName, string uLastName, Guid uID)
         {
-            InitializeComponent();           
+            InitializeComponent();
+
+            sadLogo.Source = ImageSource.FromFile("sadSmiley.png");
+            sadLogo.Opacity = 0.25;
+            middleLogo.Source = ImageSource.FromFile("middleSmile.png");
+            middleLogo.Opacity = 0.25;
+            HappinessLogo.Source = ImageSource.FromFile("happySmile.png");
+            HappinessLogo.Opacity = 0.25;
 
             //Logo.source is created in xaml file
             //Logo.Source = ImageSource.FromFile("Logo.png");
@@ -68,15 +75,15 @@ namespace BrainPod
 
             if (average < 3)
             {
-                HappinessLogo.Source = ImageSource.FromFile("sadSmile.png");
+                sadLogo.Opacity = 1;
             }
             if (average > 3 & average < 6)
             {
-                HappinessLogo.Source = ImageSource.FromFile("middleSmile.png");
+                middleLogo.Opacity = 1;
             }
             if (average > 6 & average < 11)
             {
-                HappinessLogo.Source = ImageSource.FromFile("happySmile.png");
+                HappinessLogo.Opacity = 1;
             }
 
             //fetch account based on information provided by user
@@ -88,11 +95,17 @@ namespace BrainPod
             if (getUser == null)
             {
                 logDate.Text = "No recent logs found";
-
+                
             }
             //valid logs found, return data, successful login
             else
             {
+                //display most recent log date
+                mostRecentLogDate.Text = getUser.Object.logTime.Substring(0,10);
+                //dispaly most recent log time
+                mostRecentLogTime.Text = getUser.Object.logTime.Substring(getUser.Object.logTime.Length - 5);
+
+
                 //receive activities
                 var activites = getUser.Object.activities;
                 List<string> activitesList = new List<string>();
@@ -192,19 +205,7 @@ namespace BrainPod
                 happinessRating.Text = getUser.Object.sliderValue;
 
 
-                switch(getUser.Object.mood)
-                {
-                    case "bad":
-                        Emoji.Source = ImageSource.FromFile("sadSmile.png");
-                        break;
-                    case "middle":
-                        Emoji.Source = ImageSource.FromFile("middleSmile.png");
-                        break;
-                    case "good":
-                        Emoji.Source = ImageSource.FromFile("happySmile.png");
-                        break;
-
-                }
+    
                 
 
             }
