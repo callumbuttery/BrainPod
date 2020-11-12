@@ -1,4 +1,5 @@
 ﻿using BrainPod.Table;
+using Firebase.Auth;
 using Firebase.Database;
 using System;
 using System.Collections.Generic;
@@ -49,6 +50,10 @@ namespace BrainPod
             //need to add functionality to load users saved journal logs
             if(validuser != null)
             {
+                var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
+
+                var user = authProvider.GetUserAsync(validuser.Email);
+
                 string userEmail = validuser.Email;
                 string userFirstName = validuser.FirstName;
                 string userLastName = validuser.LastName;

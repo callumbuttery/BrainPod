@@ -1,4 +1,5 @@
 ﻿using BrainPod.Table;
+using Firebase.Auth;
 using Firebase.Database;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,9 @@ namespace BrainPod
                 //list to store logs returned from backend
         List<UserLogs> foundLogs = new List<UserLogs>();
 
+        //global email
+        string userEmail;
+
         public AccountInfo(string uEmail, string uFirstName, string uLastName, Guid uID)
         {
             InitializeComponent();
@@ -25,7 +29,7 @@ namespace BrainPod
             userFirstDisplay.Text = "First name: " + uFirstName;
             userLastDisplay.Text = "Last name: " + uLastName;
 
-            
+            userEmail = uEmail;
 
         }
 
@@ -82,5 +86,14 @@ namespace BrainPod
             
         }
 
+        //used to request password reset
+        private void resetPassword(object sender, EventArgs e)
+        {
+            var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
+
+            authProvider.SendPasswordResetEmailAsync(userEmail);
+
+            DisplayAlert("Success", "Please check your email to reset your password", "Close");
+        }
     }
 }

@@ -131,8 +131,7 @@ namespace BrainPod
 
 
                             var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
-
-
+                            //Create account and send email verification
                             await authProvider.CreateUserWithEmailAndPasswordAsync(EmailInput.Text, PasswordInput.Text, FirstNameInput.Text,true);
                             
 

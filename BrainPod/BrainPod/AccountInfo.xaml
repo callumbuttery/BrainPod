@@ -45,7 +45,11 @@
                        HorizontalOptions="Center"
                         Clicked="SignOut_Clicked"/>
 
-
+            <Button Text="Reset Password"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="resetPassword"/>
+                
             <Label Text ="Icons from flaticon and thenounproject"
                    HorizontalOptions="Center"
                    />
