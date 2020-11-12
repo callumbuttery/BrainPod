@@ -1,10 +1,7 @@
 ﻿using BrainPod.Table;
+using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
-using FireSharp;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
 using System;
 using System.Linq;
 using System.Net.Mail;
@@ -29,6 +26,8 @@ namespace BrainPod
          * ! */
         
         public static Firebase.Database.FirebaseClient firebaseClient = new Firebase.Database.FirebaseClient("https://brainpod-eba39.firebaseio.com/");
+
+  
         public Registration()
         {
             InitializeComponent();
@@ -112,41 +111,30 @@ namespace BrainPod
                         //Enable loading wheel
                         LoadingWheel.IsRunning = true;
 
-                        //stores response from firebase
+                        Guid id = Guid.NewGuid();
+                        
+
+                        //stores response from firebases
                         var result = await firebaseClient
                            .Child("RegisteredUsers")
                            //posts new user to databse
-                           .PostAsync(new RegisteredUsers() { UserID = Guid.NewGuid(), Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
+                           .PostAsync(new RegisteredUsers() { UserID = id, Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
 
                         //Hide loading wheel, no longer need to wait
                         LoadingWheel.IsRunning = false;
 
 
 
-
                         if (result.Object != null)
                         {
-                            await DisplayAlert("Registration", "Successfully registered", "Close");
 
-                            //var node = "https://brainpod-eba39.firebaseio.com/";
-                           // IFirebaseConfig config = new FirebaseConfig
-                            //{
-                               // AuthSecret = "q3Vtleyfjnmo33AKmkVUiOlKDCRyEamyk4X4nNyd",
-                               // BasePath = node
-                           // };
 
-                           // IFirebaseClient client = new FireSharp.FirebaseClient(config);
 
-                           // RegisteredUsers user = new RegisteredUsers()
-                            //{
-                              //  UserID = Guid.NewGuid(),1e4
-                              //  Email = EmailInput.Text,
-                               // Password = PasswordInput.Text,
-                               // FirstName = FirstNameInput.Text,
-                               // LastName = SecondNameInput.Text
-                          //  };
+                            var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
 
-                           // SetResponse set = client.Set(@"Users/", user);
+
+                            await authProvider.CreateUserWithEmailAndPasswordAsync(EmailInput.Text, PasswordInput.Text, FirstNameInput.Text,true);
+                            
 
                             FirstNameInput.Text = null;
                             SecondNameInput.Text = null;
