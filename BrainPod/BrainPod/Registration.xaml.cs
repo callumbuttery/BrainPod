@@ -1,6 +1,10 @@
 ﻿using BrainPod.Table;
 using Firebase.Database;
 using Firebase.Database.Query;
+using FireSharp;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
 using System;
 using System.Linq;
 using System.Net.Mail;
@@ -24,7 +28,7 @@ namespace BrainPod
          * !
          * ! */
         
-        public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
+        public static Firebase.Database.FirebaseClient firebaseClient = new Firebase.Database.FirebaseClient("https://brainpod-eba39.firebaseio.com/");
         public Registration()
         {
             InitializeComponent();
@@ -118,9 +122,31 @@ namespace BrainPod
                         LoadingWheel.IsRunning = false;
 
 
+
+
                         if (result.Object != null)
                         {
                             await DisplayAlert("Registration", "Successfully registered", "Close");
+
+                            //var node = "https://brainpod-eba39.firebaseio.com/";
+                           // IFirebaseConfig config = new FirebaseConfig
+                            //{
+                               // AuthSecret = "q3Vtleyfjnmo33AKmkVUiOlKDCRyEamyk4X4nNyd",
+                               // BasePath = node
+                           // };
+
+                           // IFirebaseClient client = new FireSharp.FirebaseClient(config);
+
+                           // RegisteredUsers user = new RegisteredUsers()
+                            //{
+                              //  UserID = Guid.NewGuid(),1e4
+                              //  Email = EmailInput.Text,
+                               // Password = PasswordInput.Text,
+                               // FirstName = FirstNameInput.Text,
+                               // LastName = SecondNameInput.Text
+                          //  };
+
+                           // SetResponse set = client.Set(@"Users/", user);
 
                             FirstNameInput.Text = null;
                             SecondNameInput.Text = null;

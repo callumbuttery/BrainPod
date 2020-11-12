@@ -1,5 +1,5 @@
 ﻿using BrainPod.Table;
-using Firebase.Auth;
+
 using Firebase.Database;
 using Firebase.Database.Query;
 using System;

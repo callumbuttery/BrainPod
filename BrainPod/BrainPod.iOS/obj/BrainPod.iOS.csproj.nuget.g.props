@@ -5,7 +5,7 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Callum\.nuget\packages\;D:\Microsoft\Xamarin\NuGet\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\callu\.nuget\packages\;C:\Microsoft\Xamarin\NuGet\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.7.0</NuGetToolVersion>
   </PropertyGroup>
@@ -18,4 +18,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)xamarin.forms\4.8.0.1364\buildTransitive\Xamarin.Forms.props" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\4.8.0.1364\buildTransitive\Xamarin.Forms.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_Bcl_Build Condition=" '$(PkgMicrosoft_Bcl_Build)' == '' ">C:\Users\callu\.nuget\packages\microsoft.bcl.build\1.0.14</PkgMicrosoft_Bcl_Build>
+  </PropertyGroup>
 </Project>
