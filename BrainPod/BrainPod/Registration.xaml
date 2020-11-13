@@ -28,9 +28,13 @@
                 HorizontalOptions="CenterAndExpand" 
                    HorizontalTextAlignment="Center"
                    FontSize="20"
-                   Margin="20"
+                   Margin="20,20,20,0"
                    TextColor="White"/>
 
+            <ActivityIndicator x:Name="LoadingWheel"
+                               IsRunning="False"
+                               Margin="0,0,0,0"/>
+            
             <Frame HasShadow="True" CornerRadius="10" Margin="20,0,20,0" BackgroundColor="#E0E0E0">
                 <StackLayout >
                     <StackLayout Orientation="Horizontal">
@@ -82,8 +86,7 @@
                 </StackLayout>
             </Frame>
 
-            <ActivityIndicator x:Name="LoadingWheel"
-                               IsRunning="False"/>
+
             
         </StackLayout>
     </ContentPage.Content>

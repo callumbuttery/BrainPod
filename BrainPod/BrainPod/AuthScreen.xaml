@@ -6,31 +6,39 @@
 
     <ContentPage.Content>
         <StackLayout BackgroundColor="#7C40A9">
-            <Label Text="Please check your email for your authentication code"
-                VerticalOptions="Center" 
-                HorizontalOptions="CenterAndExpand"
-                   TextColor="White"
-                   Margin="0,250"/>
 
-            <Entry HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   Keyboard="Numeric"
-                   TextChanged="Entry_TextChanged"
-                   BackgroundColor="White"
-                   TextColor="Black"
-                    WidthRequest="250"
-                   />
+            <Image x:Name="Logo"
+               VerticalOptions="StartAndExpand" 
+               HeightRequest="250"
+                   Margin="0,100"/>
+            
+            <Label Text="Please check your email for your authentication code"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center"
+                   TextColor="White"
+                   Margin="0,0,0,0"/>
+
 
             <Label HorizontalOptions="Center"
                    VerticalOptions="Start"
                    HorizontalTextAlignment="Center"
                    x:Name="displayError"
                    WidthRequest="250"
+                   TextColor="White"
+                   />
+
+            <Entry HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="Entry_TextChanged"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   WidthRequest="250"
                    Margin="0,0,0,250"
-                   TextColor="White"/>
-            
+                   />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -25,7 +25,8 @@ namespace BrainPod
             ID = userID;
             auth = authCode;
 
-
+            //Logo.source is created in xaml file
+            Logo.Source = ImageSource.FromFile("Logo.png");
 
         }
 
