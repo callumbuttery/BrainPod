@@ -50,36 +50,7 @@ namespace BrainPod
 
             if(validuser != null)
             {
-                var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
-
-                try
-                {
-                    //login
-                    await authProvider.SignInWithEmailAndPasswordAsync(emailEntry.Text, passwordEntry.Text);
-
-                   
-
-                }
-                //catch hits if user has entered wrong details
-                catch
-                {
-
-                    await DisplayAlert("Uh-oh", "Please ensure you have entered the correct credentals", "Retry");
-                    return;
-                }
-
-                FirebaseApp.Create(new AppOptions()
-                {
-                    Credential = GoogleCredential.FromFile("C:/Users/Callum/source/repos/callumbuttery/BrainPod/BrainPod/BrainPod/brainpod-eba39-firebase-adminsdk-vrnww-fa45f74efb.json"),
-                });
-
-
-
-
-                //await FirebaseAdmin.Auth.FirebaseAuth.DefaultInstance.GetUserByEmailAsync(validuser.Email);
-
-                // var record = userRecord.EmailVerified;
-
+                
 
                 string userEmail = validuser.Email;
                 string userFirstName = validuser.FirstName;
