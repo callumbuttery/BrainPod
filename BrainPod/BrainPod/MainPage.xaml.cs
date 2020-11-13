@@ -1,6 +1,9 @@
 ﻿using BrainPod.Table;
 using Firebase.Auth;
 using Firebase.Database;
+using FirebaseAdmin;
+using FirebaseAdmin.Auth;
+using Google.Apis.Auth.OAuth2;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,16 +13,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using FirebaseAuth = FirebaseAdmin.Auth.FirebaseAuth;
 
 namespace BrainPod
 {
     [DesignTimeVisible(false)]
+
     public partial class MainPage : ContentPage
     {
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
         public MainPage()
         {
-
+            
             InitializeComponent();
             //Logo.source is created in xaml file
             Logo.Source = ImageSource.FromFile("Logo.png");
@@ -43,16 +48,38 @@ namespace BrainPod
             //checks if username and password are registered to a user
             var validuser = await CheckUserExists();
 
-            
-            
-
-            //if returned user isn't null then load tabbedmaster page
-            //need to add functionality to load users saved journal logs
             if(validuser != null)
             {
                 var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
 
-                var user = authProvider.GetUserAsync(validuser.Email);
+                try
+                {
+                    //login
+                    await authProvider.SignInWithEmailAndPasswordAsync(emailEntry.Text, passwordEntry.Text);
+
+                   
+
+                }
+                //catch hits if user has entered wrong details
+                catch
+                {
+
+                    await DisplayAlert("Uh-oh", "Please ensure you have entered the correct credentals", "Retry");
+                    return;
+                }
+
+                FirebaseApp.Create(new AppOptions()
+                {
+                    Credential = GoogleCredential.FromFile("C:/Users/Callum/source/repos/callumbuttery/BrainPod/BrainPod/BrainPod/brainpod-eba39-firebase-adminsdk-vrnww-fa45f74efb.json"),
+                });
+
+
+
+
+                //await FirebaseAdmin.Auth.FirebaseAuth.DefaultInstance.GetUserByEmailAsync(validuser.Email);
+
+                // var record = userRecord.EmailVerified;
+
 
                 string userEmail = validuser.Email;
                 string userFirstName = validuser.FirstName;
@@ -79,7 +106,7 @@ namespace BrainPod
             //fetch account based on information provided by user
             var getUser = (await firebaseClient
                 .Child("RegisteredUsers")
-                .OnceAsync<RegisteredUsers>()).Where(a => a.Object.Email == email).Where(b => b.Object.Password == password).FirstOrDefault();
+                .OnceAsync<RegisteredUsers>()).Where(a => a.Object.Email == email).FirstOrDefault();
 
             //No longer need to await a process, hide loading wheel from screen
             LoadingWheel.IsRunning = false;

@@ -112,29 +112,51 @@ namespace BrainPod
                         LoadingWheel.IsRunning = true;
 
                         Guid id = Guid.NewGuid();
-                        
+
+                        //generate email random auth number
+                        int min = 1000;
+                        int max = 9999;
+                        Random rnd = new Random();
+                        int auth = rnd.Next(min, max);
+
+
 
                         //stores response from firebases
                         var result = await firebaseClient
                            .Child("RegisteredUsers")
                            //posts new user to databse
-                           .PostAsync(new RegisteredUsers() { UserID = id, Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text });
+                           .PostAsync(new RegisteredUsers() { UserID = id, Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text, emailAuth = false, emailAuthCode = auth });
 
                         //Hide loading wheel, no longer need to wait
                         LoadingWheel.IsRunning = false;
+
+              
+                        
 
 
 
                         if (result.Object != null)
                         {
 
+                            using(MailMessage mail = new MailMessage())
+                            {
+                                mail.From = new MailAddress("callumbuttery@gmail.com");
+                                mail.To.Add(EmailInput.Text);
+                                mail.Subject = "testing sending mail";
+                                mail.Body = "Hello " + FirstNameInput.Text + " welcome to brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
+                                mail.IsBodyHtml = true;
 
+                                using(SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                                {
+                                    smtp.Credentials = new System.Net.NetworkCredential("brainpod1234@gmail.com", "brainpodmailserver");
+                                    smtp.EnableSsl = true;
+                                    smtp.Send(mail);
+                                }
+                            }
 
-                            var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
-                            //Create account and send email verification
-                            await authProvider.CreateUserWithEmailAndPasswordAsync(EmailInput.Text, PasswordInput.Text, FirstNameInput.Text,true);
+                            await DisplayAlert("Success", "Account successfully added\n\nPlease check your email for an email authentication number which you will need to enter next time you login","Return");
                             
-
+                            
                             FirstNameInput.Text = null;
                             SecondNameInput.Text = null;
                             EmailInput.Text = null;
@@ -163,8 +185,9 @@ namespace BrainPod
                     return;
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 await DisplayAlert("Failed", "The mouse fell off the wheel", "Retry");
                 return;
 

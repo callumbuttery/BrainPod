@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <OutputType>Library</OutputType>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -18,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FirebaseAdmin" Version="2.0.0" />
     <PackageReference Include="FirebaseAuthentication.net" Version="3.4.0" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.4" />
     <PackageReference Include="Xam.Plugins.Messaging" Version="5.2.0" />

@@ -136,6 +136,6 @@ C:\Users\Callum\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\
 C:\Users\Callum\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.dll
 C:\Users\Callum\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\Callum\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.pdb
-C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
 C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
 C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
