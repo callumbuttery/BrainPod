@@ -1,9 +1,7 @@
 ﻿using BrainPod.Table;
 using Firebase.Auth;
 using Firebase.Database;
-using FirebaseAdmin;
-using FirebaseAdmin.Auth;
-using Google.Apis.Auth.OAuth2;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using FirebaseAuth = FirebaseAdmin.Auth.FirebaseAuth;
+
 
 namespace BrainPod
 {
@@ -59,7 +57,17 @@ namespace BrainPod
 
                 //await Navigation.PushAsync(new TabbedMaster(userEmail, userFirstName, userLastName, userID));
                 //User is logged in, load MasterPage
-                Application.Current.MainPage = new MasterPage(userEmail, userFirstName, userLastName, userID);
+
+                //if user is already authorised 
+                if (validuser.emailAuth == true)
+                {
+                    Application.Current.MainPage = new MasterPage(userEmail, userFirstName, userLastName, userID);
+                }
+                else
+                {
+                    //user not authorised, take to auth screen
+                    Application.Current.MainPage = new AuthScreen(userID, validuser.emailAuthCode);
+                }
             }
         }
 

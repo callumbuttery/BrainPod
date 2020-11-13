@@ -89,12 +89,7 @@ namespace BrainPod
         //used to request password reset
         private void resetPassword(object sender, EventArgs e)
         {
-            var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAI4Xmw5aEZVSUjUipRBg2Umgk_AqM3G5M"));
-            
 
-            authProvider.SendPasswordResetEmailAsync(userEmail);
-            
-            DisplayAlert("Success", "Please check your email to reset your password", "Close");
         }
     }
 }

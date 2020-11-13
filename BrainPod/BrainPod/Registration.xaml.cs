@@ -125,7 +125,7 @@ namespace BrainPod
                         var result = await firebaseClient
                            .Child("RegisteredUsers")
                            //posts new user to databse
-                           .PostAsync(new RegisteredUsers() { UserID = id, Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text, emailAuth = false, emailAuthCode = auth });
+                           .PostAsync(new RegisteredUsers() { UserID = id, Email = EmailInput.Text, Password = PasswordInput.Text, FirstName = FirstNameInput.Text, LastName = SecondNameInput.Text, emailAuth = false, emailAuthCode = auth.ToString() });
 
                         //Hide loading wheel, no longer need to wait
                         LoadingWheel.IsRunning = false;

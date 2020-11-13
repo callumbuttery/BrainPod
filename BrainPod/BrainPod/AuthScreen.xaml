@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainPod.AuthScreen">
+
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#7C40A9">
+            <Label Text="Please check your email for your authentication code"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   Margin="0,250"/>
+
+            <Entry HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Keyboard="Numeric"
+                   TextChanged="Entry_TextChanged"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                    WidthRequest="250"
+                   />
+
+            <Label HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   HorizontalTextAlignment="Center"
+                   x:Name="displayError"
+                   WidthRequest="250"
+                   Margin="0,0,0,250"
+                   TextColor="White"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

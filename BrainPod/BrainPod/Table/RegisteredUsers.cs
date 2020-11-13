@@ -12,7 +12,7 @@ namespace BrainPod.Table
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public bool emailAuth { get; set; }
-        public int emailAuthCode { get; set; }
+        public string emailAuthCode { get; set; }
 
     }
 }
