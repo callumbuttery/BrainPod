@@ -101,9 +101,8 @@ namespace BrainPod
             else
             {
                 //display most recent log date
-                mostRecentLogDate.Text = getUser.Object.logTime.Substring(0,10);
-                //dispaly most recent log time
-                mostRecentLogTime.Text = getUser.Object.logTime.Substring(getUser.Object.logTime.Length - 5);
+                mostRecentLogDate.Text = getUser.Object.logDate;
+                mostRecentLogTime.Text = getUser.Object.logTime;
 
 
                 //receive activities

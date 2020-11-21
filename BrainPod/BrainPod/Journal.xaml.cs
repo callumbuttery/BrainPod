@@ -89,7 +89,7 @@ namespace BrainPod
         
         private void sadFaceClicked(object sender, EventArgs e)
         {
-            faceClicked = "bad";
+            faceClicked = "Bad";
             faceClickedBool = true;
             sadFace.BackgroundColor = Color.FromHex("#FF2C26");
             middleFace.BackgroundColor = Color.White;
@@ -98,7 +98,7 @@ namespace BrainPod
 
         private void middleFaceClicked(object sender, EventArgs e)
         {
-            faceClicked = "middle";
+            faceClicked = "Average";
             faceClickedBool = true;
             sadFace.BackgroundColor = Color.White;
             middleFace.BackgroundColor = Color.FromHex("#F4FF54");
@@ -107,7 +107,7 @@ namespace BrainPod
 
         private void happyFaceClicked(object sender, EventArgs e)
         {
-            faceClicked = "good";
+            faceClicked = "Good";
             faceClickedBool = true;
             sadFace.BackgroundColor = Color.White;
             middleFace.BackgroundColor = Color.White;
@@ -132,7 +132,8 @@ namespace BrainPod
             //get current date
             DateTime dt = DateTime.Now;
             //append datetime to correct format
-            string convertedDateTime = dt.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+            string convertedDate = dt.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+            string convertedTime = dt.ToString("HH:mm tt");
 
 
            
@@ -151,7 +152,7 @@ namespace BrainPod
                     var result = await firebaseClient
                        .Child("UserLogs")
                        //posts new log to databse
-                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedDateTime, mood = faceClicked, activities = activitiesString});
+                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedTime, logDate = convertedDate, mood = faceClicked, activities = activitiesString});
 
                     //reset values
                     DayRatingSlider.Value = 0;

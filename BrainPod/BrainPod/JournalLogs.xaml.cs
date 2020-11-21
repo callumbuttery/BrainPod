@@ -29,15 +29,6 @@ namespace BrainPod
 
             WelcomeMessage.Text = ("Journal Entries");
 
-            //images
-            
-            //sadLogo.Source = ImageSource.FromFile("sadSmiley.png");
-            //sadLogo.Opacity = 0.25;
-            //middleLogo.Source = ImageSource.FromFile("middleSmile.png");
-            //middleLogo.Opacity = 0.25;
-            //HappinessLogo.Source = ImageSource.FromFile("happySmile.png");
-            //HappinessLogo.Opacity = 0.25;
-
             //recieve instances of userlogs to display
             RecieveInstances(userID);
         }
@@ -57,8 +48,10 @@ namespace BrainPod
                 logData = item.Object.logData,
                 sliderValue = item.Object.sliderValue,
                 logTime = item.Object.logTime,
+                logDate = item.Object.logDate,
                 activities = item.Object.activities,
                 mood = item.Object.mood,
+
                
 
             }).ToList();
@@ -98,10 +91,11 @@ namespace BrainPod
             //get most recent log times
             var logObject = foundLogs.LastOrDefault();
 
-            mostRecentLogDate.Text = logObject.logTime.Substring(0,10);
-            mostRecentLogTime.Text = logObject.logTime.Substring(logObject.logTime.Length - 5);
+            mostRecentLogDate.Text = logObject.logDate;
+            mostRecentLogTime.Text = logObject.logTime;
+            
 
-
+            
 
             var activities = logObject.activities;
             List<string> activitiesList = new List<string>();
@@ -109,8 +103,7 @@ namespace BrainPod
             activitiesList = activities.Split(',').ToList<string>();
 
             //order list so most recently added log is positioned first
-            var orderedLogs = foundLogs.OrderByDescending(x => x.logTime).ToList();
-
+            var orderedLogs = foundLogs.OrderByDescending(x => x.logTime).ThenBy(y => y.logDate).ToList();
             //set listview source to the list returned from backend 
             listOfLogs.ItemsSource = orderedLogs;
 

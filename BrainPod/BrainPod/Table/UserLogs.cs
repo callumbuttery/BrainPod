@@ -10,6 +10,7 @@ namespace BrainPod.Table
         public string logData { get; set; }
         public string sliderValue { get; set; }
         public string mood { get; set; }
+        public string logDate { get; set; }
         public string logTime { get; set; }
         public string activities { get; set; }
 
