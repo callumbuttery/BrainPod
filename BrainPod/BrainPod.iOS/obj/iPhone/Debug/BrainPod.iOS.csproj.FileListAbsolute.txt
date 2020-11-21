@@ -189,3 +189,10 @@ C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iP
 C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\BrainPod.iOS.csproj.CopyComplete
 C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\BrainPod.iOS.exe
 C:\Users\Callum\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\BrainPod.iOS.pdb
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\optimized\
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\BrainPod.iOS.csproj.CoreCompileInputs.cache

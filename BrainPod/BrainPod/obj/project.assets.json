@@ -1529,25 +1529,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Callum\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\callu\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Callum\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+      "projectUniqueName": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
       "projectName": "BrainPod",
-      "projectPath": "C:\\Users\\Callum\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
-      "packagesPath": "C:\\Users\\Callum\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Callum\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\obj\\",
+      "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+      "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Callum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\callu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1609,7 +1607,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
