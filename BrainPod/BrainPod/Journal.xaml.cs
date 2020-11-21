@@ -211,52 +211,52 @@ namespace BrainPod
             switch(buttonID.ClassId)
             {
                 case "WorkButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Worked");
                     break;
                 case "StudyButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Studied");
                     break;
                 case "ExerciseButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Exercised");
                     break;
                 case "StretchButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Stretched");
                     break;
                 case "SocialiseButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Socialised");
                     break;
                 case "GameButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Gamed");
                     break;
                 case "NapButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Napped");
                     break;
                 case "MovieButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Watched Movie");
                     break;
                 case "AlcoholButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Drank Alcohol");
                     break;
                 case "EatOutButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Ate out");
                     break;
                 case "ShoppingButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Went shopping");
                     break;
                 case "DateButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Went on a date");
                     break;
                 case "ReadButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Read");
                     break;
                 case "CleanButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Cleaned");
                     break;
                 case "EatHealthyButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Ate healthy");
                     break;
                 case "EarlySleepButton":
-                    returnValue = validateActivity(activityType);
+                    returnValue = validateActivity(" Slept early");
                     break;
 
             }
