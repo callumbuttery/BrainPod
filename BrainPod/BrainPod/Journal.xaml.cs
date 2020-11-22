@@ -135,8 +135,10 @@ namespace BrainPod
             string convertedDate = dt.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
             string convertedTime = dt.ToString("HH:mm tt");
 
+            //DateTime convertedDateTime = DateTime.Parse("dd/MM/yyyy", CultureInfo.InvariantCulture);
 
-           
+
+
             //journal must not be blank, slider value must have changed, face clicked must be true and list of activities must not be empty or null
             //in order to enable the submit log button to prevent blank values being logged
             if (journalVal != "" && SliderChanged == true && faceClickedBool == true && listofactivites.Count != 0 && listofactivites != null)
@@ -152,7 +154,7 @@ namespace BrainPod
                     var result = await firebaseClient
                        .Child("UserLogs")
                        //posts new log to databse
-                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedTime, logDate = convertedDate, mood = faceClicked, activities = activitiesString});
+                       .PostAsync(new UserLogs() { UserID = uID, logData = journalVal, sliderValue = sConvertedSliderVal, logTime = convertedTime, logDate = convertedDate, mood = faceClicked, activities = activitiesString, logDateDT = dt});
 
                     //reset values
                     DayRatingSlider.Value = 0;

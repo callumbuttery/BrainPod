@@ -2,6 +2,7 @@
 using Firebase.Database;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 using Xamarin.Forms;
@@ -14,9 +15,15 @@ namespace BrainPod
     {
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
 
+        //global user ID
+        Guid id;
+
         public Statistics(string uEmail, string uFirstName, string uLastName, Guid uID)
         {
+            Device.SetFlags(new string[] { "Expander_Experimental" });
             InitializeComponent();
+
+            id = uID;
 
             sadLogo.Source = ImageSource.FromFile("sadSmiley.png");
             sadLogo.Opacity = 0.25;
@@ -211,6 +218,68 @@ namespace BrainPod
             
 
         }
+
+        //searches for user records
+        async void searchFunction(object sender, EventArgs e)
+        {
+            //get button id so we know what the user wants to search for e.g. happiness or activities
+            var button = (Button)sender;
+            var buttonClassID = button.ClassId;
+
+            //list to store logs returned from backend
+            List<UserLogs> foundLogs = new List<UserLogs>();
+
+            try
+            {
+                //search based on happiness rating
+                if (buttonClassID == "happinessButton")
+                {
+                    //check user has entered a value
+                    if (!string.IsNullOrEmpty(happinessEntry.Text))
+                    {
+                        foundLogs = (await firebaseClient
+                            .Child("UserLogs")
+                            .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == id).Where(b => b.Object.sliderValue == happinessEntry.Text).Select(item => new UserLogs
+                            {
+                                UserID = item.Object.UserID,
+                                logData = item.Object.logData,
+                                sliderValue = item.Object.sliderValue,
+                                logTime = item.Object.logTime,
+                                logDate = item.Object.logDate,
+                                activities = item.Object.activities,
+                                mood = item.Object.mood,
+
+
+
+                            }).ToList();
+
+                        //check a log has been found
+                        if(foundLogs.Count == 0 || foundLogs == null)
+                        {
+                            await DisplayAlert("No data found", "No data found based on the terms you have searched for", "Retry");
+
+                        }
+                        else
+                        {
+                           
+                            //give list view source
+                            happinessFilterList.ItemsSource = foundLogs;
+                        }
+                        
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+            }
+            catch (Exception excep)
+            {
+                await DisplayAlert("Uh oh", excep.ToString(), "retry");
+                return;
+            }
+        }
+
 
         public void addActivityToList(object sender, EventArgs  e)
         {
