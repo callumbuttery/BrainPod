@@ -179,7 +179,7 @@ namespace BrainPod
                     EatHealthyButton.BackgroundColor = Color.White;
                     EarlySleepButton.BackgroundColor = Color.White;
 
-
+                    await DisplayAlert("Success", "New journal entry added to your account", "Close");
 
                 }
                 catch

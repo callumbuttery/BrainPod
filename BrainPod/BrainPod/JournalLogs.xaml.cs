@@ -109,7 +109,7 @@ namespace BrainPod
                 activitiesList = activities.Split(',').ToList<string>();
 
                 //order list so most recently added log is positioned first
-                var orderedLogs = foundLogs.OrderByDescending(x => x.logTime).ThenBy(y => y.logDate).ToList();
+                var orderedLogs = foundLogs.OrderByDescending(x => x.logDate).ThenBy(y => y.logTime).ToList();
                 //set listview source to the list returned from backend 
                 listOfLogs.ItemsSource = orderedLogs;
             }
