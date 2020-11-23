@@ -237,6 +237,7 @@ namespace BrainPod
                     //check user has entered a value
                     if (!string.IsNullOrEmpty(happinessEntry.Text))
                     {
+                        foundLogs.Clear();
                         foundLogs = (await firebaseClient
                             .Child("UserLogs")
                             .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == id).Where(b => b.Object.sliderValue == happinessEntry.Text).Select(item => new UserLogs
@@ -271,6 +272,45 @@ namespace BrainPod
                     {
                         return;
                     }
+                }
+
+                if(buttonClassID == "activityButton")
+                {
+                    string selectedActivity = activityPicker.SelectedItem.ToString();
+                    if (!string.IsNullOrEmpty(selectedActivity))
+                    {
+                        foundLogs.Clear();
+                        foundLogs = (await firebaseClient
+                            .Child("UserLogs")
+                            .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == id).Where(b => b.Object.activities.Contains(selectedActivity)).Select(item => new UserLogs
+                            {
+                                UserID = item.Object.UserID,
+                                logData = item.Object.logData,
+                                sliderValue = item.Object.sliderValue,
+                                logTime = item.Object.logTime,
+                                logDate = item.Object.logDate,
+                                activities = item.Object.activities,
+                                mood = item.Object.mood,
+
+
+
+                            }).ToList();
+
+                        //check a log has been found
+                        if (foundLogs.Count == 0 || foundLogs == null)
+                        {
+                            await DisplayAlert("No data found", "No data found based on the terms you have searched for", "Retry");
+
+                        }
+                        else
+                        {
+
+                            //give list view source
+                            activityFilterList.ItemsSource = foundLogs;
+                        }
+                    }
+                    
+
                 }
             }
             catch (Exception excep)

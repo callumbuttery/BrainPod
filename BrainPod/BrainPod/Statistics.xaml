@@ -448,13 +448,16 @@
                 </Frame>
 
                 <StackLayout>
+                    <Label Text="Filter" FontSize="45" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,40,0,10" FontAttributes="Italic" TextColor="White" TextTransform="Uppercase"/>
                     <Label Text="Here you can filter all your journal entries to work out why you felt a certain way on a certain day" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="Body" TextColor="White" Margin="10,0,10,0"/>
                     <Frame Margin="10,10,10,10" HasShadow="True" CornerRadius="10">
                         <StackLayout>
                             <Label Text="Filter using one of the following options" HorizontalTextAlignment="Center" HorizontalOptions="Center" Margin="0,0,0,10" FontSize="Medium" FontAttributes="Bold"/>
                             <Expander>
                                 <Expander.Header>
-                                    <Label Text="Happiness Rating" FontSize="Medium" HorizontalOptions="Center" Margin="15,15,15,15"/>
+                                    <StackLayout BackgroundColor ="#FEC8D8">
+                                        <Label Text="Happiness Rating" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" Margin="15,15,15,15" TextColor="White"/>
+                                    </StackLayout>
                                 </Expander.Header>
                                 <StackLayout>
                                     <Label Text="Enter a happiness value between 1 and 10" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="Body" Margin="0,10,0,0"/>
@@ -500,14 +503,77 @@
                             
                             <Expander>
                                 <Expander.Header>
-                                    <Label Text="Activities" FontSize="Medium" HorizontalOptions="Center" Margin="15,15,15,15"/>
+                                    <StackLayout BackgroundColor="#E0BBE4">
+                                        <Label Text="Activities" FontSize="Large" HorizontalOptions="Center" Margin="15,15,15,15" FontAttributes="Bold" TextColor="White"/>
+                                    </StackLayout>
                                 </Expander.Header>
+
+                                <StackLayout>
+                                    <Label Text="Enter an activity" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="Body" Margin="0,10,0,0"/>
+                                    <Picker x:Name="activityPicker" HorizontalOptions="Center" WidthRequest="150" HorizontalTextAlignment="Center">
+                                        <Picker.Items>
+                                            <x:String>Worked</x:String>
+                                            <x:String>Studied</x:String>
+                                            <x:String>Exercised</x:String>
+                                            <x:String>Stretched</x:String>
+                                            <x:String>Socialised</x:String>
+                                            <x:String>Gamed</x:String>
+                                            <x:String>Napped</x:String>
+                                            <x:String>Watched Movie</x:String>
+                                            <x:String>Drank Alcohol</x:String>
+                                            <x:String>Ate out</x:String>
+                                            <x:String>Went shopping</x:String>
+                                            <x:String>Went on a date</x:String>
+                                            <x:String>Read</x:String>
+                                            <x:String>Cleaned</x:String>
+                                            <x:String>Ate healthy</x:String>
+                                            <x:String>Slept early</x:String>
+                                        </Picker.Items>
+                                    </Picker>
+                                    <Button Text="Search" HeightRequest="70" WidthRequest="90" HorizontalOptions="Center" Clicked="searchFunction" ClassId="activityButton"/>
+
+
+                                    <ListView HasUnevenRows="True" x:Name="activityFilterList">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <Frame CornerRadius='10' Margin="10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="#7c40a9">
+                                                        <StackLayout BackgroundColor="White" Padding="10,10,10,10">
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Happiness rating: "/>
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding sliderValue}"/>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,10">
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Journal Date: "/>
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding logDate}"/>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,10">
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Journal Time: "/>
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding logTime}"/>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,10,0,10">
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Journal data: "/>
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding logData}"/>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,10,0,10">
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Journal Activities: "/>
+                                                                <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding activities}"/>
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </Frame>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
                             </Expander>
 
 
                             <Expander>
                                 <Expander.Header>
-                                    <Label Text="Date" FontSize="Medium" HorizontalOptions="Center" Margin="15,15,15,15"/>
+                                    <StackLayout BackgroundColor="#FFDFD3">
+                                        <Label Text="Date" FontSize="Large" HorizontalOptions="Center" Margin="15,15,15,15" FontAttributes="Bold" TextColor="White"/>
+                                    </StackLayout>
                                 </Expander.Header>
                             </Expander>
                         </StackLayout>
