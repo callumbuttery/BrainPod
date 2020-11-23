@@ -108,8 +108,8 @@ namespace BrainPod
             else
             {
                 //display most recent log date
-                mostRecentLogDate.Text = getUser.Object.logDate;
-                mostRecentLogTime.Text = getUser.Object.logTime;
+                logDate.Text = getUser.Object.logDate;
+                logTime.Text = getUser.Object.logTime;
 
 
                 //receive activities
@@ -206,7 +206,7 @@ namespace BrainPod
                 //remove all chars after found space
                 string trimmedDateTime = getUser.Object.logTime.Substring(0, spaceIndex);
                 //display
-                logDate.Text = trimmedDateTime;
+                //logDate.Text = trimmedDateTime;
                 logData.Text = '"' + getUser.Object.logData + '"';
                 happinessRating.Text = getUser.Object.sliderValue;
 

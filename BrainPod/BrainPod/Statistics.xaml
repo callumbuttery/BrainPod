@@ -127,8 +127,9 @@
                             <StackLayout>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                                     <Frame HasShadow="True" CornerRadius="10" HeightRequest="30" Margin="0,0,0,10">
-                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" WidthRequest="210">
                                             <Label x:Name="logDate" FontSize="25" HorizontalTextAlignment="Center" TextColor="Black" VerticalOptions="Center"/>
+                                            <Label x:Name="logTime" FontSize="25" HorizontalTextAlignment="Center" TextColor="Black" VerticalOptions="Center"/>
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>
