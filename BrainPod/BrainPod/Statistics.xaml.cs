@@ -32,6 +32,10 @@ namespace BrainPod
             HappinessLogo.Source = ImageSource.FromFile("happySmile.png");
             HappinessLogo.Opacity = 0.25;
 
+            datePicker.MaximumDate = DateTime.Now;
+            datePicker.Date = DateTime.Now;
+            datePicker.Format = "dd/MM/yy";
+
             //Logo.source is created in xaml file
             //Logo.Source = ImageSource.FromFile("Logo.png");
             //checks if username and password are registered to a user
@@ -328,6 +332,47 @@ namespace BrainPod
                     
 
                 }
+
+                //user has pressed date button
+                if(buttonClassID == "dateButton")
+                {
+                    //get value
+                    DateTime dt = datePicker.Date;
+
+                    if(dt != null)
+                    {
+                        //clear logs
+                        foundLogs.Clear();
+
+                        //convert dt to string
+                        string cdt = dt.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                        foundLogs = (await firebaseClient
+                            .Child("UserLogs")
+                            .OnceAsync<UserLogs>()).Where(a => a.Object.UserID == id).Where(b => b.Object.logDate == cdt).Select(item => new UserLogs
+                            {
+                                UserID = item.Object.UserID,
+                                logData = item.Object.logData,
+                                sliderValue = item.Object.sliderValue,
+                                logTime = item.Object.logTime,
+                                logDate = item.Object.logDate,
+                                activities = item.Object.activities,
+                                mood = item.Object.mood,
+
+
+
+                            }).ToList();
+
+                        if (foundLogs.Count != 0)
+                        {
+                            //add to screen
+                            dateFilterList.ItemsSource = foundLogs;
+                        }
+                    }
+                }
+
+
+                
             }
             catch (Exception excep)
             {
