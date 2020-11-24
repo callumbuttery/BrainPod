@@ -274,11 +274,15 @@ namespace BrainPod
                     }
                 }
 
+                //handled activity button click
                 if(buttonClassID == "activityButton")
                 {
+                    //get selected activity
                     string selectedActivity = activityPicker.SelectedItem.ToString();
+                    //insure not null
                     if (!string.IsNullOrEmpty(selectedActivity))
                     {
+                        //clear any previous logs
                         foundLogs.Clear();
                         foundLogs = (await firebaseClient
                             .Child("UserLogs")
@@ -308,6 +312,11 @@ namespace BrainPod
                             //give list view source
                             activityFilterList.ItemsSource = foundLogs;
                         }
+                    }
+                    else
+                    {
+                        await DisplayAlert("Oh no", "Please select a task from the menu", "Retry");
+                        return;
                     }
                     
 
