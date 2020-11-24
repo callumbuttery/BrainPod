@@ -237,6 +237,12 @@ namespace BrainPod
                     //check user has entered a value
                     if (!string.IsNullOrEmpty(happinessEntry.Text))
                     {
+                        int value = Int32.Parse(happinessEntry.Text);
+                        if (value < 0 || value > 10)
+                        {
+                            return;
+                        }
+
                         foundLogs.Clear();
                         foundLogs = (await firebaseClient
                             .Child("UserLogs")
@@ -270,6 +276,7 @@ namespace BrainPod
                     }
                     else
                     {
+                        await DisplayAlert("Oh no", "Please enter a number between 1 and 10", "Retry");
                         return;
                     }
                 }
