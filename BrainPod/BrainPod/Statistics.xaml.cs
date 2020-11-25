@@ -115,6 +115,9 @@ namespace BrainPod
                 logDate.Text = getUser.Object.logDate;
                 logTime.Text = getUser.Object.logTime;
 
+                mostRecentLogDate.Text = getUser.Object.logDate;
+                mostRecentLogTime.Text = getUser.Object.logTime;
+
 
                 //receive activities
                 var activites = getUser.Object.activities;
