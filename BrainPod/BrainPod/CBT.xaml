@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainPod.CBT">
+    <ContentPage.Content>
+        <StackLayout>
+           
+            <Label Text="Cognitive Behavioral Therapy"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" 
+                HorizontalTextAlignment="Center"
+                   FontSize="30"/>
+
+            <Label Text="CBT focuses on challenging unhelpful thoughts and behaviours. Feel free to come here anytime you want to challenge a though"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Body"/>
+
+            <Image Source="https://static.thenounproject.com/png/66159-200.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   />
+
+            <StackLayout>
+                <Frame HasShadow="True" BorderColor="Black" BackgroundColor="White" Margin="10,10,10,10">
+                    
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

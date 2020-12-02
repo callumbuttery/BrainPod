@@ -43,7 +43,7 @@
 
                         <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="https://static.thenounproject.com/png/2500248-84.png"
+                                <Image Source="https://static.thenounproject.com/png/1683890-200.png"
                                    Margin="0,0,45,0"/>
                             
                             <Button Text="Analysis"
@@ -87,6 +87,21 @@
                             />
                         </StackLayout>
                     </Frame>
+
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="https://static.thenounproject.com/png/66159-200.png"
+                                       Margin="0,0,45,0"/>
+
+                                <Button Text="CBT"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        Background="White"
+                                        CornerRadius="10"
+                                        WidthRequest="150"
+                                        Clicked="Button_Clicked_8"/>
+                            </StackLayout>
+                        </Frame>
 
                         <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
                         <StackLayout Orientation="Horizontal">

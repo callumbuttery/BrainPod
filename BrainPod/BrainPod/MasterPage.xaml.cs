@@ -126,5 +126,16 @@ namespace BrainPod
             //hide menu bar
             IsPresented = false;
         }
+
+        //loads cbt screen
+        private void Button_Clicked_8(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new CBT(uID))
+            {
+                BarBackgroundColor = Color.FromHex("#7C40A9")
+            };
+            //hide menu bar
+            IsPresented = false;
+        }
     }
 }

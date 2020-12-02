@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bzFNwCc9MpjyOOPIhTNkwktiAZPaPl3fx0BrnoxL1XuSXnKk3ZsGRUA25qxJPLXw0se+chUrzVXIgxyGpk0kWA==",
+  "dgSpecHash": "kxvViSL73LWWDdWdY5Q9pc6/HKR3Hv/itpumtpcR8CqWd4ZR7EeD9awHvGfOpbojDcVgA4BUWNe4DNKTtIDUEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,10 @@
     "C:\\Users\\callu\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",
     "C:\\Users\\callu\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",
     "C:\\Users\\callu\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\callu\\.nuget\\packages\\skiachart.forms\\1.2.50\\skiachart.forms.1.2.50.nupkg.sha512",
+    "C:\\Users\\callu\\.nuget\\packages\\skiasharp\\1.68.1.1\\skiasharp.1.68.1.1.nupkg.sha512",
+    "C:\\Users\\callu\\.nuget\\packages\\skiasharp.views\\1.68.1.1\\skiasharp.views.1.68.1.1.nupkg.sha512",
+    "C:\\Users\\callu\\.nuget\\packages\\skiasharp.views.forms\\1.68.1.1\\skiasharp.views.forms.1.68.1.1.nupkg.sha512",
     "C:\\Users\\callu\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\callu\\.nuget\\packages\\system.reactive\\4.0.0\\system.reactive.4.0.0.nupkg.sha512",
     "C:\\Users\\callu\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",

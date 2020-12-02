@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:chart="clr-namespace:SkiaChart.Charts;assembly=SkiaChart"
+             xmlns:chartViews="clr-namespace:SkiaChart.Views;assembly=SkiaChart"
              mc:Ignorable="d"
              x:Class="BrainPod.Statistics"
              Title="Analysis">
@@ -110,8 +112,6 @@
 
                     </StackLayout>
                 </Frame>
-
-
 
                 <Frame Margin="20,10,20,20" HasShadow="True" BackgroundColor="White" CornerRadius="40">
                     <StackLayout>
@@ -468,7 +468,7 @@
                                     <Entry Keyboard="Numeric" WidthRequest="200" HorizontalTextAlignment="Center" HorizontalOptions="Center" x:Name="happinessEntry"/>
                                     <Button Text="Search" HeightRequest="70" WidthRequest="90" HorizontalOptions="Center" Clicked="searchFunction" ClassId="happinessButton"/>
 
-                                   
+
                                     <ListView HasUnevenRows="True" x:Name="happinessFilterList">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
@@ -508,7 +508,7 @@
                                 </StackLayout>
                             </Expander>
 
-                            
+
                             <Expander>
                                 <Expander.Header>
                                     <StackLayout BackgroundColor="#E0BBE4">
@@ -635,6 +635,12 @@
                         </StackLayout>
                     </Frame>
                 </StackLayout>
+
+                <StackLayout>
+                    
+                </StackLayout>
+                
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
