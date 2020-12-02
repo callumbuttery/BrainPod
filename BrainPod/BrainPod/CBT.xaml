@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:BrainPod"
+             mc:Ignorable="d"
              x:Class="BrainPod.CBT">
+    
+    
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+            <StackLayout>
            
             <Label Text="Cognitive Behavioral Therapy"
                 VerticalOptions="Start" 
@@ -20,14 +27,30 @@
             <Image Source="https://static.thenounproject.com/png/66159-200.png"
                    HorizontalOptions="Center"
                    VerticalOptions="Start"
+                   Margin="0,20,0,0"
                    />
 
             <StackLayout>
-                <Frame HasShadow="True" BorderColor="Black" BackgroundColor="White" Margin="10,10,10,10">
-                    
-                </Frame>
+                <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
+                        <StackLayout>
+                            <Label Text="Thought your are questioning?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                            <local:CustomEntry HorizontalOptions="Center" VerticalOptions="Start" x:Name="thoughtBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" VerticalTextAlignment="Start" BackgroundColor="White"/>
+
+                            <Label Text="What is the evidence for this? Against this?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                            <local:CustomEntry HorizontalOptions="Center" VerticalTextAlignment="Start" VerticalOptions="Start" x:Name="evidenceBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+
+                            <Label Text="Am I basing this on facts, or on feelings?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                            <local:CustomEntry HorizontalOptions="Center" VerticalTextAlignment="Start" VerticalOptions="Start" x:Name="factsfeelingsBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+
+                            <Label Text="Is this a likely scenario, or is this the worst case scenario?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                            <local:CustomEntry HorizontalOptions="Center" VerticalTextAlignment="Start" VerticalOptions="Start" x:Name="likelyScenarioBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+
+                            <Button Text="Submit" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" Margin="0,20,0,0" Clicked="submitData"/>
+                        </StackLayout>
+                    </Frame>
             </StackLayout>
 
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

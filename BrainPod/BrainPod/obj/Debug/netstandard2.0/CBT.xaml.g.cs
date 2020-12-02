@@ -17,8 +17,24 @@ namespace BrainPod {
     public partial class CBT : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::BrainPod.CustomEntry thoughtBox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::BrainPod.CustomEntry evidenceBox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::BrainPod.CustomEntry factsfeelingsBox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::BrainPod.CustomEntry likelyScenarioBox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CBT));
+            thoughtBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "thoughtBox");
+            evidenceBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "evidenceBox");
+            factsfeelingsBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "factsfeelingsBox");
+            likelyScenarioBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "likelyScenarioBox");
         }
     }
 }
