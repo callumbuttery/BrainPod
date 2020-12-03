@@ -17,24 +17,24 @@ namespace BrainPod {
     public partial class CBT : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::BrainPod.CustomEntry thoughtBox;
+        private global::Xamarin.Forms.Editor thoughtBox;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::BrainPod.CustomEntry evidenceBox;
+        private global::Xamarin.Forms.Editor evidenceBox;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::BrainPod.CustomEntry factsfeelingsBox;
+        private global::Xamarin.Forms.Editor factsfeelingsBox;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::BrainPod.CustomEntry likelyScenarioBox;
+        private global::Xamarin.Forms.Editor likelyScenarioBox;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CBT));
-            thoughtBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "thoughtBox");
-            evidenceBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "evidenceBox");
-            factsfeelingsBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "factsfeelingsBox");
-            likelyScenarioBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::BrainPod.CustomEntry>(this, "likelyScenarioBox");
+            thoughtBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "thoughtBox");
+            evidenceBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "evidenceBox");
+            factsfeelingsBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "factsfeelingsBox");
+            likelyScenarioBox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "likelyScenarioBox");
         }
     }
 }

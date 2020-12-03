@@ -33,18 +33,33 @@
             <StackLayout>
                 <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
                         <StackLayout>
-                            <Label Text="Thought your are questioning?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
-                            <local:CustomEntry HorizontalOptions="Center" VerticalOptions="Start" x:Name="thoughtBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" VerticalTextAlignment="Start" BackgroundColor="White"/>
+                            <StackLayout>
+                                <Label Text="Thought your are questioning?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                                <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                    <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="thoughtBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                </Frame>
+                            </StackLayout>
 
-                            <Label Text="What is the evidence for this? Against this?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
-                            <local:CustomEntry HorizontalOptions="Center" VerticalTextAlignment="Start" VerticalOptions="Start" x:Name="evidenceBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                            <StackLayout>
+                                <Label Text="What is the evidence for this? Against this?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                                <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                    <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="evidenceBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                </Frame>
+                            </StackLayout>
 
-                            <Label Text="Am I basing this on facts, or on feelings?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
-                            <local:CustomEntry HorizontalOptions="Center" VerticalTextAlignment="Start" VerticalOptions="Start" x:Name="factsfeelingsBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                            <StackLayout>
+                                <Label Text="Am I basing this on facts, or on feelings?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                                <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                    <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="factsfeelingsBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                </Frame>
+                            </StackLayout>
 
-                            <Label Text="Is this a likely scenario, or is this the worst case scenario?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
-                            <local:CustomEntry HorizontalOptions="Center" VerticalTextAlignment="Start" VerticalOptions="Start" x:Name="likelyScenarioBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
-
+                            <StackLayout>
+                                <Label Text="Is this a likely scenario, or is this the worst case scenario?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                                <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                    <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="likelyScenarioBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                </Frame>
+                            </StackLayout>
                             <Button Text="Submit" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" Margin="0,20,0,0" Clicked="submitData"/>
                         </StackLayout>
                     </Frame>
