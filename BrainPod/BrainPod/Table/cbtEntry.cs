@@ -12,5 +12,6 @@ namespace BrainPod.Table
         public string evidence { get; set; }
         public string factsfeeling { get; set; }
         public string scenarioEvaluation { get; set; }
+        public string positiveNotes { get; set; }
     }
 }

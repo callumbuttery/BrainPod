@@ -65,6 +65,13 @@ namespace BrainPod
                 nullCode = true;
             }
 
+            //validate
+            if(positiveBox.Text == null || positiveBox.Text == "")
+            {
+                positiveBox.Placeholder = "Please enter some text";
+                nullCode = true;
+            }
+
             if(nullCode == true)
             {
                 return;
@@ -76,7 +83,7 @@ namespace BrainPod
                 //post data to database
                 var data = await firebaseClient
                     .Child("cbtEntry")
-                    .PostAsync(new cbtEntry() { uID = id, cbtEntryID = postID, thoughts = thoughtBox.Text, evidence = evidenceBox.Text, scenarioEvaluation = likelyScenarioBox.Text, factsfeeling = factsfeelingsBox.Text });
+                    .PostAsync(new cbtEntry() { uID = id, cbtEntryID = postID, thoughts = thoughtBox.Text, evidence = evidenceBox.Text, scenarioEvaluation = likelyScenarioBox.Text, factsfeeling = factsfeelingsBox.Text, positiveNotes = positiveBox.Text });
 
                 //rotate button to show complete
                 await button.RotateTo(360, 0500);
@@ -87,6 +94,7 @@ namespace BrainPod
                 evidenceBox.Text = "";
                 likelyScenarioBox.Text = "";
                 factsfeelingsBox.Text = "";
+                positiveBox.Text = "";
 
 
             }

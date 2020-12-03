@@ -34,7 +34,7 @@
                 <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
                         <StackLayout>
                             <StackLayout>
-                                <Label Text="Thought your are questioning?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                                <Label Text="Thought you are questioning?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
                                 <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
                                     <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="thoughtBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
                                 </Frame>
@@ -60,6 +60,14 @@
                                     <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="likelyScenarioBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
                                 </Frame>
                             </StackLayout>
+
+                            <StackLayout>
+                                <Label Text="What are some positives you can put into the situation?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                                <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                    <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="positiveBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                </Frame>
+                            </StackLayout>
+                            
                             <Button Text="Submit" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" Margin="0,20,0,0" Clicked="submitData"/>
                         </StackLayout>
                     </Frame>
