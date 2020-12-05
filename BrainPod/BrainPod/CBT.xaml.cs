@@ -4,8 +4,6 @@ using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -143,9 +141,52 @@ namespace BrainPod
             cbtHistory(id);
         }
 
-        private void submit(object sender, EventArgs e)
+        private async void submit(object sender, EventArgs e)
         {
+            //submit new data to database
+            var button = (Button)sender;
 
+            //buttonID is the same as the cas ID in each rendered cbt entry
+            var cbtID = button.ClassId;
+
+            //convert from string to guid
+            Guid guid = new Guid(cbtID);
+
+            //get and store details of current case before deleting
+            try
+            {
+                var getPost = (await firebaseClient
+                    .Child("cbtEntry")
+                    .OnceAsync<cbtEntry>()).Where(a => a.Object.cbtEntryID == guid).FirstOrDefault();
+
+                //store returned details
+                var cbtEntryID = getPost.Object.cbtEntryID;
+                var uID = getPost.Object.uID;
+                var evidence = getPost.Object.evidence;
+                var factsFeeling = getPost.Object.factsfeeling;
+                var postiveNotes = getPost.Object.positiveNotes;
+                var thoughts = getPost.Object.thoughts;
+                var scenario = getPost.Object.scenarioEvaluation;
+
+                //delete old entry
+                await firebaseClient.Child("cbtEntry").Child(getPost.Key).DeleteAsync();
+
+                //add upated record
+                var postRecord = await firebaseClient
+                    .Child("cbtEntry")
+                    .PostAsync(new cbtEntry() { uID = uID, cbtEntryID = cbtEntryID, thoughts = thoughts, evidence = evidence, factsfeeling = factsFeeling, scenarioEvaluation = scenario, positiveNotes = postiveNotes, updatedNotes = newFeelings });
+
+                //rotate button to show complete
+                await button.RotateTo(360, 0500);
+                button.Rotation = 0;
+
+                //refresh list 
+                cbtHistory(uID);
+            }
+            catch(Exception ex)
+            {
+                return;
+            }
         }
 
         private void updateDetailsEditor_TextChanged(object sender, TextChangedEventArgs e)

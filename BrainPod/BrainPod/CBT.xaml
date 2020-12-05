@@ -98,19 +98,19 @@
                                                 <ViewCell>
                                                     <Frame CornerRadius='10' Margin="10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="#7c40a9">
                                                         <StackLayout BackgroundColor="White" Padding="5,5,5,5">
-                                                            <StackLayout Orientation="Horizontal">
+                                                            <StackLayout Orientation="Vertical">
                                                                 <Label Text="Thoughts: " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                                                                 <Label Text="{Binding thoughts}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
                                                             </StackLayout>
-                                                            <StackLayout Orientation="Horizontal">
+                                                            <StackLayout Orientation="Vertical">
                                                                 <Label Text="Evidence for/against: " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                                                                 <Label Text="{Binding evidence}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
                                                             </StackLayout>
-                                                            <StackLayout Orientation="Horizontal">
+                                                            <StackLayout Orientation="Vertical">
                                                                 <Label Text="Facts or Feelings? " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                                                                 <Label Text="{Binding factsfeeling}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
                                                             </StackLayout>
-                                                            <StackLayout Orientation="Horizontal">
+                                                            <StackLayout Orientation="Vertical">
                                                                 <Label Text="Scenario Evaluation: " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
                                                                 <Label Text="{Binding scenarioEvaluation}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
                                                             </StackLayout>
@@ -123,7 +123,7 @@
                                                                     TextChanged="updateDetailsEditor_TextChanged"
                                                                     Keyboard="Chat"
                                                                     Margin="0,15,0,0"/>
-                                                            <Button Clicked="submit" Text="Update" WidthRequest="60" Margin="30,0,30,0"/>
+                                                            <Button Clicked="submit" Text="Update" WidthRequest="60" Margin="30,0,30,0" ClassId="{Binding cbtEntryID}"/>
 
                                                         </StackLayout>
                                                     </Frame>
