@@ -20,6 +20,8 @@ namespace BrainPod
 
         //globals
         Guid id;
+
+        string newFeelings = "";
         public CBT(Guid uID)
         {
             Device.SetFlags(new string[] { "Expander_Experimental" });
@@ -27,6 +29,9 @@ namespace BrainPod
 
             //store user ID, required to identify database data
             id = uID;
+
+            //get CBT log history
+            cbtHistory(id);
         }
 
         //handles button click to store entered data 
@@ -84,7 +89,7 @@ namespace BrainPod
                 //post data to database
                 var data = await firebaseClient
                     .Child("cbtEntry")
-                    .PostAsync(new cbtEntry() { uID = id, cbtEntryID = postID, thoughts = thoughtBox.Text, evidence = evidenceBox.Text, scenarioEvaluation = likelyScenarioBox.Text, factsfeeling = factsfeelingsBox.Text, positiveNotes = positiveBox.Text });
+                    .PostAsync(new cbtEntry() { uID = id, cbtEntryID = postID, thoughts = thoughtBox.Text, evidence = evidenceBox.Text, scenarioEvaluation = likelyScenarioBox.Text, factsfeeling = factsfeelingsBox.Text, positiveNotes = positiveBox.Text, updatedNotes = "false" });
 
                 //rotate button to show complete
                 await button.RotateTo(360, 0500);
@@ -99,6 +104,54 @@ namespace BrainPod
 
 
             }
+        }
+
+        async void cbtHistory(Guid ID)
+        {
+            try
+            {
+                //list to store logs returned from backend
+                List<cbtEntry> cbtLogs = new List<cbtEntry>();
+
+                cbtLogs.Clear();
+                cbtLogs = (await firebaseClient
+                    .Child("cbtEntry")
+                    .OnceAsync<cbtEntry>()).Where(a => a.Object.uID == ID).Where(b => b.Object.updatedNotes == "false").Select(item => new cbtEntry
+                    {
+                        uID = item.Object.uID,
+                        cbtEntryID = item.Object.cbtEntryID,
+                        thoughts = item.Object.thoughts,
+                        evidence = item.Object.evidence,
+                        factsfeeling = item.Object.factsfeeling,
+                        scenarioEvaluation = item.Object.scenarioEvaluation,
+                        positiveNotes = item.Object.positiveNotes,
+
+                    }).ToList();
+
+                //render list
+                cbtHistoryList.ItemsSource = cbtLogs;
+            }
+            catch(Exception e)
+            {
+                //log error
+                await DisplayAlert("Error","Send this to support" + e.ToString(), "Retry");
+            }
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            cbtHistory(id);
+        }
+
+        private void submit(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateDetailsEditor_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var editor = (Editor)sender;
+            newFeelings = editor.Text;
         }
     }
 }
