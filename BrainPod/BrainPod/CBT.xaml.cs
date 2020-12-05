@@ -111,6 +111,26 @@ namespace BrainPod
                 //list to store logs returned from backend
                 List<cbtEntry> cbtLogs = new List<cbtEntry>();
 
+                //second list to store logs returned from backend with different criteria 
+                List<cbtEntry> completetcbtLogs = new List<cbtEntry>();
+
+                //searches for criteria where logs have been updated
+                completetcbtLogs.Clear();
+                completetcbtLogs = (await firebaseClient
+                    .Child("cbtEntry")
+                    .OnceAsync<cbtEntry>()).Where(a => a.Object.uID == ID).Where(b => b.Object.updatedNotes != "false").Select(item => new cbtEntry
+                    {
+                        uID = item.Object.uID,
+                        cbtEntryID = item.Object.cbtEntryID,
+                        thoughts = item.Object.thoughts,
+                        evidence = item.Object.evidence,
+                        factsfeeling = item.Object.factsfeeling,
+                        scenarioEvaluation = item.Object.scenarioEvaluation,
+                        positiveNotes = item.Object.positiveNotes,
+                        updatedNotes = item.Object.updatedNotes
+
+                    }).ToList();
+
                 cbtLogs.Clear();
                 cbtLogs = (await firebaseClient
                     .Child("cbtEntry")
@@ -128,11 +148,12 @@ namespace BrainPod
 
                 //render list
                 cbtHistoryList.ItemsSource = cbtLogs;
+                completecbtHistoryList.ItemsSource = completetcbtLogs;
             }
             catch(Exception e)
             {
                 //log error
-                await DisplayAlert("Error","Send this to support" + e.ToString(), "Retry");
+                await DisplayAlert("Error", "Send this to support \n\n" + e.ToString(), "Retry");
             }
         }
 
@@ -177,7 +198,7 @@ namespace BrainPod
                     .PostAsync(new cbtEntry() { uID = uID, cbtEntryID = cbtEntryID, thoughts = thoughts, evidence = evidence, factsfeeling = factsFeeling, scenarioEvaluation = scenario, positiveNotes = postiveNotes, updatedNotes = newFeelings });
 
                 //rotate button to show complete
-                await button.RotateTo(360, 0500);
+                await button.RotateTo(360, 0300);
                 button.Rotation = 0;
 
                 //refresh list 
@@ -185,13 +206,19 @@ namespace BrainPod
             }
             catch(Exception ex)
             {
+                
+                //log error
+                await DisplayAlert("Error", "Send this to support \n\n" + ex.ToString(), "Retry");
+
                 return;
+
             }
         }
 
         private void updateDetailsEditor_TextChanged(object sender, TextChangedEventArgs e)
         {
             var editor = (Editor)sender;
+            //update global variable
             newFeelings = editor.Text;
         }
     }

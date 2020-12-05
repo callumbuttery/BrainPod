@@ -83,13 +83,13 @@
                     <Expander>
                         <Expander.Header>
                             <Frame BackgroundColor="White" WidthRequest="100" BorderColor="Black" Margin="100,10,100,0" HasShadow="True" CornerRadius="10">
-                                <Label Text="History" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                <Label Text="Reflect" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
                             </Frame>
                         </Expander.Header>
 
                         <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
                             <StackLayout>
-                                <Label Text="CBT History" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Text="Reflect on entries" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
                                 <Button Text="Refresh" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
                                 <StackLayout>
                                     <ListView x:Name="cbtHistoryList" HasUnevenRows="True">
@@ -135,6 +135,61 @@
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
+                    </Expander>
+
+                    <Expander>
+                        <Expander.Header>
+                            <Frame BackgroundColor="White" WidthRequest="100" BorderColor="Black" Margin="100,10,100,0" HasShadow="True" CornerRadius="10">
+                                <Label Text="History" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                            </Frame>
+                        </Expander.Header>
+
+                        <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
+                            <StackLayout>
+                                <Label Text="Reflect on entries" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Button Text="Refresh" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked"/>
+                                <StackLayout>
+                                    <ListView x:Name="completecbtHistoryList" HasUnevenRows="True">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <Frame CornerRadius='10' Margin="10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="#7c40a9">
+                                                        <StackLayout BackgroundColor="White" Padding="5,5,5,5">
+                                                            <StackLayout Orientation="Vertical">
+                                                                <Frame BorderColor="Black" HasShadow="True">
+                                                                    <StackLayout>
+                                                                        <Label Text="Updated thoughts: " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                                                        <Label Text="{Binding updatedNotes}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                                                    </StackLayout>
+                                                                </Frame>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                                                                <Label Text="Thoughts: " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                                                <Label Text="{Binding thoughts}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                                                                <Label Text="Evidence for/against: " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                                                <Label Text="{Binding evidence}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                                                                <Label Text="Facts or Feelings? " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                                                <Label Text="{Binding factsfeeling}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                                            </StackLayout>
+                                                            <StackLayout Orientation="Vertical" Margin="0,20,0,0">
+                                                                <Label Text="Scenario Evaluation: " HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                                                <Label Text="{Binding scenarioEvaluation}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </Frame>
+
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
                     </Expander>
                 </StackLayout>
 
