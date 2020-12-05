@@ -22,6 +22,7 @@ namespace BrainPod
         Guid id;
         public CBT(Guid uID)
         {
+            Device.SetFlags(new string[] { "Expander_Experimental" });
             InitializeComponent();
 
             //store user ID, required to identify database data

@@ -31,7 +31,14 @@
                    />
 
             <StackLayout>
-                <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
+                    <Expander>
+                        <Expander.Header>
+                            <Frame BackgroundColor="White" WidthRequest="100" BorderColor="Black" Margin="100,30,100,0" HasShadow="True" CornerRadius="10">
+                                <Label Text="CBT" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+
+                            </Frame>
+                        </Expander.Header>
+                        <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
                         <StackLayout>
                             <StackLayout>
                                 <Label Text="Thought you are questioning?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
@@ -71,7 +78,16 @@
                             <Button Text="Submit" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" Margin="0,20,0,0" Clicked="submitData"/>
                         </StackLayout>
                     </Frame>
-            </StackLayout>
+                    </Expander>
+
+                    <Expander>
+                        <Expander.Header>
+                            <Frame BackgroundColor="White" WidthRequest="100" BorderColor="Black" Margin="100,10,100,0" HasShadow="True" CornerRadius="10">
+                                <Label Text="History" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                            </Frame>
+                        </Expander.Header>
+                    </Expander>
+                </StackLayout>
 
         </StackLayout>
         </ScrollView>
