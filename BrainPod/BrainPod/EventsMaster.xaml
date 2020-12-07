@@ -33,6 +33,15 @@
                     HeightRequest="70"
                     Margin="0,0,0,55"/>
 
+            <Button Text="Manage events in CBT"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    HeightRequest="70"
+                    BackgroundColor="Transparent"
+                    Clicked="loadCBT"
+                    TextColor="Gray"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

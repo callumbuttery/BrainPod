@@ -27,5 +27,11 @@ namespace BrainPod
         {
             Navigation.PushAsync(new Events(userID));
         }
+
+        private void loadCBT(object sender, EventArgs e)
+        {
+            //push CBT on top of nav stack
+            Navigation.PushAsync( new CBT(userID));
+        }
     }
 }
