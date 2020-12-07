@@ -172,3 +172,4 @@ C:\Users\Callum\source\repos\callumbuttery\repo\BrainPod\BrainPod\BrainPod\obj\D
 C:\Users\Callum\source\repos\callumbuttery\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.dll
 C:\Users\Callum\source\repos\callumbuttery\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\Callum\source\repos\callumbuttery\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.pdb
+C:\Users\Callum\source\repos\callumbuttery\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\Targets.xaml.g.cs
