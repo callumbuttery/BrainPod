@@ -24,18 +24,19 @@
                    FontAttributes="Bold"/>
 
 
-                <Frame HasShadow="True" Margin="20,0,20,20" CornerRadius="10" BackgroundColor="#77dd77">
+                <Frame HasShadow="True" Margin="20,0,20,20" CornerRadius="10" BackgroundColor="#7C40A9">
                     <StackLayout>
                         <Label Text="Select event date"
                            HorizontalOptions="Center"
                            VerticalOptions="Start"
-                           FontSize="20"/>
+                           FontSize="20"
+                           TextColor="White"/>
 
                         <DatePicker VerticalOptions="Start"
                             HorizontalOptions="CenterAndExpand"
                             x:Name="DatePicker"
                                FontSize="30" 
-                                    />
+                                    TextColor="White"/>
 
                         <local:CustomEntry x:Name="EventTitleBox"
                            Placeholder="Event name"
@@ -53,13 +54,16 @@
                            WidthRequest="300"
                            HeightRequest="300"
                            Keyboard="Chat"
+                                BackgroundColor="White"
+                                
                            />
 
                         <Label x:Name="AnxietyLevelDisplay"
                                HorizontalOptions="Center"
                                VerticalOptions="Start"
-                               Padding="0,10,0,0"
-                               FontSize="20"/>
+                               Padding="0,20,0,0"
+                               FontSize="20"
+                               TextColor="White"/>
 
                         <Slider x:Name="AnxietyLevelSlider"
                                 VerticalOptions="Start"
@@ -77,7 +81,8 @@
                                HorizontalOptions="Center"
                                VerticalOptions="Start"
                                Padding="0,10,0,0"
-                               FontSize="20"/>
+                               FontSize="20"
+                               TextColor="White"/>
 
                         <Slider x:Name="WorryingThoughtSlider"
                                 VerticalOptions="Start"
