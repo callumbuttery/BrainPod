@@ -62,7 +62,7 @@
                             </StackLayout>
 
                             <StackLayout>
-                                <Label Text="Is this a likely scenario, or is this the worst case scenario?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
+                                <Label Text="Is this likely to be the scenario, or is this the worst case scenario?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Large" HorizontalTextAlignment="Center"/>
                                 <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
                                     <Editor IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="likelyScenarioBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
                                 </Frame>
@@ -182,6 +182,85 @@
                                                         </StackLayout>
                                                     </Frame>
 
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Expander>
+
+                    <Expander>
+                        <Expander.Header>
+                            <Frame BackgroundColor="White" WidthRequest="100" BorderColor="Black" Margin="100,10,100,0" HasShadow="True" CornerRadius="10">
+                                <Label Text="Events" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                            </Frame>
+                        </Expander.Header>
+
+                        <Frame HasShadow="True" BorderColor="Black" BackgroundColor="white" Margin="10,10,10,10" CornerRadius="10">
+                            <StackLayout>
+                                <Label Text="Reflect on events" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Button Text="Refresh" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center" Clicked="eventsRefresh"/>
+                                <StackLayout>
+                                    <ListView x:Name="eventsHistoryList" HasUnevenRows="True">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <Frame CornerRadius='10' Margin="10,10,10,10" HasShadow="True" BorderColor="Black" BackgroundColor="#7c40a9">
+                                                        <StackLayout>
+                                                            <StackLayout BackgroundColor="White" Padding="5,5,5,5">
+                                                                <StackLayout Orientation="Vertical" >
+                                                                    <Frame BorderColor="Black">
+                                                                        <StackLayout>
+                                                                            <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Event Date" FontAttributes="Bold"/>
+                                                                            <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding eventDate}" Margin="0,0,0,10"/>
+                                                                            <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Event Title" FontAttributes="Bold"/>
+                                                                            <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding eventTitle}"/>
+                                                                        </StackLayout>
+                                                                    </Frame>
+                                                                </StackLayout>
+                                                            
+                                                                <StackLayout Orientation="Vertical">
+                                                                    <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Reason" FontAttributes="Bold"/>
+                                                                    <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding reason}"/>
+                                                                </StackLayout>
+
+                                                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                                                                    <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Anxiety Level: " FontAttributes="Bold"/>
+                                                                    <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding anxietyLevel}"/>
+                                                                </StackLayout>
+
+                                                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                                                    <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="Worry Level: " FontAttributes="Bold"/>
+                                                                    <Label HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="{Binding worryLevel}"/>
+                                                                </StackLayout>
+
+                                                                <StackLayout>
+                                                                    <Label Text="Am I basing this on facts, or on feelings?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,40,0,0"/>
+                                                                    <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                                                        <Editor TextChanged="factsfeelingsChanged" IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="factsorfeelingsBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                                                    </Frame>
+                                                                </StackLayout>
+
+                                                                <StackLayout>
+                                                                    <Label Text="Is this likely to be the scenario, or is this the worst case scenario?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+                                                                    <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                                                        <Editor TextChanged="scenarioChanged" IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="scenarioBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                                                    </Frame>
+                                                                </StackLayout>
+
+                                                                <StackLayout>
+                                                                    <Label Text="What are some positives you can put into the situation?" HorizontalOptions="Center" VerticalOptions="Start" FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+                                                                    <Frame BorderColor="Black" CornerRadius="10" HasShadow="True">
+                                                                        <Editor TextChanged="posChanged" IsTextPredictionEnabled="True" IsSpellCheckEnabled="True" HorizontalOptions="Center" VerticalOptions="Start" x:Name="posBox" Margin="0,0,0,10" WidthRequest="250" HeightRequest="250" BackgroundColor="White"/>
+                                                                    </Frame>
+                                                                </StackLayout>
+
+                                                                <Button Text="Submit" HorizontalOptions="Center" VerticalOptions="Center" Clicked="submitNewEventData" ClassId="{Binding EventID}"/>
+                                                            </StackLayout>
+                                                        </StackLayout>
+                                                    </Frame>
                                                 </ViewCell>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>

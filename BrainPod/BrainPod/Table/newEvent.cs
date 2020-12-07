@@ -13,5 +13,8 @@ namespace BrainPod.Table
         public string eventDate { get; set; }
         public int anxietyLevel { get; set; }
         public int worryLevel { get; set; }
+        public string factsfeeling { get; set; }
+        public string scenarioEvaluation { get; set; }
+        public string positiveNotes { get; set; }
     }
 }

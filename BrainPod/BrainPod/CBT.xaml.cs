@@ -19,6 +19,11 @@ namespace BrainPod
         //globals
         Guid id;
 
+        //for events
+        string eventFactFeelings = "";
+        string positives = "";
+        string scenario = "";
+
         string newFeelings = "";
         public CBT(Guid uID)
         {
@@ -30,6 +35,8 @@ namespace BrainPod
 
             //get CBT log history
             cbtHistory(id);
+            //get events history
+            eventsCall(id);
         }
 
         //handles button click to store entered data 
@@ -220,6 +227,138 @@ namespace BrainPod
             var editor = (Editor)sender;
             //update global variable
             newFeelings = editor.Text;
+        }
+
+        //used to get list of events user has logged in events tab
+        private void eventsRefresh(object sender, EventArgs e)
+        {
+            //call method
+            eventsCall(id);
+        }
+
+        async void eventsCall(Guid id)
+        {
+            //create new list
+            List<newEvent> eventHistory = new List<newEvent>();
+
+            //get list of events
+            eventHistory.Clear();
+            eventHistory = (await firebaseClient
+                .Child("newEvent")
+                .OnceAsync<newEvent>()).Where(a => a.Object.userID == id).Select(item => new newEvent
+                {
+                    userID = item.Object.userID,
+                    EventID = item.Object.EventID,
+                    eventDate = item.Object.eventDate,
+                    eventTitle = item.Object.eventTitle,
+                    reason = item.Object.reason,
+                    worryLevel = item.Object.worryLevel,
+                    anxietyLevel = item.Object.anxietyLevel
+
+                }).ToList();
+
+
+            //assign list source 
+            eventsHistoryList.ItemsSource = eventHistory;
+        }
+
+        //validate inputs
+        private void submitNewEventData(object sender, EventArgs e)
+        {
+            if(eventFactFeelings == null)
+            {
+                DisplayAlert("Uh oh", "Please enter text in all boxes", "Retry");
+                return;
+            }
+            if (positives == null)
+            {
+                DisplayAlert("Uh oh", "Please enter text in all boxes", "Retry");
+                return;
+            }
+            if(scenario == null)
+            {
+                DisplayAlert("Uh oh", "Please enter text in all boxes", "Retry");
+                return;
+            }
+
+            //push new data to database
+            try
+            {
+                //access button classID to get EventID
+                Button bt = (Button)sender;
+
+                string eID = bt.ClassId;
+
+                //module call
+                postUpdatedEventDetails(eID);
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Uh oh", "Please show this to support: \n\n" + ex.ToString() , "Retry");
+                return;
+            }
+        }
+
+        async void postUpdatedEventDetails(string eventID)
+        {
+            try
+            {
+                //convert ID string to guid
+                Guid g = new Guid(eventID);
+
+                //retrieve
+                var getPost = (await firebaseClient
+                       .Child("newEvent")
+                       .OnceAsync<newEvent>()).Where(a => a.Object.EventID == g).FirstOrDefault();
+
+                //store data
+                var EventID = getPost.Object.EventID;
+                var title = getPost.Object.eventTitle;
+                var reason = getPost.Object.reason;
+                var Worry = getPost.Object.worryLevel;
+                var anxiety = getPost.Object.anxietyLevel;
+                var date = getPost.Object.eventDate;
+
+                //delete old entry
+                await firebaseClient.Child("newEvent").Child(getPost.Key).DeleteAsync();
+
+                //add upated record
+                var postRecord = await firebaseClient
+                    .Child("newEvent")
+                    .PostAsync(new newEvent() { userID = id, EventID = g, reason = reason, worryLevel = Worry, anxietyLevel = anxiety, eventDate = date, eventTitle = title, factsfeeling = eventFactFeelings, positiveNotes = positives, scenarioEvaluation = scenario});
+
+                //refresh
+                eventsCall(id);
+
+
+            }
+
+            catch (Exception ex)
+            {
+                await DisplayAlert("Uh oh", "Please show this to support: \n\n" + ex.ToString(), "Retry");
+                return;
+            }
+        }
+
+        private void factsfeelingsChanged(object sender, TextChangedEventArgs e)
+        {
+            var editor = (Editor)sender;
+            //update global variable
+            eventFactFeelings = editor.Text;
+        }
+
+        private void posChanged(object sender, TextChangedEventArgs e)
+        {
+            var editor = (Editor)sender;
+            //update global variable
+            positives = editor.Text;
+        }
+
+        private void scenarioChanged(object sender, TextChangedEventArgs e)
+        {
+            var editor = (Editor)sender;
+            //update global variable
+            scenario = editor.Text;
         }
     }
 }
