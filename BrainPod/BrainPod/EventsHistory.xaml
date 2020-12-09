@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainPod.EventsHistory">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Events History"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   Margin="0,10,0,0"/>
+
+            <Label Text="Here you can see all the events you've entered"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,20,0,0"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"/>
+
+            <Image Source="https://static.thenounproject.com/png/3646120-200.png"
+                   Margin="0,20,0,0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   WidthRequest="300"/>
+
+            <StackLayout>
+                <ListView x:Name="listOfLogs" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <StackLayout>
+                                    <Label Text="text to prevent crash"/>
+                                </StackLayout>
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

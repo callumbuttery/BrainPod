@@ -26,12 +26,14 @@
                     WidthRequest="150"
                     HeightRequest="70"
                     Clicked="Button_Clicked"/>
+            
             <Button Text="Track events"
                     VerticalOptions="Start"
                     HorizontalOptions="Center"
                     WidthRequest="150"
                     HeightRequest="70"
-                    Margin="0,0,0,55"/>
+                    Margin="0,0,0,55"
+                    Clicked="ViewHistory"/>
 
             <Button Text="Manage events in CBT"
                     VerticalOptions="Start"
