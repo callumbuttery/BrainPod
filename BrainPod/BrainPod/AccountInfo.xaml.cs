@@ -163,7 +163,7 @@ namespace BrainPod
                         //sender user an email letting them know their password has been reset
                         using (MailMessage mail = new MailMessage())
                         {
-                            mail.From = new MailAddress("callumbuttery@gmail.com");
+                            mail.From = new MailAddress("brainpod1234@gmail.com");
                             mail.To.Add(userEmail);
                             mail.Subject = "Brain Pod password reset";
                             mail.Body = "Hello " + firstName + " You have successfully reset your password on Brain Pod\n" + "<p>Wasn't you? Please contact brainpod1234@gmail.com</p>";

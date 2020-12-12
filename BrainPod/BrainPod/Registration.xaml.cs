@@ -129,7 +129,7 @@ namespace BrainPod
 
                             using(MailMessage mail = new MailMessage())
                             {
-                                mail.From = new MailAddress("callumbuttery@gmail.com");
+                                mail.From = new MailAddress("brainpod1234@gmail.com");
                                 mail.To.Add(EmailInput.Text);
                                 mail.Subject = "testing sending mail";
                                 mail.Body = "Hello " + FirstNameInput.Text + " welcome to brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
