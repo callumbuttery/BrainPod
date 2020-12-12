@@ -1,9 +1,11 @@
 ﻿using BrainPod.Table;
 using Firebase.Auth;
 using Firebase.Database;
+using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,6 +21,7 @@ namespace BrainPod
 
         //global email
         string userEmail;
+        string firstName;
 
         public AccountInfo(string uEmail, string uFirstName, string uLastName, Guid uID)
         {
@@ -30,6 +33,7 @@ namespace BrainPod
             userLastDisplay.Text = "Last name: " + uLastName;
 
             userEmail = uEmail;
+            firstName = uFirstName;
 
         }
 
@@ -87,9 +91,101 @@ namespace BrainPod
         }
 
         //used to request password reset
-        private void resetPassword(object sender, EventArgs e)
+        async void resetPassword(object sender, EventArgs e)
         {
 
+            //generate email random auth number
+            int min = 1000;
+            int max = 9999;
+            Random rnd = new Random();
+            int auth = rnd.Next(min, max);
+
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("callumbuttery@gmail.com");
+                mail.To.Add(userEmail);
+                mail.Subject = "Brain Pod password reset";
+                mail.Body = "Hello " + firstName + " You have made a password reset request on brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new System.Net.NetworkCredential("brainpod1234@gmail.com", "brainpodmailserver");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
+            }
+
+
+            try
+            {
+                await DisplayAlert("Success", "Please check your email for an email authentication number which you will need to enter to reset your password", "Return");
+
+                var result = await DisplayPromptAsync("Security", "What's your email verification code?", keyboard: Keyboard.Numeric, maxLength: 4);
+
+                if (Convert.ToInt32(result) == auth)
+                {
+                    //get input
+                    var password = await DisplayPromptAsync("Security", "Please enter your new password?", keyboard: Keyboard.Text, maxLength: 16);
+
+                    //loop
+                    while (password == null || password.Length < 1 || password.Length > 16)
+                    {
+                        password = await DisplayPromptAsync("Security", "Please enter your new password?", keyboard: Keyboard.Text, maxLength: 16);
+                    }
+
+                    if (password != null)
+                    {
+                        //get account details to update user
+
+                        //fetch account based on information provided by user
+                        var getUser = (await firebaseClient
+                            .Child("RegisteredUsers")
+                            .OnceAsync<RegisteredUsers>()).Where(a => a.Object.Email == userEmail).FirstOrDefault();
+
+                        string fname = getUser.Object.FirstName;
+                        string lname = getUser.Object.LastName;
+                        Guid uID = getUser.Object.UserID;
+                        bool emailAuth = getUser.Object.emailAuth;
+                        string email = getUser.Object.Email;
+
+                        //delete account to post new updated details
+                        await firebaseClient.Child("RegisteredUsers").Child(getUser.Key).DeleteAsync();
+
+                        //add updated account
+                        var post = await firebaseClient
+                           .Child("RegisteredUsers")
+                           //posts new user to databse
+                           .PostAsync(new RegisteredUsers() { UserID = uID, Email = email, Password = password, FirstName = fname, LastName = lname, emailAuth = true });
+
+                        await DisplayAlert("Success", "Password reset", "Return");
+
+                        //sender user an email letting them know their password has been reset
+                        using (MailMessage mail = new MailMessage())
+                        {
+                            mail.From = new MailAddress("callumbuttery@gmail.com");
+                            mail.To.Add(userEmail);
+                            mail.Subject = "Brain Pod password reset";
+                            mail.Body = "Hello " + firstName + " You have successfully reset your password on Brain Pod\n" + "<p>Wasn't you? Please contact brainpod1234@gmail.com</p>";
+                            mail.IsBodyHtml = true;
+
+                            using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                            {
+                                smtp.Credentials = new System.Net.NetworkCredential("brainpod1234@gmail.com", "brainpodmailserver");
+                                smtp.EnableSsl = true;
+                                smtp.Send(mail);
+                            }
+                        }
+
+                    }
+
+                }
+            }
+            catch (Exception xe)
+            {
+                await DisplayAlert("Fail", xe.ToString(), "Return");
+            }
+          
         }
     }
 }

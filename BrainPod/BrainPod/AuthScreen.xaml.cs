@@ -60,6 +60,7 @@ namespace BrainPod
                 await firebaseClient.Child("RegisteredUsers").Child(delete.Key).DeleteAsync();
 
 
+              
                 //post updated account details
                 var result = await firebaseClient
                    .Child("RegisteredUsers")
