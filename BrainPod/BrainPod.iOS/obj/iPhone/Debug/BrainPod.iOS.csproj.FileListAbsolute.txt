@@ -196,3 +196,11 @@ C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPh
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\optimized\
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\BrainPod.iOS.csproj.CoreCompileInputs.cache
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\optimized\
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\BrainPod.iOS.csprojAssemblyReference.cache
+D:\repo\BrainPod\BrainPod\BrainPod.iOS\obj\iPhone\Debug\BrainPod.iOS.csproj.CoreCompileInputs.cache

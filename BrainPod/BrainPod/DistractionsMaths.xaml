@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainPod.DistractionsMaths">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Do some calculations to distract yourself"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="25"/>
+
+            <StackLayout>
+                <Frame HasShadow="True" BorderColor="Black" BackgroundColor="White">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="no1" FontAttributes="Bold"/>
+                            <Label x:Name="operator1" FontAttributes="Bold"/>
+                            <Label x:Name="no2" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Entry Keyboard="Numeric" x:Name="numberInput" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                            <Button Text="Check" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="100" Clicked="check"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
