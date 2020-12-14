@@ -22,18 +22,23 @@ namespace BrainPod
 
         public void generateNumbers()
         {
+            
+            
+            //clear entry box
+            numberInput.Text = null;
+
             //get all operators in array
             string[] operatorArray = { "X", "/", "-", "+" };
 
             //generate first random number
-            int min1 = 0001;
-            int max1 = 0020;
+            int min1 = 0005;
+            int max1 = 0010;
             Random rnd1 = new Random();
             int random1 = rnd1.Next(min1, max1);
 
             //generate second random number
             int min2 = 0001;
-            int max2 = 0020;
+            int max2 = 0005;
             Random rnd2 = new Random();
             int random2 = rnd2.Next(min2, max2);
 
@@ -78,22 +83,29 @@ namespace BrainPod
 
         }
 
-        public void check(object sender, EventArgs e)
+        private void check(object sender, EventArgs e)
         {
             //wrap in try catch incase user enters null value
             try
             {
-                if(Convert.ToInt32(numberInput.Text) == calculationResult)
+                //stop animation
+                animationView.StopAnimation();
+
+                if (Convert.ToInt32(numberInput.Text) == calculationResult)
                 {
                     //play celebration animation
-                    //generate new numbers
-
+                    animationView.PlayAnimation();
+                    
+                    generateNumbers();
+                    
+                    
 
                 }
                 else
                 {
                     //play loss animation
                     //generate new numbers
+                    generateNumbers();
                 }
             }
             catch

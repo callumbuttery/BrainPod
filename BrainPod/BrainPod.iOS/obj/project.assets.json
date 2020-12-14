@@ -2,6 +2,28 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Com.Airbnb.iOS.Lottie/2.5.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/4.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.12",
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.4.0": {
         "type": "package",
         "dependencies": {
@@ -324,6 +346,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": "4.0.7",
           "FirebaseAuthentication.net": "3.4.0",
           "FirebaseDatabase.net": "4.0.4",
           "SkiaChart.Forms": "1.2.50",
@@ -340,6 +363,28 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Com.Airbnb.iOS.Lottie/2.5.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/4.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.12",
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.4.0": {
         "type": "package",
         "dependencies": {
@@ -640,6 +685,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": "4.0.7",
           "FirebaseAuthentication.net": "3.4.0",
           "FirebaseDatabase.net": "4.0.4",
           "SkiaChart.Forms": "1.2.50",
@@ -656,6 +702,28 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Com.Airbnb.iOS.Lottie/2.5.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/4.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.12",
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.4.0": {
         "type": "package",
         "dependencies": {
@@ -959,6 +1027,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": "4.0.7",
           "FirebaseAuthentication.net": "3.4.0",
           "FirebaseDatabase.net": "4.0.4",
           "SkiaChart.Forms": "1.2.50",
@@ -975,6 +1044,28 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Com.Airbnb.iOS.Lottie/2.5.12": {
+        "type": "package",
+        "compile": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.iOS.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/4.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.iOS.Lottie": "2.5.12",
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "compile": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Lottie.Forms.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.4.0": {
         "type": "package",
         "dependencies": {
@@ -1278,6 +1369,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": "4.0.7",
           "FirebaseAuthentication.net": "3.4.0",
           "FirebaseDatabase.net": "4.0.4",
           "SkiaChart.Forms": "1.2.50",
@@ -1295,6 +1387,68 @@
     }
   },
   "libraries": {
+    "Com.Airbnb.iOS.Lottie/2.5.12": {
+      "sha512": "bxQUhgbHgzYBavs3W60H5oiGqcCcJeGaMVMgTvYqDFvY0ngGF9OCuwJwezE2+dJ9KoSI1aASa7oyi1/6lnwVZA==",
+      "type": "package",
+      "path": "com.airbnb.ios.lottie/2.5.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.ios.lottie.2.5.12.nupkg.sha512",
+        "com.airbnb.ios.lottie.nuspec",
+        "icon.png",
+        "lib/xamarinios10/Lottie.iOS.dll",
+        "lib/xamarinios10/Lottie.iOS.pdb",
+        "lib/xamarinios10/Lottie.iOS.xml",
+        "lib/xamarinmac20/Lottie.iOS.dll",
+        "lib/xamarinmac20/Lottie.iOS.pdb",
+        "lib/xamarinmac20/Lottie.iOS.xml",
+        "lib/xamarintvos10/Lottie.iOS.dll",
+        "lib/xamarintvos10/Lottie.iOS.pdb",
+        "lib/xamarintvos10/Lottie.iOS.xml",
+        "readme.txt"
+      ]
+    },
+    "Com.Airbnb.Xamarin.Forms.Lottie/4.0.7": {
+      "sha512": "ih82F1Luq+jp3pEv247M6vy5JA/1nS3cYgEpAlZcNJ1fdW/1m3OomhPf0Zb3WCycmKyAxp2/cUyroZUBSVwELA==",
+      "type": "package",
+      "path": "com.airbnb.xamarin.forms.lottie/4.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.xamarin.forms.lottie.4.0.7.nupkg.sha512",
+        "com.airbnb.xamarin.forms.lottie.nuspec",
+        "icon.png",
+        "lib/monoandroid10.0/Lottie.Forms.dll",
+        "lib/monoandroid10.0/Lottie.Forms.pdb",
+        "lib/monoandroid10.0/Lottie.Forms.xml",
+        "lib/net472/Lottie.Forms.dll",
+        "lib/net472/Lottie.Forms.pdb",
+        "lib/net472/Lottie.Forms.xml",
+        "lib/netcoreapp3.1/Lottie.Forms.dll",
+        "lib/netcoreapp3.1/Lottie.Forms.pdb",
+        "lib/netcoreapp3.1/Lottie.Forms.xml",
+        "lib/netstandard2.0/Lottie.Forms.dll",
+        "lib/netstandard2.0/Lottie.Forms.pdb",
+        "lib/netstandard2.0/Lottie.Forms.xml",
+        "lib/tizen40/Lottie.Forms.dll",
+        "lib/tizen40/Lottie.Forms.pdb",
+        "lib/tizen40/Lottie.Forms.xml",
+        "lib/uap10.0.17763/Lottie.Forms.dll",
+        "lib/uap10.0.17763/Lottie.Forms.pdb",
+        "lib/uap10.0.17763/Lottie.Forms.pri",
+        "lib/uap10.0.17763/Lottie.Forms.xml",
+        "lib/xamarinios10/Lottie.Forms.dll",
+        "lib/xamarinios10/Lottie.Forms.pdb",
+        "lib/xamarinios10/Lottie.Forms.xml",
+        "lib/xamarinmac20/Lottie.Forms.dll",
+        "lib/xamarinmac20/Lottie.Forms.pdb",
+        "lib/xamarinmac20/Lottie.Forms.xml",
+        "readme.txt"
+      ]
+    },
     "FirebaseAuthentication.net/3.4.0": {
       "sha512": "KLoD8nqKe2OwZ9SqyblEle0LM7QtDMEf7eqwzUQxAkMiViKvbSb8Rp9UGTuSkMtsekdYDtreI2H7/5Fq+hnbwg==",
       "type": "package",
@@ -2174,29 +2328,30 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "BrainPod >= 1.0.0",
+      "Com.Airbnb.Xamarin.Forms.Lottie >= 4.0.7",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.8.0.1364"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Callum\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\callu\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repo\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
       "projectName": "BrainPod.iOS",
-      "projectPath": "D:\\repo\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
-      "packagesPath": "C:\\Users\\Callum\\.nuget\\packages\\",
-      "outputPath": "D:\\repo\\BrainPod\\BrainPod\\BrainPod.iOS\\obj\\",
+      "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.iOS\\BrainPod.iOS.csproj",
+      "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Callum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\callu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2210,8 +2365,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\repo\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
-              "projectPath": "D:\\repo\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
+            "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+              "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
             }
           }
         }
@@ -2220,6 +2375,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Com.Airbnb.Xamarin.Forms.Lottie": {
+            "target": "Package",
+            "version": "[4.0.7, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.3.1, )"

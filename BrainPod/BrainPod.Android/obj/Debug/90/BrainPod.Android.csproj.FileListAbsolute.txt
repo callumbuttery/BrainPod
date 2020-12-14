@@ -3552,3 +3552,5 @@ D:\repo\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\res.flag
 D:\repo\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\R.txt
 D:\repo\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\R.cs.flag
 D:\repo\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\BrainPod.Android.csproj.CoreCompileInputs.cache
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\assets\Lottie.Forms.dll
+C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\90\android\assets\Lottie.Forms.pdb

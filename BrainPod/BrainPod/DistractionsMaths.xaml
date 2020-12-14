@@ -1,26 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="BrainPod.DistractionsMaths">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Do some calculations to distract yourself"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
                    FontSize="25"/>
 
             <StackLayout>
                 <Frame HasShadow="True" BorderColor="Black" BackgroundColor="White">
                     <StackLayout>
-                        <StackLayout Orientation="Horizontal">
-                            <Label x:Name="no1" FontAttributes="Bold"/>
-                            <Label x:Name="operator1" FontAttributes="Bold"/>
-                            <Label x:Name="no2" FontAttributes="Bold"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label x:Name="no1" FontAttributes="Bold" FontSize="80"/>
+                            <Label x:Name="operator1" FontAttributes="Bold" FontSize="60" VerticalTextAlignment="Center"/>
+                            <Label x:Name="no2" FontAttributes="Bold" FontSize="80"/>
                         </StackLayout>
 
                         <StackLayout>
-                            <Entry Keyboard="Numeric" x:Name="numberInput" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-                            <Button Text="Check" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="100" Clicked="check"/>
+                            <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="677-trophy.json"
+                                AutoPlay="False"
+                                HeightRequest="70"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                
+                                />
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Frame BorderColor="Black" BackgroundColor="#7C40A9">
+                                <Entry Keyboard="Numeric" x:Name="numberInput" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="150" FontSize="20" BackgroundColor="White"/>
+                            </Frame>
+                             <Button Text="Check" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="100" Clicked="check"/>
                         </StackLayout>
                     </StackLayout>
                 </Frame>
