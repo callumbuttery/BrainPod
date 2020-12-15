@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:chart="clr-namespace:SkiaChart.Charts;assembly=SkiaChart"
-             xmlns:chartViews="clr-namespace:SkiaChart.Views;assembly=SkiaChart"
+             xmlns:chartViews="clr-namespace:SkiaChart.Views;assembly=SkiaChart" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.Statistics"
              Title="Analysis">
@@ -14,11 +14,18 @@
                 <StackLayout>
 
                     <Frame CornerRadius="100" BackgroundColor="White" Margin="100,20,100,0">
-                        <Image x:Name="Logo"
-                       VerticalOptions="StartAndExpand" 
-                       WidthRequest="100"
-                       HeightRequest="100"
-                       Source="https://static.thenounproject.com/png/2500248-84.png"/>
+                        <StackLayout>
+                            <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="16952-group-working.json"
+                                AutoPlay="True"
+                                HeightRequest="200"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                RepeatMode="Infinite"
+                                />
+                        </StackLayout>
                     </Frame>
 
                     <Label Text="Here you can analyse your statistics based on the activities you have participated in"

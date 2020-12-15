@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.JournalLogs"
              Title="Summary">
@@ -28,9 +28,18 @@
                        HorizontalTextAlignment="Center"
                        />
 
-                <Image x:Name="jLogo"
-                       VerticalOptions="StartAndExpand"
-                       HeightRequest="250"/>
+                <StackLayout>
+                    <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="26918-book-page-turn-story-telling.json"
+                                AutoPlay="True"
+                                HeightRequest="200"
+                                WidthRequest="150"
+                                VerticalOptions="Start"
+                                HorizontalOptions="Center"
+                        RepeatMode="Infinite"
+                                />
+                </StackLayout>
 
 
                 <Frame HasShadow="True" Margin="20,20,20,5" BackgroundColor="White" CornerRadius="40">

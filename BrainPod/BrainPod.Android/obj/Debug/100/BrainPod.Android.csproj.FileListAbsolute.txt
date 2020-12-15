@@ -74,7 +74,6 @@ C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Plugin.Messaging.Abstractions.dll
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Plugin.Messaging.Abstractions.pdb
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Plugin.Messaging.dll
-C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Plugin.Messaging.dll.mdb
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\SkiaChart.dll
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\SkiaSharp.dll
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\SkiaSharp.Views.Android.dll
@@ -626,3 +625,4 @@ C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Plugin.Messaging.pdb

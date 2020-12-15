@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.Journal"
              Title="Daily Journal">
@@ -17,6 +17,19 @@
                    FontAttributes="Bold"
                    TextColor="Black"
                    FontSize="25"/>
+
+                <StackLayout>
+                    <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="41111-man-filling-a-survey-with-a-woman-watching-at-5-star-feedback-dialog.json"
+                                AutoPlay="True"
+                                HeightRequest="200"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                        RepeatMode="Infinite"
+                                />
+                </StackLayout>
 
                 <StackLayout Orientation="Horizontal">
                     <Image Source="https://static.thenounproject.com/png/3480239-200.png"

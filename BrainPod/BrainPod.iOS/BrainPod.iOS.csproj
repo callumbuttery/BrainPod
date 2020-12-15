@@ -74,6 +74,10 @@
     <BundleResource Include="Resources\39420-calculator.json" />
     <BundleResource Include="Resources\40538-game-console.json" />
     <BundleResource Include="Resources\16952-group-working.json" />
+    <BundleResource Include="Resources\41111-man-filling-a-survey-with-a-woman-watching-at-5-star-feedback-dialog.json" />
+    <BundleResource Include="Resources\36636-bradn-book.json" />
+    <BundleResource Include="Resources\4887-book.json" />
+    <BundleResource Include="Resources\26918-book-page-turn-story-telling.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

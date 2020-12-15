@@ -75,6 +75,10 @@
     <AndroidAsset Include="Assets\39420-calculator.json" />
     <AndroidAsset Include="Assets\40538-game-console.json" />
     <AndroidAsset Include="Assets\16952-group-working.json" />
+    <AndroidAsset Include="Assets\41111-man-filling-a-survey-with-a-woman-watching-at-5-star-feedback-dialog.json" />
+    <AndroidAsset Include="Assets\36636-bradn-book.json" />
+    <AndroidAsset Include="Assets\4887-book.json" />
+    <AndroidAsset Include="Assets\26918-book-page-turn-story-telling.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
