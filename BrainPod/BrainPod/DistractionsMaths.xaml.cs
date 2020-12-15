@@ -17,6 +17,9 @@ namespace BrainPod
         {
             InitializeComponent();
 
+            //play animation
+            mathsAnimation.PlayAnimation();
+
             generateNumbers();
         }
 
@@ -28,7 +31,7 @@ namespace BrainPod
             numberInput.Text = null;
 
             //get all operators in array
-            string[] operatorArray = { "X", "/", "-", "+" };
+            string[] operatorArray = { "X", "-", "+" };
 
             //generate first random number
             int min1 = 0005;
@@ -44,7 +47,7 @@ namespace BrainPod
 
             //generate random number between 0 and 3 to select and operator
             int min3 = 0000;
-            int max3 = 0003;
+            int max3 = 0002;
             Random rnd3 = new Random();
             int random3 = rnd3.Next(min3, max3);
 
@@ -63,11 +66,6 @@ namespace BrainPod
             {
                 //multiply
                 calculationResult = random1 * random2;
-            }
-            if (operatorArray[random3] == "/")
-            {
-                //divide
-                calculationResult = random1 / random2;
             }
             if (operatorArray[random3] == "-")
             {
@@ -94,6 +92,8 @@ namespace BrainPod
                 if (Convert.ToInt32(numberInput.Text) == calculationResult)
                 {
                     //play celebration animation
+                    animationView.IsVisible = true;
+                    animationView2.IsVisible = false;
                     animationView.PlayAnimation();
                     
                     generateNumbers();
@@ -104,8 +104,14 @@ namespace BrainPod
                 else
                 {
                     //play loss animation
+                    animationView.IsVisible = false;
+                    animationView2.IsVisible = true;
+                    animationView2.PlayAnimation();
+
                     //generate new numbers
                     generateNumbers();
+
+                    
                 }
             }
             catch

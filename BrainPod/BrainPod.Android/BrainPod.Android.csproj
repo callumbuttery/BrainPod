@@ -71,6 +71,8 @@
       <Link>.editorconfig</Link>
     </None>
     <AndroidAsset Include="Assets\677-trophy.json" />
+    <AndroidAsset Include="Assets\35271-try-again.json" />
+    <AndroidAsset Include="Assets\39420-calculator.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

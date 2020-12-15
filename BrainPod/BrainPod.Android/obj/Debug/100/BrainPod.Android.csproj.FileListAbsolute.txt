@@ -246,7 +246,6 @@ C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Xamarin.Forms.Xaml.pdb
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Xamarin.Google.Android.Material.dll
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Xamarin.Google.Android.Material.pdb
-C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\androidx\proguard\86dd575a-525f-4bcf-9a46-1d30fdd51eac.cfg
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_AndroidXJetifyProguardRules.stamp
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\androidx\_AndroidXJetifyProguardRules.jetify
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_AndroidXCecilfy.stamp
@@ -625,4 +624,4 @@ C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\android\assets\Plugin.Messaging.pdb
+C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\androidx\proguard\3b3d98f0-5293-40f7-8dc5-2451eb3eea0a.cfg
