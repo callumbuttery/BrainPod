@@ -1,15 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              x:Class="BrainPod.DistractionsMaster">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Distract yourself from an anxiety attack "
+            <Label Text="Distract yourself"
                 VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Having a bad day with Anxiety? Distract yourself by playing some games"
+                   FontSize="20"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
 
             <StackLayout>
-                <Frame BorderColor="Black">
+                <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="40538-game-console.json"
+                                AutoPlay="True"
+                                HeightRequest="200"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                    RepeatMode="Infinite"
+                                />
+            </StackLayout>
+           
+            
+            <StackLayout>
+                <Frame BorderColor="Black" Margin="20,0,20,0">
                     <Button Text="Maths"
                             FontSize="20"
                             Clicked="LoadMaths"/>
@@ -17,7 +39,7 @@
             </StackLayout>
 
             <StackLayout>
-                <Frame BorderColor="Black">
+                <Frame BorderColor="Black" Margin="20,0,20,0">
                     <Button Text="Reaction"
                             FontSize="20"
                             Clicked="LoadReaction"/>

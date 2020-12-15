@@ -15,6 +15,8 @@ namespace BrainPod
         public DistractionsMaster()
         {
             InitializeComponent();
+
+            animationView.PlayAnimation();
         }
 
         private void LoadMaths(object sender, EventArgs e)

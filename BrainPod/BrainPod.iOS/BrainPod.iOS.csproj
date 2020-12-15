@@ -72,6 +72,8 @@
     <BundleResource Include="Resources\677-trophy.json" />
     <BundleResource Include="Resources\35271-try-again.json" />
     <BundleResource Include="Resources\39420-calculator.json" />
+    <BundleResource Include="Resources\40538-game-console.json" />
+    <BundleResource Include="Resources\16952-group-working.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
