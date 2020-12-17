@@ -79,6 +79,9 @@
     <AndroidAsset Include="Assets\36636-bradn-book.json" />
     <AndroidAsset Include="Assets\4887-book.json" />
     <AndroidAsset Include="Assets\26918-book-page-turn-story-telling.json" />
+    <AndroidAsset Include="Assets\40066-girl-yoga.json" />
+    <AndroidAsset Include="Assets\36760-settings-icon.json" />
+    <AndroidAsset Include="Assets\31193-calendar-wiggle.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.AccountInfo"
              Title="Account Info">
@@ -15,6 +15,19 @@
                        FontAttributes="Bold"
                        FontSize="30"
                        Margin="0,20,0,20"/>
+
+            <StackLayout>
+                <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="36760-settings-icon.json"
+                                AutoPlay="True"
+                                HeightRequest="200"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                        RepeatMode="Infinite"
+                                />
+            </StackLayout>
 
             <Label x:Name="userEmailDisplay"
                        VerticalOptions="Center"

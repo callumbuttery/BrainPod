@@ -19,7 +19,7 @@ namespace BrainPod
 
             InitializeComponent();
             userID = uID;
-            CalendarLogo.Source = "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png";
+            //CalendarLogo.Source = "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png";
         }
 
       

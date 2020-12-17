@@ -32,7 +32,7 @@ namespace BrainPod
             InitializeComponent();
             UserID = uID;
 
-            CalendarLogo.Source = "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png";
+            //CalendarLogo.Source = "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png";
             DatePicker.MinimumDate = DateTime.Now;
             DatePicker.MaximumDate = DateTime.Now.AddMonths(4);
             DatePicker.Format = "dd-MM-yy";

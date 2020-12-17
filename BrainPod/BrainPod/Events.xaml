@@ -2,18 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:BrainPod"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:BrainPod" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.Events"
              Title="Events">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-
-                <Image x:Name="CalendarLogo"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Margin="0,15,0,0"/>
 
                 <Label Text="Worried about an up coming event? We get it! You can add and track your thoughts and feelings towards your events here"
                 VerticalOptions="Start" 

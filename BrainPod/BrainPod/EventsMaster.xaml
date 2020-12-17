@@ -2,16 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.EventsMaster"
              Title="Events">
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="CalendarLogo"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Margin="0,15,0,0"/>
+            <StackLayout>
+                <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="31193-calendar-wiggle.json"
+                                AutoPlay="True"
+                                HeightRequest="200"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                        RepeatMode="Infinite"
+                                />
+            </StackLayout>
 
             <Label Text="Worried about a forth coming event? We get it! Whether it's a social event or a big work event, add and track your feelings until you start to feel positive about it"
                 VerticalOptions="CenterAndExpand" 

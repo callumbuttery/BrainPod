@@ -78,6 +78,9 @@
     <BundleResource Include="Resources\36636-bradn-book.json" />
     <BundleResource Include="Resources\4887-book.json" />
     <BundleResource Include="Resources\26918-book-page-turn-story-telling.json" />
+    <BundleResource Include="Resources\40066-girl-yoga.json" />
+    <BundleResource Include="Resources\36760-settings-icon.json" />
+    <BundleResource Include="Resources\31193-calendar-wiggle.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

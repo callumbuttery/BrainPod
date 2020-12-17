@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:BrainPod"
+             xmlns:local="clr-namespace:BrainPod" xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.CBT">
     
@@ -18,19 +18,26 @@
                 HorizontalTextAlignment="Center"
                    FontSize="30"/>
 
-            <Label Text="CBT focuses on challenging unhelpful thoughts and behaviours. Feel free to come here anytime you want to challenge a though"
+                <StackLayout>
+                    <forms:AnimationView 
+                                x:Name="animationView"
+                                Animation="40066-girl-yoga.json"
+                                AutoPlay="True"
+                                HeightRequest="200"
+                                WidthRequest="150"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                        RepeatMode="Infinite"
+                                />
+                </StackLayout>
+
+                <Label Text="CBT focuses on challenging unhelpful thoughts and behaviours. Feel free to come here anytime you want to challenge a though"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
                    FontSize="Body"/>
 
-            <Image Source="https://static.thenounproject.com/png/66159-200.png"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start"
-                   Margin="0,20,0,0"
-                   />
-
-            <StackLayout>
+                <StackLayout>
                     <Expander>
                         <Expander.Header>
                             <Frame BackgroundColor="White" WidthRequest="100" BorderColor="Black" Margin="100,30,100,0" HasShadow="True" CornerRadius="10">
