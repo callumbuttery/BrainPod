@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AfGPgaRl5Ht5t3z8UhaSEsuEo/3NTpuLJQ1ILJRRV3VIzIfGbR/2TdbWGq7FpIlqXvuz+nnbQF03lDB0PR00TA==",
+  "dgSpecHash": "HkK11DAv7I9mCvJYBpgPOcM/YounCIjEg6f7s9FN32VGzaFSdKZ1ZmpUKr0VUqsv6xpF26TdvrqjAVFA5Foyhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+  "projectFilePath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\callu\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.0.7\\com.airbnb.xamarin.forms.lottie.4.0.7.nupkg.sha512",
     "C:\\Users\\callu\\.nuget\\packages\\firebaseauthentication.net\\3.4.0\\firebaseauthentication.net.3.4.0.nupkg.sha512",

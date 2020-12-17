@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj": {}
+    "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj": {
+    "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
+        "projectUniqueName": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
         "projectName": "BrainPod.Android",
-        "projectPath": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
+        "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
         "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\obj\\",
+        "outputPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
-                "projectPath": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
+              "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+                "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
               }
             }
           }
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+    "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+        "projectUniqueName": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
         "projectName": "BrainPod",
-        "projectPath": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
+        "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj",
         "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\obj\\",
+        "outputPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
