@@ -15,7 +15,7 @@
                 <ScrollView>
                     <StackLayout BackgroundColor="WhiteSmoke">
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,20,0,10" CornerRadius="0">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="https://static.thenounproject.com/png/1228602-200.png"
                                    Margin="0,0,45,0"/>
@@ -33,7 +33,7 @@
                         </Frame>
 
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="0">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="https://static.thenounproject.com/png/1683890-200.png"
                                        Margin="0,0,45,0"/>
@@ -50,24 +50,7 @@
                             </StackLayout>
                         </Frame>
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="https://static.thenounproject.com/png/3345104-200.png"
-                                       Margin="0,0,45,0"/>
-
-                                <Button Text="Distractions"
-                                VerticalOptions="Center" 
-                            HorizontalOptions="Center"
-                               Clicked="loadDistractions"
-                                BackgroundColor="White"
-                                    CornerRadius="10"
-                                    WidthRequest="150"
-                                        TextTransform="Lowercase"
-                                />
-                            </StackLayout>
-                        </Frame>
-
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="0">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/2079029-200.png"
                                    Margin="0,0,45,0"/>
@@ -83,7 +66,7 @@
                         </StackLayout>
                     </Frame>
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="0">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/3087920-200.png"
                                    Margin="0,0,45,0"/>
@@ -100,7 +83,7 @@
                         </StackLayout>
                     </Frame>
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="0">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="https://static.thenounproject.com/png/66159-200.png"
                                        Margin="0,0,45,0"/>
@@ -116,7 +99,7 @@
                             </StackLayout>
                         </Frame>
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="0">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/1243631-200.png"
                                    Margin="0,0,45,0"/>
@@ -132,7 +115,7 @@
                         </StackLayout>
                     </Frame>
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="0">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/3480239-200.png"
                                    Margin="0,0,45,0"/>
@@ -149,7 +132,7 @@
                     </Frame>
 
 
-                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="10">
+                        <Frame HasShadow="True" HeightRequest="40" BackgroundColor="#7C40A9" Margin="0,0,0,10" CornerRadius="0">
                         <StackLayout Orientation="Horizontal">
                             <Image Source="https://static.thenounproject.com/png/3480499-200.png"
                                    Margin="0,0,45,0"/>

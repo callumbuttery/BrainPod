@@ -137,15 +137,5 @@ namespace BrainPod
             //hide menu bar
             IsPresented = false;
         }
-
-        private void loadDistractions(object sender, EventArgs e)
-        {
-            Detail = new NavigationPage(new DistractionsMaster())
-            {
-                BarBackgroundColor = Color.FromHex("#7C40A9")
-            };
-            //hide menu bar
-            IsPresented = false;
-        }
     }
 }

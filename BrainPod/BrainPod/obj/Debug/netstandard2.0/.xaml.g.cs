@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BrainPod.DistractionsMaths.xaml", "DistractionsMaths.xaml", typeof(global::BrainPod.DistractionsMaths))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("BrainPod..xaml", ".xaml", typeof(global::BrainPod.DistractionsMaths))]
 
 namespace BrainPod {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("DistractionsMaths.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute(".xaml")]
     public partial class DistractionsMaths : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
