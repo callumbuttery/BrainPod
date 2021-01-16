@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\BrainPod",
-    "\\BrainPod\\BrainPod",
-    "\\BrainPod\\BrainPod\\Table"
+    "\\BrainPod\\BrainPod"
   ],
-  "SelectedNode": "\\BrainPod\\BrainPod\\Table\\UserLogs.cs",
+  "SelectedNode": "\\BrainPod.sln",
   "PreviewInSolutionExplorer": false
 }

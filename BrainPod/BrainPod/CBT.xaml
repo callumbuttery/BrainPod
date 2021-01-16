@@ -31,7 +31,7 @@
                                 />
                 </StackLayout>
 
-                <Label Text="CBT focuses on challenging unhelpful thoughts and behaviours. Feel free to come here anytime you want to challenge a though"
+                <Label Text="CBT focuses on challenging unhelpful thoughts and behaviours. Feel free to come here anytime you want to challenge a thought"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
