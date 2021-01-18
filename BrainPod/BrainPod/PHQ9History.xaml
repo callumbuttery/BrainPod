@@ -2,37 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              mc:Ignorable="d"
              x:Class="BrainPod.PHQ9History"
              Title="PHQ9 History">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#c4ebf2">
-            <Label Text="Previous test results"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" 
-                   FontAttributes="Bold"
-                   FontSize="30"
-                   TextColor="Black"/>
+        <ScrollView>
+            <StackLayout BackgroundColor="#c4ebf2">
 
-            <ListView x:Name="listOfResults" HasUnevenRows="True">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black">
-                                <StackLayout BackgroundColor="White" >
-                                    <Label Text="Test Date" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding submissionDate}" FontSize="15" HorizontalTextAlignment="Center"/>
-                                    <Label Text="Overall Result" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding overallResult}" FontSize="15" HorizontalTextAlignment="Center"/>
+                <StackLayout>
+                    <Label Text="Score History" HorizontalOptions="Center" FontSize="30" Margin="0,20,0,0" FontAttributes="Bold" TextColor="Black"/>
+                    <microcharts:ChartView x:Name="ChartViewBar" HeightRequest="200" WidthRequest="500" Margin="0,20" BackgroundColor="#c4ebf2"/>
+                </StackLayout>
+                <Label Text="Previous test results"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                       FontSize="30"
+                       TextColor="Black"/>
 
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell>
+                <ListView x:Name="listOfResults" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame CornerRadius="10" Margin = "10,10,10,10" HasShadow="True" BorderColor="Black">
+                                    <StackLayout BackgroundColor="White" >
+                                        <Label Text="Test Date" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
+                                        <Label Text="{Binding submissionDate}" FontSize="15" HorizontalTextAlignment="Center"/>
+                                        <Label Text="Overall Result" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center"/>
+                                        <Label Text="{Binding overallResult}" FontSize="15" HorizontalTextAlignment="Center"/>
 
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
