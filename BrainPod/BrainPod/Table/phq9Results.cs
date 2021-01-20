@@ -9,5 +9,7 @@ namespace BrainPod.Table
         public Guid UserID { get; set; }
         public int overallResult { get; set; }
         public string submissionDate { get; set; }
+        public string submissionDateWithoutTime { get; set; }
+        public string year { get; set; }
     }
 }

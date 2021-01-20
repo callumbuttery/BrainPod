@@ -59,7 +59,9 @@ namespace BrainPod
                 {
                     UserID = item.Object.UserID,
                     overallResult = item.Object.overallResult,
-                    submissionDate = item.Object.submissionDate
+                    submissionDate = item.Object.submissionDate,
+                    submissionDateWithoutTime = item.Object.submissionDateWithoutTime,
+                    year = item.Object.year
 
                 }).ToList();
 
@@ -68,6 +70,9 @@ namespace BrainPod
 
                 listOfResults.ItemsSource = orderedResults;
 
+
+                //reorder by date not time
+                var dateOrderedResults = getResults.OrderBy(x => x.year).ToList();
 
 
                 //user must log 10 entries to display 
@@ -78,7 +83,7 @@ namespace BrainPod
                     int count = 0;
                     while (count < 9)
                     {
-                        foreach (var item in orderedResults)
+                        foreach (var item in dateOrderedResults)
                         {
                             if (count < 9)
                             {

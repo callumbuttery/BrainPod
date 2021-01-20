@@ -126,6 +126,10 @@ namespace BrainPod
             DateTime dt = DateTime.Now;
             //append datetime to correct format
             string convertedDateTime = dt.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+            string convertedDateTimeWithoutTime = dt.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+            string year = dt.ToString("yyyy", CultureInfo.InvariantCulture);
+
+            
 
             try
             {
@@ -133,7 +137,7 @@ namespace BrainPod
                 await firebaseClient
                    .Child("phq9Results")
                    //posts new log to databse
-                   .PostAsync(new phq9Results() { UserID = GlobalUserID, submissionDate = convertedDateTime, overallResult = score });
+                   .PostAsync(new phq9Results() { UserID = GlobalUserID, submissionDate = convertedDateTime, overallResult = score, submissionDateWithoutTime = convertedDateTimeWithoutTime,year = year});
 
                 //open results window
                 
