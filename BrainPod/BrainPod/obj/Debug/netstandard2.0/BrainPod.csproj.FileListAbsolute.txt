@@ -166,7 +166,10 @@ D:\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\WelcomeScreen.xaml.g
 D:\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfoInputs.cache
 D:\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfo.cs
 D:\repo\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
-C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
+C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.deps.json
+C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\ref\BrainPod.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.pdb
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\AccountInfo.xaml.g.cs
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\AuthScreen.xaml.g.cs
@@ -188,10 +191,6 @@ C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\n
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfoInputs.cache
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfo.cs
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csproj.CoreCompileInputs.cache
-C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.deps.json
-C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.dll
-C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\ref\BrainPod.dll
-C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\bin\Debug\netstandard2.0\BrainPod.pdb
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.dll
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
