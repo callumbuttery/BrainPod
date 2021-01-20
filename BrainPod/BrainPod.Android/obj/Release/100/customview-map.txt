@@ -81,6 +81,7 @@ resources;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.A
 resources;C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\49\jl\res\values\styles.xml
 resources;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\49\jl\res\values\styles.xml
 resources;C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\88\jl\res\values\strings.xml
+resources;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\88\jl\res\values\strings.xml
 resources;obj\Release\100\res\values\colors.xml
 resources;obj\Release\100\res\values\styles.xml
 set;C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\49\jl\res\anim\enterfromleft.xml
@@ -94,6 +95,7 @@ set;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android
 string;C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\49\jl\res\values\strings.xml
 string;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\49\jl\res\values\strings.xml
 string;C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\88\jl\res\values\strings.xml
+string;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\88\jl\res\values\strings.xml
 style;C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\49\jl\res\values\styles.xml
 style;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Release\100\lp\49\jl\res\values\styles.xml
 style;obj\Release\100\res\values\styles.xml
