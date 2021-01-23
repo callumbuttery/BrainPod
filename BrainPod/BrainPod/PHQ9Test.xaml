@@ -7,8 +7,8 @@
              x:Class="BrainPod.PHQ9Test"
              Title="PHQ9 Test">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#c4ebf2">
-            <Label Text="Welcome to the PHQ9 test, please answer the following questions"
+        <StackLayout BackgroundColor="White">
+            <Label Text="Welcome to your mental health check-up, please answer the following questions"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
                 Margin="0"

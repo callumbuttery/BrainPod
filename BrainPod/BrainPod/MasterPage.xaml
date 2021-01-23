@@ -104,7 +104,7 @@
                             <Image Source="https://static.thenounproject.com/png/1243631-200.png"
                                    Margin="0,0,45,0"/>
 
-                            <Button Text="PHQ9"
+                            <Button Text="check-up"
                             VerticalOptions="Center" 
                         HorizontalOptions="Center"
                             Clicked="Button_Clicked_2"

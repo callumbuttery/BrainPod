@@ -26,7 +26,7 @@
                    HorizontalOptions="Center"
                    HeightRequest="200"/>
 
-            <Button Text="Take the test"
+            <Button Text="Check-up"
                         VerticalOptions="Start" 
                 HorizontalOptions="Center"
                         WidthRequest="150"
@@ -34,7 +34,7 @@
                         Margin="0,0,0,10"
                         Clicked="startTestBtn"/>
 
-            <Button Text="Test History"
+            <Button Text="Check-up History"
                         VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
                         WidthRequest="150"

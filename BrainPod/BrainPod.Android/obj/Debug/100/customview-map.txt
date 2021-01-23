@@ -27,6 +27,7 @@ com.google.android.material.tabs.TabLayout;C:\Users\callu\Source\Repos\callumbut
 com.google.android.material.tabs.TabLayout;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\lp\50\jl\res\layout\rootlayout.xml
 com.google.android.material.tabs.TabLayout;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\lp\50\jl\res\layout\tabbar.xml
 com.google.android.material.tabs.TabLayout;obj\Debug\100\res\layout\tabbar.xml
+crc64720bb2db43a66fe9.FormsViewPager;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\lp\50\jl\res\layout\rootlayout.xml
 declare-styleable;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\lp\1\jl\res\values\values.xml
 declare-styleable;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\lp\50\jl\res\values\attrs.xml
 enum;C:\Users\callu\Source\Repos\callumbuttery\BrainPod\BrainPod\BrainPod.Android\obj\Debug\100\lp\1\jl\res\values\values.xml
