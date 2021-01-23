@@ -1,5 +1,7 @@
 ﻿using BrainPod.Table;
 using Firebase.Database;
+using Microcharts;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +63,59 @@ namespace BrainPod
                 }).ToList();
 
 
-                //code for box which counts journal entries etc
+                //workout number of happy logs for graph info
+                foreach (var item in foundLogs)
+                {
+                    //counters
+                    float goodcounter = 0;
+                    float averagecounter = 0;
+                    float badcounter = 0;
+
+                    if(item.mood == "Good")
+                    {
+                        goodcounter++;
+                    }
+                    if(item.mood == "Average")
+                    {
+                        averagecounter++;
+                    }
+                    if(item.mood == "Bad")
+                    {
+                        badcounter++;
+                    }
+
+                    ChartEntry[] entries = new[]
+                    {
+                        //initialise entries
+                        new ChartEntry(goodcounter)
+                        {
+                            Label = "Happy Rated Journals",
+                            ValueLabel = goodcounter.ToString(),
+                            Color = SKColor.Parse("#7CFC00"),
+                            TextColor = SKColor.Parse("#7C40A9"),
+                        },
+
+                        new ChartEntry(averagecounter)
+                        {
+                            Label = "Average Rated Journals",
+                            ValueLabel = averagecounter.ToString(),
+                            Color = SKColor.Parse("#ffff00"),
+                            TextColor = SKColor.Parse("#7C40A9"),
+                        },
+
+                        new ChartEntry(badcounter)
+                        {
+                            Label = "Poorly Rated Journals",
+                            ValueLabel = badcounter.ToString(),
+                            Color = SKColor.Parse("#ff0000"),
+                            TextColor = SKColor.Parse("#7C40A9"),
+                        }
+                    };
+
+
+                    //call to initialise chart
+                    AssignValues(entries);
+                }
 
                 //get the number of logs to work out average
                 countLogs = foundLogs.Count;
@@ -119,5 +173,20 @@ namespace BrainPod
             }
 
         }
+
+
+        public void AssignValues(ChartEntry[] entries)
+        {
+            //initalise chart
+            ChartViewBar.Chart = new BarChart
+            {
+                Entries = entries,
+                LabelTextSize = 50,
+                IsAnimated = true,
+                ValueLabelOrientation = Orientation.Horizontal,
+                
+            };
+        }
+
     }
 }
