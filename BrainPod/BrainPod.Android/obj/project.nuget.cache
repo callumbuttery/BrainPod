@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y9K87sfjOQQdC8NMGPhz7O0n4acEVl74IFEcazZyVEvh82K/PmD0vPwCcitZtAEBYz0tF4iqZCWr4QSPK6MlTw==",
+  "dgSpecHash": "eMK9sYnTvI+vhysk8azAow/gn/c6VCxitbzVKMtClsf1dswUEl9+z3rlDnPdi4qd9M0glaVDxbHnFXotqvM9Zg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
+  "projectFilePath": "C:\\Users\\callu\\source\\repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\callu\\.nuget\\packages\\com.airbnb.android.lottie\\3.4.4\\com.airbnb.android.lottie.3.4.4.nupkg.sha512",
     "C:\\Users\\callu\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.0.7\\com.airbnb.xamarin.forms.lottie.4.0.7.nupkg.sha512",

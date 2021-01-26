@@ -40,19 +40,9 @@
             <Label x:Name="userLastDisplay"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
-                   FontSize="20"/>
-            <Label x:Name="logCounter"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"
                    FontSize="20"
-                   Margin="0,45,0,0"/>
+                   Margin="0,0,0,40"/>
 
-            <Label x:Name="phq9Counter"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"
-                   FontSize="20"
-                   Margin="0,45,0,0"/>
-                
             <Button Text="Sign out"
                         VerticalOptions="Center"
                        HorizontalOptions="Center"
@@ -62,7 +52,7 @@
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     Clicked="resetPassword"/>
-                
+
             <Label Text ="Icons from flaticon and thenounproject"
                    HorizontalOptions="Center"
                    />

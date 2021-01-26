@@ -54,10 +54,6 @@ namespace BrainPod
 
             }).ToList();
 
-            int numberOfLogs = foundLogs.Count;
-
-            //display number of recorded logs on screen
-            logCounter.Text = "Number of journal entries: " + numberOfLogs;
 
 
             //Get all instances of recorded PHQ9 tests
@@ -73,9 +69,6 @@ namespace BrainPod
 
             //count number of instances
             int numberOfTests = getResults.Count;
-
-            //display number of recorded tests on screen
-            phq9Counter.Text = "Number of PHQ9 entries: " + numberOfTests;
 
         }
 
@@ -94,28 +87,38 @@ namespace BrainPod
         async void resetPassword(object sender, EventArgs e)
         {
 
+
+
             //generate email random auth number
             int min = 1000;
             int max = 9999;
             Random rnd = new Random();
             int auth = rnd.Next(min, max);
 
-            using (MailMessage mail = new MailMessage())
+            try
             {
-                mail.From = new MailAddress("callumbuttery@gmail.com");
-                mail.To.Add(userEmail);
-                mail.Subject = "Brain Pod password reset";
-                mail.Body = "Hello " + firstName + " You have made a password reset request on brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
-                mail.IsBodyHtml = true;
 
-                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                using (MailMessage mail = new MailMessage())
                 {
-                    smtp.Credentials = new System.Net.NetworkCredential("brainpod1234@gmail.com", "brainpodmailserver");
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
+                    mail.From = new MailAddress("callumbuttery@gmail.com");
+                    mail.To.Add(userEmail);
+                    mail.Subject = "Brain Pod password reset";
+                    mail.Body = "Hello " + firstName + " You have made a password reset request on brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
+                    mail.IsBodyHtml = true;
+
+                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtp.Credentials = new System.Net.NetworkCredential("brainpod1234@gmail.com", "brainpodmailserver");
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+                    }
                 }
             }
-
+            catch(Exception error)
+            {
+                await DisplayAlert("Fail", error.ToString(), "Return");
+                return;
+            }
 
             try
             {
