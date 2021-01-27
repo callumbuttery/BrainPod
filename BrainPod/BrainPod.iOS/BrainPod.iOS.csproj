@@ -81,6 +81,7 @@
     <BundleResource Include="Resources\40066-girl-yoga.json" />
     <BundleResource Include="Resources\36760-settings-icon.json" />
     <BundleResource Include="Resources\31193-calendar-wiggle.json" />
+    <BundleResource Include="Resources\5066-meeting-and-stuff.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

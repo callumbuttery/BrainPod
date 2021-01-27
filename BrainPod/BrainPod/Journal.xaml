@@ -9,13 +9,13 @@
     
         <ContentPage.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="#E0E0E0">
+            <StackLayout BackgroundColor="#7C40A9">
                 <Label Text="Log how you're feeling"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"
                    Margin="10"
                    FontAttributes="Bold"
-                   TextColor="Black"
+                   TextColor="White"
                    FontSize="25"/>
 
                 <StackLayout>
@@ -31,18 +31,29 @@
                                 />
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal">
-                    <Image Source="https://static.thenounproject.com/png/3480239-200.png"
-                           WidthRequest="50"
-                           HeightRequest="50"
-                           HorizontalOptions="Center"
-                           Margin="80,10,0,0"/>
-                    <DatePicker VerticalOptions="Start"
+                <Frame HasShadow="True" CornerRadius="10" Margin="40,0,40,0">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="White" HorizontalOptions="Center">
+                        <forms:AnimationView 
+                                x:Name="animationView2"
+                                Animation="31193-calendar-wiggle.json"
+                                AutoPlay="True"
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                        RepeatMode="Infinite"
+                                />
+
+                      
+                        <DatePicker VerticalOptions="Start"
                             HorizontalOptions="Center"
                             x:Name="DatePicker"
                                FontSize="30"
-                                Margin="0,0,20,0"/>
-                </StackLayout>
+                                
+                                />
+
+                    </StackLayout>
+                </Frame>
 
                 <Image x:Name="LogoWithoutText"
                    HorizontalOptions="Center"/>
@@ -109,21 +120,24 @@
                                        FontSize="25"/>
                             </StackLayout>
                             
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                                 <ImageButton Source="https://static.thenounproject.com/png/1421319-200.png"
                                                Margin="10,0,0,0"
                                                Clicked="sadFaceClicked"
                                                x:Name="sadFace"
-                                             BackgroundColor="White"/>
+                                             BackgroundColor="White"
+                                             HorizontalOptions="Center"/>
                                 <ImageButton Source="https://static.thenounproject.com/png/746248-200.png"
                                                Margin="15,0,15,0"
                                                Clicked="middleFaceClicked"
                                                x:Name="middleFace"
-                                             BackgroundColor="White"/>
+                                             BackgroundColor="White"
+                                             HorizontalOptions="Center"/>
                                 <ImageButton Source="https://static.thenounproject.com/png/2541167-200.png"
                                                Clicked="happyFaceClicked"
                                                x:Name="happyFace"
-                                             BackgroundColor="White"/>
+                                             BackgroundColor="White"
+                                             HorizontalOptions="Center"/>
                             </StackLayout>
                         </StackLayout>
                     </Frame>

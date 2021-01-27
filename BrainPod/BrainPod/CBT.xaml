@@ -10,13 +10,15 @@
     
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-           
-            <Label Text="Cognitive Behavioral Therapy"
+            <StackLayout BackgroundColor="#7C40A9">
+
+                <Label Text="Cognitive Behavioral Therapy"
                 VerticalOptions="Start" 
                 HorizontalOptions="Center" 
                 HorizontalTextAlignment="Center"
-                   FontSize="30"/>
+                   FontSize="30"
+                   TextColor="White"
+                   FontAttributes="Bold"/>
 
                 <StackLayout>
                     <forms:AnimationView 
@@ -35,7 +37,8 @@
                    VerticalOptions="Start"
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
-                   FontSize="Body"/>
+                   FontSize="Body"
+                       TextColor="White"/>
 
                 <StackLayout>
                     <Expander>

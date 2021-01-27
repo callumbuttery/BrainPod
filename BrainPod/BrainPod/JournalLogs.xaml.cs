@@ -63,13 +63,16 @@ namespace BrainPod
                 }).ToList();
 
 
+
+                //counters
+                float goodcounter = 0;
+                float averagecounter = 0;
+                float badcounter = 0;
+
+
                 //workout number of happy logs for graph info
                 foreach (var item in foundLogs)
                 {
-                    //counters
-                    float goodcounter = 0;
-                    float averagecounter = 0;
-                    float badcounter = 0;
 
                     if(item.mood == "Good")
                     {
@@ -84,20 +87,26 @@ namespace BrainPod
                         badcounter++;
                     }
 
-                    ChartEntry[] entries = new[]
+                    
+                }
+
+
+                ChartEntry[] entries = new[]
                     {
                         //initialise entries
                         new ChartEntry(goodcounter)
                         {
-                            Label = "Happy Rated Journals",
+                            Label = "Happy",
                             ValueLabel = goodcounter.ToString(),
                             Color = SKColor.Parse("#7CFC00"),
                             TextColor = SKColor.Parse("#7C40A9"),
+                            
+                            
                         },
 
                         new ChartEntry(averagecounter)
                         {
-                            Label = "Average Rated Journals",
+                            Label = "Average",
                             ValueLabel = averagecounter.ToString(),
                             Color = SKColor.Parse("#ffff00"),
                             TextColor = SKColor.Parse("#7C40A9"),
@@ -105,7 +114,7 @@ namespace BrainPod
 
                         new ChartEntry(badcounter)
                         {
-                            Label = "Poorly Rated Journals",
+                            Label = "Poorly",
                             ValueLabel = badcounter.ToString(),
                             Color = SKColor.Parse("#ff0000"),
                             TextColor = SKColor.Parse("#7C40A9"),
@@ -113,9 +122,8 @@ namespace BrainPod
                     };
 
 
-                    //call to initialise chart
-                    AssignValues(entries);
-                }
+                //call to initialise chart
+                AssignValues(entries);
 
                 //get the number of logs to work out average
                 countLogs = foundLogs.Count;
@@ -183,6 +191,7 @@ namespace BrainPod
                 Entries = entries,
                 LabelTextSize = 50,
                 IsAnimated = true,
+                
                 ValueLabelOrientation = Orientation.Horizontal,
                 
             };

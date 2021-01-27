@@ -85,6 +85,7 @@
     <AndroidAsset Include="Assets\40066-girl-yoga.json" />
     <AndroidAsset Include="Assets\36760-settings-icon.json" />
     <AndroidAsset Include="Assets\31193-calendar-wiggle.json" />
+    <AndroidAsset Include="Assets\5066-meeting-and-stuff.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
