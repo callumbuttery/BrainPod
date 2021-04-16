@@ -133,7 +133,7 @@ namespace BrainPod
                             {
                                 mail.From = new MailAddress("brainpod1234@gmail.com");
                                 mail.To.Add(EmailInput.Text);
-                                mail.Subject = "Odro validation";
+                                mail.Subject = "BrainPod validation";
                                 mail.Body = "Hello " + FirstNameInput.Text + " welcome to brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
                                 mail.IsBodyHtml = true;
 

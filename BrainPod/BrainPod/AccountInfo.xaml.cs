@@ -102,7 +102,7 @@ namespace BrainPod
                 {
                     mail.From = new MailAddress("callumbuttery@gmail.com");
                     mail.To.Add(userEmail);
-                    mail.Subject = "Brain Pod password reset";
+                    mail.Subject = "BrainPod password reset";
                     mail.Body = "Hello " + firstName + " You have made a password reset request on brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
                     mail.IsBodyHtml = true;
 
