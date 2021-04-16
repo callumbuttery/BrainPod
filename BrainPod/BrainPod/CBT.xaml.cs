@@ -360,5 +360,10 @@ namespace BrainPod
             //update global variable
             scenario = editor.Text;
         }
+
+        public void Method()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

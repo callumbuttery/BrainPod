@@ -20,15 +20,15 @@ namespace BrainPod
         public static FirebaseClient firebaseClient = new FirebaseClient("https://brainpod-eba39.firebaseio.com/");
 
         //holds all questions
-        string[] questions = { "Little interest or pleasure in doing things?",
-        "Feeling down, depressed, or hopeless?",
-        "Trouble falling or staying asleep, or sleeping too much?",
-        "Feeling tired or having little energy?",
-        "Poor appetite or overeating?",
-        "Feeling bad about yourself — or that you are a failure or have let yourself or your family down?",
-        "Trouble concentrating on things, such as reading the newspaper or watching television?",
-        "Moving or speaking so slowly that other people could have noticed? Or so fidgety or restless that you have been moving a lot more than usual?",
-        "Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?"};
+        string[] questions = { "How often do you have little interest or pleasure in doing things?",
+        "How often do you feeling down, depressed, or hopeless?",
+        "How often do you have trouble falling or staying asleep, or sleeping too much?",
+        "How often are you feeling tired or having little energy?",
+        "How often do you have a poor appetite or overeating?",
+        "How often do you feeling bad about yourself — or that you are a failure or have let yourself or your family down?",
+        "How often do you have Trouble concentrating on things, such as reading the newspaper or watching television?",
+        "How often do are you moving or speaking so slowly that other people could have noticed? Or so fidgety or restless that you have been moving a lot more than usual?",
+        "How often do you have thoughts that you would be better off dead, or thoughts of hurting yourself in some way?"};
 
         //holds all question scores
         int[] questionScores = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };

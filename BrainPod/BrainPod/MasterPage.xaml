@@ -27,7 +27,7 @@
                             BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"
-                                        TextTransform="Lowercase"
+                                        TextTransform="Uppercase"
                             />
                             </StackLayout>
                         </Frame>
@@ -45,7 +45,7 @@
                                 BackgroundColor="White"
                                     CornerRadius="10"
                                     WidthRequest="150"
-                                        TextTransform="Lowercase"
+                                        TextTransform="Uppercase"
                                 />
                             </StackLayout>
                         </Frame>
@@ -62,7 +62,7 @@
                              BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"
-                                    TextTransform="Lowercase"/>
+                                    TextTransform="Uppercase"/>
                         </StackLayout>
                     </Frame>
 
@@ -78,7 +78,7 @@
                             BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"
-                                    TextTransform="Lowercase"
+                                    TextTransform="Uppercase"
                             />
                         </StackLayout>
                     </Frame>
@@ -95,7 +95,7 @@
                                         CornerRadius="10"
                                         WidthRequest="150"
                                         Clicked="Button_Clicked_8"
-                                        TextTransform="Lowercase"/>
+                                        TextTransform="Uppercase"/>
                             </StackLayout>
                         </Frame>
 
@@ -111,7 +111,7 @@
                              BackgroundColor="White"
                                CornerRadius="10"
                                WidthRequest="150"
-                                    TextTransform="Lowercase"/>
+                                    TextTransform="Uppercase"/>
                         </StackLayout>
                     </Frame>
 
@@ -127,7 +127,7 @@
                              BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"
-                                    TextTransform="Lowercase"/>
+                                    TextTransform="Uppercase"/>
                         </StackLayout>
                     </Frame>
 
@@ -144,7 +144,7 @@
                              BackgroundColor="White"
                                 CornerRadius="10"
                                 WidthRequest="150"
-                                    TextTransform="Lowercase"/>
+                                    TextTransform="Uppercase"/>
                         </StackLayout>
                     </Frame>
 
@@ -155,7 +155,7 @@
                                 CornerRadius="10"
                                 WidthRequest="150"
                             Margin="0,10,0,10"
-                            TextTransform="Lowercase"/>
+                            TextTransform="Uppercase"/>
 
                 </StackLayout>
                 </ScrollView>

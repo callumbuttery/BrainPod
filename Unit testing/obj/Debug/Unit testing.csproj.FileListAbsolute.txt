@@ -1,0 +1,14 @@
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Unit testing.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Unit testing.pdb
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\obj\Debug\Unit testing.csprojAssemblyReference.cache
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\obj\Debug\Unit testing.csproj.CoreCompileInputs.cache
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\obj\Debug\Unit testing.csproj.CopyComplete
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\obj\Debug\Unit testing.dll
+C:\Users\callu\source\repos\callumbuttery\BrainPod\Unit testing\obj\Debug\Unit testing.pdb

@@ -159,21 +159,25 @@ namespace BrainPod
                 //get most recent log times
                 var logObject = foundLogs.LastOrDefault();
 
-                mostRecentLogDate.Text = logObject.logDate;
-                mostRecentLogTime.Text = logObject.logTime;
+                if (logObject != null)
+                {
+                    mostRecentLogDate.Text = logObject.logDate;
+                    mostRecentLogTime.Text = logObject.logTime;
 
 
 
 
-                var activities = logObject.activities;
-                List<string> activitiesList = new List<string>();
 
-                activitiesList = activities.Split(',').ToList<string>();
+                    var activities = logObject.activities;
+                    List<string> activitiesList = new List<string>();
 
-                //order list so most recently added log is positioned first
-                var orderedLogs = foundLogs.OrderByDescending(x => x.logDate).ThenBy(y => y.logTime).ToList();
-                //set listview source to the list returned from backend 
-                listOfLogs.ItemsSource = orderedLogs;
+                    activitiesList = activities.Split(',').ToList<string>();
+
+                    //order list so most recently added log is positioned first
+                    var orderedLogs = foundLogs.OrderByDescending(x => x.logDate).ThenBy(y => y.logTime).ToList();
+                    //set listview source to the list returned from backend 
+                    listOfLogs.ItemsSource = orderedLogs;
+                }
             }
             catch (Exception ex)
             {

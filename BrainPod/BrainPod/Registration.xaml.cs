@@ -24,6 +24,8 @@ namespace BrainPod
             NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = new RegisteredUsers();
 
+          
+
         }
 
         //pop off current page from navigations stack to go back to login
@@ -131,7 +133,7 @@ namespace BrainPod
                             {
                                 mail.From = new MailAddress("brainpod1234@gmail.com");
                                 mail.To.Add(EmailInput.Text);
-                                mail.Subject = "testing sending mail";
+                                mail.Subject = "Odro validation";
                                 mail.Body = "Hello " + FirstNameInput.Text + " welcome to brain pod!\n" + "<p>Please enter the following code into your app</p>" + "\n" + "Your email confirmation number is: " + auth;
                                 mail.IsBodyHtml = true;
 
