@@ -7,7 +7,7 @@
              x:Class="BrainPod.PHQ9Master"
              Title="PHQ9">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#F7F4EA">
+        <StackLayout>
             <Label Text="Where's your head at?"
                        VerticalOptions="Start" 
                        HorizontalOptions="CenterAndExpand"
@@ -22,16 +22,12 @@
                        HorizontalTextAlignment="Center"
                        FontAttributes="Bold"/>
 
-            <Image x:Name="SmileyIcon"
-                   HorizontalOptions="Center"
-                   HeightRequest="200"/>
-
             <Button Text="Check-up"
                         VerticalOptions="Start" 
                 HorizontalOptions="Center"
                         WidthRequest="150"
                         BackgroundColor="LightGreen"
-                        Margin="0,0,0,10"
+                        Margin="0,50,0,10"
                         Clicked="startTestBtn"/>
 
             <Button Text="Check-up History"
@@ -39,7 +35,8 @@
                 HorizontalOptions="CenterAndExpand"
                         WidthRequest="150"
                         BackgroundColor="Orange"
-                        Clicked="TestHistory"/>
+                        Clicked="TestHistory"
+                        Margin="0,0,0,50"/>
 
             <Label Margin="0"></Label>
 

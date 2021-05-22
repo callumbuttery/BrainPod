@@ -17,7 +17,7 @@
                             <Label Text="Lower score = Better mental health levels" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
                             <Label Text="Higher score = Poorer mental health levels" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
                         </StackLayout>
-                        <microcharts:ChartView x:Name="ChartViewBar" HeightRequest="400" WidthRequest="500" Margin="0,20,0,20" BackgroundColor="#c4ebf2"/>
+                        <microcharts:ChartView x:Name="ChartViewBar" HeightRequest="400" WidthRequest="500" Margin="0,20,0,20" BackgroundColor="#c4ebf2" />
                     </StackLayout>
                 </StackLayout>
                 <Label Text="Previous test results"

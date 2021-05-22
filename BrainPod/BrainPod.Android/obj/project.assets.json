@@ -4061,24 +4061,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\callu\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Callum\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
       "projectName": "BrainPod.Android",
-      "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
-      "packagesPath": "C:\\Users\\callu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod.Android\\obj\\",
+      "projectPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod.Android\\BrainPod.Android.csproj",
+      "packagesPath": "C:\\Users\\Callum\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\callu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Callum\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -4092,8 +4092,8 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
-              "projectPath": "C:\\Users\\callu\\Source\\Repos\\callumbuttery\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
+            "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj": {
+              "projectPath": "C:\\Users\\Callum\\Source\\Repos\\BrainPod\\BrainPod\\BrainPod\\BrainPod.csproj"
             }
           }
         }

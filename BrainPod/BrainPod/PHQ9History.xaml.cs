@@ -74,6 +74,11 @@ namespace BrainPod
                 //reorder by date not time
                 var dateOrderedResults = getResults.OrderBy(x => x.year).ToList();
 
+                if(orderedResults.Count < 9)
+                {
+                    ChartViewBar.IsVisible = false;
+                }
+
 
                 //user must log 10 entries to display 
                 if (orderedResults.Count >= 9)

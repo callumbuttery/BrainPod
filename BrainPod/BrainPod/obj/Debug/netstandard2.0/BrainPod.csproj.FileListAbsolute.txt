@@ -73,7 +73,6 @@ C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\Registration.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ResultsPage.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\Statistics.xaml.g.cs
-C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\TabbedMaster.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\WelcomeScreen.xaml.g.cs
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfoInputs.cache
 C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.AssemblyInfo.cs
@@ -196,3 +195,6 @@ C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\n
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\ref\BrainPod.dll
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.pdb
 C:\Users\callu\source\repos\callumbuttery\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\BrainPod.csprojAssemblyReference.cache
+C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\AuthScreen.xaml.g.cs
+C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\CBT.xaml.g.cs
+C:\Users\Callum\Source\Repos\BrainPod\BrainPod\BrainPod\obj\Debug\netstandard2.0\EventsHistory.xaml.g.cs
